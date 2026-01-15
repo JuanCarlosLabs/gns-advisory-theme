@@ -2290,7 +2290,7 @@ get_header(); ?>
 
                         <p>Y empezó a construir un imperio.</p>
 
-                        <p class="story-number">La diferencia en impuestos: <strong>22 puntos porcentuales menos.</strong></p>
+                        <p class="story-number">La diferencia en impuestos: <strong>22% menos.</strong></p>
 
                         <p>Eso en su caso son cientos de miles de euros al año.</p>
 
