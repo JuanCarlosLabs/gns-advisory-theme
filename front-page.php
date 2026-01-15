@@ -2733,11 +2733,9 @@ get_header(); ?>
                     <p class="cta-newsletter-intro">Pd: Si todavía no estás listo para hablar, puedes seguirme por email.</p>
                     <p class="cta-newsletter-desc">Mando casos reales cada semana. Sin bla bla. Solo números y estrategias que puedes copiar.</p>
 
-                    <form class="cta-newsletter-form" action="#" method="post">
-                        <input type="text" name="name" placeholder="Tu nombre" required>
-                        <input type="email" name="email" placeholder="Tu email" required>
-                        <button type="submit" class="btn btn-secondary">Suscribirme</button>
-                    </form>
+                    <div class="cta-newsletter-form">
+                        <?php echo do_shortcode('[sibwp_form id=1]'); ?>
+                    </div>
 
                     <p class="cta-newsletter-proof">Ya somos más de 2.000. Si no te aporta, te das de baja en un clic.</p>
                 </div>
