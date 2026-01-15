@@ -305,12 +305,12 @@ get_header(); ?>
     /* Hero Logo */
     .hero-logo {
         text-align: center;
-        margin-top: 40px;
+        margin-top: 20px;
         opacity: 0.6;
     }
 
     .hero-logo img {
-        max-width: 120px;
+        max-width: 200px;
         height: auto;
     }
 
@@ -2187,19 +2187,41 @@ get_header(); ?>
 
                         <p class="story-hook">Mira.</p>
 
-                        <p>Carlos pensaba lo mismo que tú.</p>
+                        <p>Un empresario español me llamó hace 2 años.</p>
 
-                        <p class="story-protagonist">47 años. Empresario. Logística. 2 millones de facturación al año.</p>
+                        <p>No te puedo decir su nombre. Acuerdo de confidencialidad.</p>
 
-                        <p>Cada trimestre, el mismo ritual:</p>
+                        <p>Pero te puedo contar su historia.</p>
 
-                        <p>Abrir la declaración. Ver el 45%. Tragar. Seguir trabajando.</p>
+                        <p>Porque es la tuya.</p>
+
+                        <p class="story-protagonist">47 años. Empresas en Francia y España. Patrimonio de 2 millones de euros.</p>
+
+                        <p>Y cada año, el mismo infierno:</p>
+
+                        <p>Fingir pérdidas.</p>
+
+                        <p>Mostrar números en rojo para que Hacienda no le destroce.</p>
+
+                        <p>Ganar dinero de verdad... pero no poder tocarlo.</p>
+
+                        <p>No poder reinvertirlo. No poder crecer. No poder moverlo.</p>
+
+                        <p>Porque si lo mueve, Hacienda se lo lleva.</p>
+
+                        <p>37% de impuestos personales.</p>
+
+                        <p>Más el resto de porquerías fiscales que ya conoces.</p>
+
+                        <p>Así que hacía lo que todos:</p>
+
+                        <p>Esconder ganancias. Fingir pérdidas. Sobrevivir.</p>
 
                         <blockquote class="story-quote">
-                            "Ale, estoy harto. Trabajo 14 horas al día para que casi la mitad se vaya en impuestos. Esto no puede seguir así."
+                            "Ale, llevo años así. Gano dinero pero no puedo usarlo. Quiero comprar empresas, quiero crecer, pero si muevo un euro me crucifican."
                         </blockquote>
 
-                        <p>Le pregunté por qué no había mirado Suiza antes.</p>
+                        <p>Le pregunté: ¿Por qué no has mirado Suiza?</p>
 
                         <p>Su respuesta:</p>
 
@@ -2207,25 +2229,63 @@ get_header(); ?>
 
                         <p>No lo es.</p>
 
-                        <p class="story-result">Diez semanas después, Carlos paga el 11,9%.</p>
+                        <p class="story-result">Le monté una Holding en Suiza.</p>
 
-                        <p class="story-emphasis">Legalmente. En Suiza. Con la misma empresa.</p>
+                        <p class="story-emphasis">Legalmente. Transparente. Sin trucos.</p>
 
-                        <p>Mismos clientes. Mismo trabajo. Mismo esfuerzo.</p>
+                        <p>Y esto es lo que pasó:</p>
 
-                        <p>Diferente país.</p>
+                        <p>Ya no finge pérdidas.</p>
 
-                        <p class="story-number">La diferencia en 3 años: <strong>640.000€</strong></p>
+                        <p>Ahora declara ganancias reales.</p>
 
-                        <p>Para él. No para Hacienda.</p>
+                        <p>Paga 15% en impuestos. No 37%.</p>
 
-                        <p class="story-lesson">Carlos dejó de pensar que Suiza era para ricos.</p>
+                        <p>Ha comprado 2 empresas nuevas.</p>
 
-                        <p class="story-lesson-answer">Y empezó a quedarse con lo que gana.</p>
+                        <p>Y en menos de 2 años comprará otras 2.</p>
+
+                        <p>Dejó de esconderse de Hacienda.</p>
+
+                        <p>Y empezó a construir un imperio.</p>
+
+                        <p class="story-number">La diferencia en impuestos: <strong>22 puntos porcentuales menos.</strong></p>
+
+                        <p>Eso en su caso son cientos de miles de euros al año.</p>
+
+                        <p>Que antes se los quedaba el Estado.</p>
+
+                        <p>Ahora se los queda él.</p>
+
+                        <p>Y los reinvierte.</p>
+
+                        <p>Y crece.</p>
+
+                        <p>Y duerme tranquilo.</p>
+
+                        <p class="story-lesson">Porque aquí está la verdad que nadie te dice:</p>
+
+                        <p class="story-lesson-answer">Mientras estés en España fingiendo pérdidas, no estás construyendo nada.</p>
+
+                        <p>Estás sobreviviendo.</p>
+
+                        <p>Como una rata escondiéndose en un rincón.</p>
+
+                        <p>¿Es eso lo que quieres?</p>
+
+                        <p>¿Trabajar 14 horas al día para esconder lo que ganas?</p>
+
+                        <p>¿Tener miedo cada vez que Hacienda te llama?</p>
+
+                        <p>¿No poder crecer porque mover dinero es un riesgo?</p>
+
+                        <p>Él dejó de fingir.</p>
+
+                        <p>Y empezó a crecer.</p>
 
                         <p class="story-question">¿Y tú?</p>
 
-                        <p class="story-question-follow">¿Hasta cuándo vas a seguir regalando tu dinero?</p>
+                        <p class="story-question-follow">¿Hasta cuándo vas a seguir escondiéndote?</p>
 
                     </div>
 
@@ -2283,7 +2343,7 @@ get_header(); ?>
                 </div>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-3 glow-on-appear shine-effect shadow-grow">
-                    <div class="testimonial-result counter-animate counter-glow">1.2M CHF/año</div>
+                    <div class="testimonial-result counter-animate counter-glow">1.2M CHF</div>
                     <h4>La familia Méndez dejó el miedo atrás</h4>
                     <p class="testimonial-detail">Empresarios latinos | Empresas en 3 países<br>
                     Antes: Inseguridad + impuestos caóticos + sin Europa<br>
@@ -2476,14 +2536,23 @@ get_header(); ?>
                         <div class="team-name">Alejandra Ortiz (Ale)</div>
                         <div class="team-role">Fundadora</div>
                         <div class="team-email">a.ortiz@gnsadvisory.com</div>
-                        <p style="margin-top: 1rem; color: #495057;">Me llamo Alejandra. Ale, para los clientes.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Llevo 4 años ayudando a empresarios a pagar menos impuestos. Legalmente. En Suiza.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Pero debo confesar algo.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">No empecé en esto por vocación fiscal. Empecé porque vi a mi padre, que tenía una pequeña empresa, pasarlo realmente mal cada vez que llegaba la declaración. Trabajaba más que nadie. Y al final del año, después de impuestos, casi no quedaba nada.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Eso no me parecía justo.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Así que me puse a estudiar. A entender cómo funcionaba el sistema. A buscar las reglas del juego que nadie te cuenta.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Y las encontré.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Hoy ayudo a empresarios como mi padre. Solo que ahora, en lugar de quedarse sin nada, se quedan con la mayor parte de lo que ganan.</p>
+                        <p style="margin-top: 1rem; color: #495057;">Mira.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">A mí me encanta España.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">La comida. La familia. Las cañas a las 2 de la tarde. Las cenas que empiezan a las 10 y terminan a las 2 de la mañana. El estilo de vida que no tiene ningún otro país en Europa.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Eso lo echo de menos.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Pero hay algo que no echo de menos.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Ver cómo cada año España se convierte en un infierno fiscal. Donde trabajas 14 horas al día para que el 45% se lo lleve Hacienda. Donde no puedes crecer porque crecer significa pagar más. Donde no puedes ahorrar porque ahorrar es sospechoso. Donde no puedes invertir porque invertir te pone una diana en la espalda.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Donde solo puedes hacer una cosa bien: comer.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Eso sí que se hace bien en España.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Pero mientras comes bien, tu empresa no crece. Mientras brindas con amigos, tus impuestos suben. Mientras disfrutas el estilo de vida, tu patrimonio se estanca.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Y lo peor de todo: la situación va a peor.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Cada año, nuevos impuestos. Cada año, más persecución. Cada año, más empresarios que se van.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Porque llega un punto en el que tienes que elegir: ¿Quieres vivir bien? ¿O quieres crecer?</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">En España, solo puedes hacer una cosa. No las dos.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Yo lo viví. Vi a empresarios brillantes fingiendo pérdidas para sobrevivir. Vi a familias con patrimonio escondiendo dinero como si fueran criminales. Vi a gente que ganaba bien pero no podía dormir tranquila.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Porque en España, ganar dinero es un delito. No oficialmente. Pero en la práctica, sí.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Me cansé de ver a gente buena siendo tratada como delincuentes. Me cansé de ver talento desperdiciado. Me cansé de ver empresarios brillantes atrapados en un sistema que los castiga por ganar.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Por eso hice esto. Fiscalidad en Suiza para revertir esta mierda.</p>
                     </div>
                 </div>
 
