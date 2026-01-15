@@ -585,10 +585,10 @@ get_header(); ?>
     }
 
     .service-column li:before {
-        content: "●";
+        content: "\2022";
         position: absolute;
         left: 0;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 700;
         top: 0.85rem;
     }
@@ -1096,7 +1096,7 @@ get_header(); ?>
     }
 
     .faq-question::after {
-        content: '+';
+        content: "\002B";
         font-size: 2rem;
         font-weight: 300;
         color: #c0c0c0;
@@ -1106,9 +1106,9 @@ get_header(); ?>
     }
 
     .faq-item.active .faq-question::after {
-        content: '−';
+        content: "\2212";
         color: #1a1a1a;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 
     .faq-answer {
@@ -2477,7 +2477,7 @@ get_header(); ?>
                         <div class="team-role">Fundadora</div>
                         <div class="team-email">a.ortiz@gnsadvisory.com</div>
                         <p style="margin-top: 1rem; color: #495057;">Me llamo Alejandra. Ale, para los clientes.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Llevo 15 años ayudando a empresarios a pagar menos impuestos. Legalmente. En Suiza.</p>
+                        <p style="margin-top: 0.75rem; color: #495057;">Llevo 4 años ayudando a empresarios a pagar menos impuestos. Legalmente. En Suiza.</p>
                         <p style="margin-top: 0.75rem; color: #495057;">Pero debo confesar algo.</p>
                         <p style="margin-top: 0.75rem; color: #495057;">No empecé en esto por vocación fiscal. Empecé porque vi a mi padre, que tenía una pequeña empresa, pasarlo realmente mal cada vez que llegaba la declaración. Trabajaba más que nadie. Y al final del año, después de impuestos, casi no quedaba nada.</p>
                         <p style="margin-top: 0.75rem; color: #495057;">Eso no me parecía justo.</p>
@@ -2563,7 +2563,7 @@ get_header(); ?>
                     <div class="faq-question">¿Por qué debería confiar en ti?</div>
                     <div class="faq-answer">
                         <p>No tienes que hacerlo. Confía en los números.</p>
-                        <p>15 años. Más de 200 clientes. Cero problemas legales.</p>
+                        <p>4 años. Más de 500 clientes protegidos en Suiza. Cero problemas legales.</p>
                         <p>Si eso no te basta, no pasa nada. Hay muchos asesores fiscales en el mundo.</p>
                     </div>
                 </div>
