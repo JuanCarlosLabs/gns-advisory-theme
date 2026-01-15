@@ -6,7 +6,12 @@
       "Bash(git config:*)",
       "Bash(cd /Users/mac/Local\\\\ Sites/gns-group-advisory/app/public/wp-content/themes/gns-advisory-theme && git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote set-url:*)"
     ]
   }
 }
