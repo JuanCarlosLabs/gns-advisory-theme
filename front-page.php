@@ -632,8 +632,7 @@ get_header(); ?>
         align-items: start;
         margin-top: 3rem;
         position: relative;
-        /* CRÍTICO: Altura mínima para que el sticky tenga espacio para bajar */
-        min-height: 200vh; /* Forzar altura para que la bandera pueda bajar */
+        /* La altura se define por el contenido - la bandera baja hasta donde terminan los cantones */
     }
 
     .structures-main-grid {
@@ -642,8 +641,7 @@ get_header(); ?>
         gap: 3rem;
         position: relative;
         z-index: 1;
-        /* El contenido de la izquierda define cuánto debe bajar la bandera */
-        padding-bottom: 5rem; /* Espacio extra para que la bandera baje más */
+        /* Sin padding extra - la bandera termina al nivel de los cantones */
     }
 
     .structures-main-grid h3 {
@@ -827,7 +825,7 @@ get_header(); ?>
 
 
     .structures-bottom-text {
-        margin-top: 3rem;
+        margin-top: 2rem;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
