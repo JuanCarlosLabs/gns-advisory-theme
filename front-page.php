@@ -1370,16 +1370,26 @@ get_header(); ?>
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* Estilos para el formulario de newsletter del CTA */
+    /* Estilos para el formulario de newsletter del CTA (Brevo) */
     .cta-newsletter-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
         margin-top: 1.5rem;
     }
 
-    .cta-newsletter-form input[type="text"],
-    .cta-newsletter-form input[type="email"] {
+    .cta-newsletter-form .sib-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-newsletter-form .sib-NOMBRE-area,
+    .cta-newsletter-form .sib-email-area {
+        display: block;
+        font-size: 0;
+    }
+
+    .cta-newsletter-form .sib-NOMBRE-area input,
+    .cta-newsletter-form .sib-email-area input {
+        width: 100%;
         padding: 1.25rem;
         font-size: 1rem;
         border: 2px solid #e0e0e0;
@@ -1387,18 +1397,49 @@ get_header(); ?>
         font-family: 'Inter Tight', sans-serif;
         font-weight: 500;
         transition: border-color 0.3s ease;
+        box-sizing: border-box;
     }
 
-    .cta-newsletter-form input[type="text"]:focus,
-    .cta-newsletter-form input[type="email"]:focus {
+    .cta-newsletter-form .sib-NOMBRE-area input:focus,
+    .cta-newsletter-form .sib-email-area input:focus {
         outline: none;
         border-color: #a8a8a8;
     }
 
-    .cta-newsletter-form input[type="text"]::placeholder,
-    .cta-newsletter-form input[type="email"]::placeholder {
+    .cta-newsletter-form .sib-NOMBRE-area input::placeholder,
+    .cta-newsletter-form .sib-email-area input::placeholder {
         color: #999;
         font-weight: 400;
+    }
+
+    .cta-newsletter-form .sib-default-btn,
+    .cta-newsletter-form input[type="submit"] {
+        width: 100%;
+        padding: 1.25rem 2.5rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: 'Inter Tight', sans-serif;
+        background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
+        color: white;
+        border: 2px solid transparent;
+    }
+
+    .cta-newsletter-form .sib-default-btn:hover,
+    .cta-newsletter-form input[type="submit"]:hover {
+        background: white;
+        color: #1a1a1a;
+        border: 2px solid #1a1a1a;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Ocultar labels del formulario Brevo */
+    .cta-newsletter-form .sib-form p {
+        margin: 0;
     }
 
     .price-tag {
