@@ -116,3 +116,87 @@ function gns_advisory_disable_emojis() {
     remove_action('admin_print_styles', 'print_emoji_styles');
 }
 add_action('init', 'gns_advisory_disable_emojis');
+
+/**
+ * Add defer attribute to scripts (Performance Optimization)
+ */
+function gns_advisory_defer_scripts($tag, $handle, $src) {
+    // Scripts that should be deferred
+    $defer_scripts = array(
+        'jquery-migrate',
+        'gns-landing-script',
+        'sib-front-js', // Brevo/Sendinblue
+    );
+
+    // Don't defer in admin
+    if (is_admin()) {
+        return $tag;
+    }
+
+    if (in_array($handle, $defer_scripts)) {
+        return str_replace(' src', ' defer src', $tag);
+    }
+
+    return $tag;
+}
+add_filter('script_loader_tag', 'gns_advisory_defer_scripts', 10, 3);
+
+/**
+ * Dequeue WordPress block library CSS if not using Gutenberg blocks
+ */
+function gns_advisory_dequeue_block_styles() {
+    // Only on front page (landing)
+    if (is_front_page()) {
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('wp-block-library-theme');
+        wp_dequeue_style('wc-blocks-style'); // WooCommerce blocks
+        wp_dequeue_style('global-styles'); // Global styles
+    }
+}
+add_action('wp_enqueue_scripts', 'gns_advisory_dequeue_block_styles', 100);
+
+/**
+ * Remove jQuery migrate on frontend (optional - comment out if issues arise)
+ */
+function gns_advisory_remove_jquery_migrate($scripts) {
+    if (!is_admin() && isset($scripts->registered['jquery'])) {
+        $script = $scripts->registered['jquery'];
+        if ($script->deps) {
+            $script->deps = array_diff($script->deps, array('jquery-migrate'));
+        }
+    }
+}
+add_action('wp_default_scripts', 'gns_advisory_remove_jquery_migrate');
+
+/**
+ * Preload critical assets
+ */
+function gns_advisory_preload_assets() {
+    // Preload main CSS
+    $css_path = get_template_directory_uri() . '/assets/css/landing.css';
+    echo '<link rel="preload" href="' . esc_url($css_path) . '" as="style">' . "\n";
+
+    // Preload Google Fonts CSS
+    echo '<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" as="style" crossorigin>' . "\n";
+}
+add_action('wp_head', 'gns_advisory_preload_assets', 1);
+
+/**
+ * Add resource hints for external resources
+ */
+function gns_advisory_resource_hints($urls, $relation_type) {
+    if ('dns-prefetch' === $relation_type) {
+        $urls[] = '//fonts.googleapis.com';
+        $urls[] = '//fonts.gstatic.com';
+    }
+
+    if ('preconnect' === $relation_type) {
+        $urls[] = array(
+            'href' => 'https://fonts.gstatic.com',
+            'crossorigin' => 'anonymous',
+        );
+    }
+
+    return $urls;
+}
+add_filter('wp_resource_hints', 'gns_advisory_resource_hints', 10, 2);

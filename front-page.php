@@ -2201,7 +2201,7 @@ get_header(); ?>
             <!-- Header -->
             <div class="hero-header">
                 <h1 class="hero-title">
-                    <span class="hero-title-line">Estás pagando impuestos de más.</span>
+                    <span class="hero-title-line">Te están robando cada vez más.</span>
                     <span class="hero-title-line">Y lo sabes.</span>
                     <span class="hero-title-line">Pero no haces nada.</span>
                     <span class="hero-title-line hero-title-semibold">Sigue pensando que Suiza es solo para los ricos.</span>
@@ -2215,7 +2215,7 @@ get_header(); ?>
                 <!-- Foto Alejandra -->
                 <div class="hero-photo-column">
                     <div class="hero-photo-circle">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz">
+                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="200" height="200" loading="eager" fetchpriority="high">
                     </div>
                     <div class="hero-photo-name">Ale</div>
                     <div class="hero-photo-role">Fundadora GNS Advisory</div>
@@ -2338,7 +2338,7 @@ get_header(); ?>
 
             <!-- Logo -->
             <div class="hero-logo">
-                <img src="https://gnsadvisory.com/wp-content/uploads/2025/05/logo_foter-2.png" alt="GNS Advisory">
+                <img src="https://gnsadvisory.com/wp-content/uploads/2025/05/logo_foter-2.png" alt="GNS Advisory" width="350" height="71" loading="lazy">
             </div>
 
         </div>
@@ -2353,7 +2353,7 @@ get_header(); ?>
             <div class="testimonial-grid">
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-1 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">1.8M CHF</div>
-                    <h4>Carlos dejó de fingir pérdidas</h4>
+                    <h4>C. dejó de fingir pérdidas</h4>
                     <p class="testimonial-detail">Empresario español | 2M€ patrimonio<br>
                     Antes: 37% de impuestos + empresas en rojo para sobrevivir<br>
                     Ahora: 15% + Holding suiza + 4 empresas reales</p>
@@ -2369,7 +2369,7 @@ get_header(); ?>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-2 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">200K CHF</div>
-                    <h4>Ana vivía en Suiza pagando de más</h4>
+                    <h4>A. vivía en Suiza pagando de más</h4>
                     <p class="testimonial-detail">Residente suiza | 3M CHF patrimonio<br>
                     Antes: 50.000 CHF/año en Vaud<br>
                     Ahora: 10.000 CHF/año en otro cantón</p>
@@ -2380,12 +2380,12 @@ get_header(); ?>
                     Ahora pago 10.000.<br>
                     Mismo país.<br>
                     Misma vida.<br>
-                    40.000 menos al año."</p>
+                    40.000 más en mi bolsillo."</p>
                 </div>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-3 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">1.2M CHF</div>
-                    <h4>La familia Méndez dejó el miedo atrás</h4>
+                    <h4>La familia M. dejó el miedo atrás</h4>
                     <p class="testimonial-detail">Empresarios latinos | Empresas en 3 países<br>
                     Antes: Inseguridad + impuestos caóticos + sin Europa<br>
                     Ahora: Suiza + hijos seguros + expansión europea</p>
@@ -2496,7 +2496,7 @@ get_header(); ?>
                     <div class="cantons-grid">
                 <!-- Ginebra -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-1">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Ginebra-grandes-fortunas-impuestos-en-Suiza.png" alt="Cantón de Ginebra" loading="lazy">
+                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Ginebra-grandes-fortunas-impuestos-en-Suiza.png" alt="Cantón de Ginebra" width="80" height="80" loading="lazy">
                     <h4>Genève</h4>
                     <h5>El internacional</h5>
                     <p>Hub diplomático. Francófono. Prestigio. Mejor para patrimonios grandes y perfiles internacionales.</p>
@@ -2504,7 +2504,7 @@ get_header(); ?>
 
                 <!-- Zug -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-2">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Zug-impuestos-bajos-y-criptomonedas.png" alt="Cantón de Zug" loading="lazy">
+                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Zug-impuestos-bajos-y-criptomonedas.png" alt="Cantón de Zug" width="80" height="80" loading="lazy">
                     <h4>Zug</h4>
                     <h5>El que todos conocen</h5>
                     <p>12% impuestos corporativos. Crypto Valley. El más barato, pero no siempre el mejor para ti.</p>
@@ -2512,7 +2512,7 @@ get_header(); ?>
 
                 <!-- Zürich -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-3">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-zurich-emprendimiento-y-en-la-ciudad-mas-grande-del-pais.png" alt="Cantón de Zürich" loading="lazy">
+                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-zurich-emprendimiento-y-en-la-ciudad-mas-grande-del-pais.png" alt="Cantón de Zürich" width="80" height="80" loading="lazy">
                     <h4>Zürich</h4>
                     <h5>El centro financiero</h5>
                     <p>Más caro que Zug, pero más servicios y conexiones. Si tu negocio necesita presencia, aquí está.</p>
@@ -2520,7 +2520,7 @@ get_header(); ?>
 
                 <!-- Basel-Stadt -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-4">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-basel-impuestos-para-las-empresas-farmaceuticas.png" alt="Cantón de Basel-Stadt" loading="lazy">
+                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-basel-impuestos-para-las-empresas-farmaceuticas.png" alt="Cantón de Basel-Stadt" width="80" height="80" loading="lazy">
                     <h4>Basel</h4>
                     <h5>El farmacéutico</h5>
                     <p>13% impuestos. Hub de innovación. Menos conocido, pero muy competitivo.</p>
@@ -2570,7 +2570,7 @@ get_header(); ?>
                 <div class="team-member main animate-on-scroll zoom-in stagger-2">
                     <div class="team-photo-wrapper">
                         <div class="team-photo">
-                            <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz">
+                            <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="250" height="250" loading="lazy">
                         </div>
                     </div>
                     <div class="team-info">
@@ -2600,7 +2600,7 @@ get_header(); ?>
                 <!-- Sofía Fajardo -->
                 <div class="team-member animate-on-scroll fade-up stagger-3">
                     <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/sofia_fajardo.jpg" alt="Sofía Fajardo">
+                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/sofia_fajardo.jpg" alt="Sofía Fajardo" width="150" height="150" loading="lazy">
                     </div>
                     <div class="team-name">Sofía Fajardo</div>
                     <div class="team-role">Legal</div>
@@ -2612,7 +2612,7 @@ get_header(); ?>
                 <!-- Javier Catota -->
                 <div class="team-member animate-on-scroll fade-up stagger-3">
                     <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Javier_Catota.jpg" alt="Javier Catota">
+                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Javier_Catota.jpg" alt="Javier Catota" width="150" height="150" loading="lazy">
                     </div>
                     <div class="team-name">Javier Catota</div>
                     <div class="team-role">Operaciones</div>
@@ -2624,7 +2624,7 @@ get_header(); ?>
                 <!-- Carlos Duarte -->
                 <div class="team-member animate-on-scroll fade-up stagger-4">
                     <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/carlos_duarte.jpg" alt="Carlos Duarte">
+                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/carlos_duarte.jpg" alt="Carlos Duarte" width="150" height="150" loading="lazy">
                     </div>
                     <div class="team-name">Carlos Duarte</div>
                     <div class="team-role">Soporte</div>
@@ -2719,7 +2719,7 @@ get_header(); ?>
                 <!-- Columna izquierda: Foto -->
                 <div class="cta-photo-column">
                     <div class="cta-photo-circle">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz">
+                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="200" height="200" loading="lazy">
                     </div>
                     <div class="cta-photo-name">Ale</div>
                     <div class="cta-photo-role">Fundadora GNS Advisory</div>
