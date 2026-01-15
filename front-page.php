@@ -1373,22 +1373,25 @@ get_header(); ?>
     /* Estilos para el formulario de newsletter del CTA (Brevo) */
     .cta-newsletter-form {
         margin-top: 1.5rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .cta-newsletter-form .sib-form {
+    .cta-newsletter-form form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .cta-newsletter-form .sib-NOMBRE-area,
-    .cta-newsletter-form .sib-email-area {
-        display: block;
+    .cta-newsletter-form p.sib-FIRSTNAME-area,
+    .cta-newsletter-form p.sib-email-area {
+        margin: 0;
         font-size: 0;
     }
 
-    .cta-newsletter-form .sib-NOMBRE-area input,
-    .cta-newsletter-form .sib-email-area input {
+    .cta-newsletter-form input[type="text"],
+    .cta-newsletter-form input[type="email"] {
         width: 100%;
         padding: 1.25rem;
         font-size: 1rem;
@@ -1400,14 +1403,13 @@ get_header(); ?>
         box-sizing: border-box;
     }
 
-    .cta-newsletter-form .sib-NOMBRE-area input:focus,
-    .cta-newsletter-form .sib-email-area input:focus {
+    .cta-newsletter-form input[type="text"]:focus,
+    .cta-newsletter-form input[type="email"]:focus {
         outline: none;
         border-color: #a8a8a8;
     }
 
-    .cta-newsletter-form .sib-NOMBRE-area input::placeholder,
-    .cta-newsletter-form .sib-email-area input::placeholder {
+    .cta-newsletter-form input::placeholder {
         color: #999;
         font-weight: 400;
     }
@@ -1418,14 +1420,13 @@ get_header(); ?>
         padding: 1.25rem 2.5rem;
         font-size: 1.125rem;
         font-weight: 700;
-        border: none;
+        border: 2px solid transparent;
         border-radius: 12px;
         cursor: pointer;
         transition: all 0.3s ease;
         font-family: 'Inter Tight', sans-serif;
         background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
         color: white;
-        border: 2px solid transparent;
     }
 
     .cta-newsletter-form .sib-default-btn:hover,
@@ -1437,8 +1438,7 @@ get_header(); ?>
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    /* Ocultar labels del formulario Brevo */
-    .cta-newsletter-form .sib-form p {
+    .cta-newsletter-form p {
         margin: 0;
     }
 
