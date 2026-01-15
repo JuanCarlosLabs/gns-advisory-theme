@@ -2251,31 +2251,53 @@ get_header(); ?>
 
             <div class="testimonial-grid">
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-1 glow-on-appear shine-effect shadow-grow">
-                    <div class="testimonial-result counter-animate counter-glow">1.2M CHF</div>
-                    <h4>Carlos, empresario español</h4>
-                    <p class="testimonial-detail">Sector: Logística | Facturación: 2M€/año<br>
-                    Antes: 45% en España<br>
-                    Ahora: 11.9% en Zug<br>
-                    Tiempo: 10 semanas</p>
-                    <p class="testimonial-quote">"Tenía miedo de que fuera demasiado complicado. En 10 semanas estaba operando desde Suiza."</p>
+                    <div class="testimonial-result counter-animate counter-glow">1.8M CHF</div>
+                    <h4>Carlos dejó de fingir pérdidas</h4>
+                    <p class="testimonial-detail">Empresario español | 2M€ patrimonio<br>
+                    Antes: 37% de impuestos + empresas en rojo para sobrevivir<br>
+                    Ahora: 15% + Holding suiza + 4 empresas reales</p>
+                    <p class="testimonial-quote">"Llevaba años mostrando pérdidas porque tenía miedo de Hacienda.<br>
+                    Ale me montó una Holding en Suiza.<br>
+                    Ahora no finjo.<br>
+                    Gano dinero de verdad.<br>
+                    Y lo reinvierto en comprar empresas.<br>
+                    En 2 años compraré 2 más.<br>
+                    Dejé de esconderme.<br>
+                    Empecé a crecer."</p>
                 </div>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-2 glow-on-appear shine-effect shadow-grow">
-                    <div class="testimonial-result counter-animate counter-glow">340K CHF</div>
-                    <h4>Familia Rodríguez, argentinos</h4>
-                    <p class="testimonial-detail">Situación: Patrimonio familiar diversificado<br>
-                    Problema: Pagaban impuestos sobre patrimonio<br>
-                    Ahora: Solo tributan sobre beneficios distribuidos</p>
-                    <p class="testimonial-quote">"Llevábamos años pagando de más sin saberlo."</p>
+                    <div class="testimonial-result counter-animate counter-glow">200K CHF</div>
+                    <h4>Ana vivía en Suiza pagando de más</h4>
+                    <p class="testimonial-detail">Residente suiza | 3M CHF patrimonio<br>
+                    Antes: 50.000 CHF/año en Vaud<br>
+                    Ahora: 10.000 CHF/año en otro cantón</p>
+                    <p class="testimonial-quote">"Llevaba 4 años en Suiza.<br>
+                    Pagando 50.000 al año.<br>
+                    Pensando que era normal.<br>
+                    Ale me dijo: 'Te puedes cambiar de cantón.'<br>
+                    Ahora pago 10.000.<br>
+                    Mismo país.<br>
+                    Misma vida.<br>
+                    40.000 menos al año."</p>
                 </div>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-3 glow-on-appear shine-effect shadow-grow">
-                    <div class="testimonial-result counter-animate counter-glow">890K CHF</div>
-                    <h4>Miguel, empresario mexicano</h4>
-                    <p class="testimonial-detail">Sector: Tecnología<br>
-                    Problema: Holding desordenado, dividendos mal estructurados<br>
-                    Ahorro: Primer año</p>
-                    <p class="testimonial-quote">"Pensé que tenía todo controlado. Ale me mostró que estaba dejando casi un millón sobre la mesa cada año."</p>
+                    <div class="testimonial-result counter-animate counter-glow">1.2M CHF/año</div>
+                    <h4>La familia Méndez dejó el miedo atrás</h4>
+                    <p class="testimonial-detail">Empresarios latinos | Empresas en 3 países<br>
+                    Antes: Inseguridad + impuestos caóticos + sin Europa<br>
+                    Ahora: Suiza + hijos seguros + expansión europea</p>
+                    <p class="testimonial-quote">"Nuestros hijos tenían guardaespaldas.<br>
+                    Pagábamos impuestos sin control.<br>
+                    No podíamos crecer a Europa.<br><br>
+                    Ahora viven sin miedo.<br>
+                    Hablan 4 idiomas.<br>
+                    Gestionamos desde Suiza.<br>
+                    Expandimos a 5 países europeos.<br><br>
+                    Y ahorramos 1.2M al año.<br><br>
+                    No es solo dinero.<br>
+                    Es dormir tranquilo."</p>
                 </div>
             </div>
 
