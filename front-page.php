@@ -2330,7 +2330,7 @@ get_header(); ?>
 
                     </div>
 
-                    <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary hero-button">Quiero dejar de regalarlo</a>
+                    <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary hero-button">Quiero dejar de regalar mi dinero</a>
 
                 </div>
 
@@ -2758,7 +2758,7 @@ get_header(); ?>
                     </div>
 
                     <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary cta-button">
-                        Quiero saber dónde estoy parado
+                        Quiero dejar de regalar mi dinero
                     </a>
 
                     <p class="cta-slots">Atiendo máximo 4 casos nuevos al mes.</p>
