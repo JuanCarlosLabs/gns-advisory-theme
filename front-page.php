@@ -2639,7 +2639,7 @@ get_header(); ?>
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
-            <h2 class="animate-on-scroll fade-up">Preguntas que me hacen (con respuestas honestas)</h2>
+            <h2 class="animate-on-scroll fade-up">Preguntas que nos hacen siempre</h2>
 
             <div class="faq-list animate-on-scroll fade-up stagger-1">
                 <div class="faq-item">
