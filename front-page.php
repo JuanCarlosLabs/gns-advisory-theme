@@ -1089,10 +1089,29 @@ get_header(); ?>
         align-items: center;
         user-select: none;
         transition: color 0.3s ease;
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        font-family: inherit;
     }
 
     .faq-question:hover {
         color: #4a4a4a;
+    }
+
+    .faq-question:focus {
+        outline: 2px solid #1a1a1a;
+        outline-offset: -2px;
+    }
+
+    .faq-question:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .faq-question:focus-visible {
+        outline: 2px solid #1a1a1a;
+        outline-offset: -2px;
     }
 
     .faq-question::after {
@@ -1121,9 +1140,20 @@ get_header(); ?>
         padding: 0 2rem;
     }
 
+    .faq-answer[hidden] {
+        display: block;
+        max-height: 0;
+        padding: 0 2rem;
+    }
+
     .faq-item.active .faq-answer {
         max-height: 500px;
         padding: 0 2rem 1.5rem 2rem;
+    }
+
+    .faq-item.active .faq-answer[hidden] {
+        max-height: 0;
+        padding: 0 2rem;
     }
 
     .faq-answer p {
@@ -2636,75 +2666,88 @@ get_header(); ?>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- FAQ Section with Accessibility -->
+    <section class="faq" aria-labelledby="faq-heading">
         <div class="container">
-            <h2 class="animate-on-scroll fade-up">Preguntas que nos hacen siempre</h2>
+            <h2 id="faq-heading" class="animate-on-scroll fade-up">Preguntas que nos hacen siempre</h2>
 
-            <div class="faq-list animate-on-scroll fade-up stagger-1">
-                <div class="faq-item">
-                    <div class="faq-question">¿Esto es legal?</div>
-                    <div class="faq-answer">
+            <div class="faq-list animate-on-scroll fade-up stagger-1" role="list">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
+                        ¿Esto es legal?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
                         <p>100%. No hago trucos. No hago ingeniería fiscal agresiva. Hago optimización dentro del marco legal suizo.</p>
                         <p>Si quieres algo ilegal, no soy tu persona. Hay otros que hacen eso. Yo no.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Cuánto cuesta la primera reunión?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+                        ¿Cuánto cuesta la primera reunión?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
                         <p>230 CHF la hora.</p>
                         <p>Si decides seguir adelante, ese coste se descuenta del proyecto. Si no, habrás invertido 230 CHF en entender tu situación fiscal real.</p>
                         <p>Probablemente la mejor inversión que hagas este año.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Necesito mudarme a Suiza?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+                        ¿Necesito mudarme a Suiza?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
                         <p>Depende.</p>
                         <p>Hay estructuras que no requieren residencia. Otras sí. Lo vemos en la primera reunión.</p>
                         <p>No te voy a decir que te mudes si no tiene sentido para ti.</p>
                     </div>
-                </div>
+                </article>
 
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Por qué debería confiar en ti?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
+                        ¿Por qué debería confiar en ti?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
                         <p>No tienes que hacerlo. Confía en los números.</p>
                         <p>4 años. Más de 500 clientes protegidos en Suiza. Cero problemas legales.</p>
                         <p>Si eso no te basta, no pasa nada. Hay muchos asesores fiscales en el mundo.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Y si al final no me conviene?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
+                        ¿Y si al final no me conviene?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
                         <p>Pues no lo hacemos.</p>
                         <p>No voy a convencerte de algo que no te beneficia. Mi negocio se basa en clientes satisfechos que me recomiendan, no en vender humo.</p>
                         <p>Si después de analizar tu caso veo que no tiene sentido, te lo digo. Y tan amigos.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Cuánto tarda todo el proceso?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
+                        ¿Cuánto tarda todo el proceso?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
                         <p>Depende de la complejidad.</p>
                         <p>Una estructura simple: 6-8 semanas.</p>
                         <p>Una relocalización completa con residencia: 3-6 meses.</p>
                         <p>Te doy un timeline realista en la primera reunión. No prometo milagros.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Eres arrogante?</div>
-                    <div class="faq-answer">
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7" id="faq-question-7">
+                        ¿Eres arrogante?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden>
                         <p>Probablemente.</p>
                         <p>Pero también soy buena en lo que hago. Y prefiero ser honesta a ser simpática.</p>
                         <p>Si buscas alguien que te diga que sí a todo, no soy yo. Si buscas alguien que te diga la verdad aunque no te guste, hablamos.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -3110,23 +3153,39 @@ get_header(); ?>
         setTimeout(cleanupExtraElements, 1000);
     });
 
-    // === ACORDEÓN FAQ ===
+    // === ACORDEÓN FAQ CON ACCESIBILIDAD ===
     document.addEventListener('DOMContentLoaded', () => {
         const faqItems = document.querySelectorAll('.faq-item');
 
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
 
             question.addEventListener('click', () => {
-                // Cerrar otros items (opcional - remover si quieres múltiples abiertos)
                 const wasActive = item.classList.contains('active');
+
+                // Cerrar todos los items y actualizar ARIA
                 faqItems.forEach(otherItem => {
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
                     otherItem.classList.remove('active');
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.setAttribute('hidden', '');
                 });
 
                 // Toggle el item clickeado
                 if (!wasActive) {
                     item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                    answer.removeAttribute('hidden');
+                }
+            });
+
+            // Soporte para navegación con teclado
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    question.click();
                 }
             });
         });

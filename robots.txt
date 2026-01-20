@@ -1,0 +1,106 @@
+# =============================================================================
+# robots.txt para GNS Advisory
+# https://gnsadvisory.com/robots.txt
+# =============================================================================
+# IMPORTANTE: Este archivo debe copiarse a la raiz del sitio WordPress
+# Ruta en produccion: /public_html/robots.txt o /www/robots.txt
+# =============================================================================
+
+# Reglas para todos los bots
+User-agent: *
+
+# Permitir acceso general
+Allow: /
+
+# Bloquear areas de WordPress admin y sistema
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/*/node_modules/
+
+# Permitir acceso a archivos necesarios para admin (AJAX, CSS admin)
+Allow: /wp-admin/admin-ajax.php
+
+# Bloquear parametros de busqueda y tracking
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /*&
+Disallow: /trackback/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*/feed/
+Disallow: /*/trackback/
+
+# Bloquear archivos sensibles
+Disallow: /wp-config.php
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /xmlrpc.php
+
+# Bloquear archivos de autor (si no tienes paginas de autor publicas)
+Disallow: /author/
+
+# Bloquear paginas de login y registro
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+
+# Bloquear archivos duplicados
+Disallow: /cgi-bin/
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.log$
+
+# =============================================================================
+# Reglas especificas para Googlebot
+# =============================================================================
+User-agent: Googlebot
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# =============================================================================
+# Reglas para Googlebot-Image
+# =============================================================================
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/
+
+# =============================================================================
+# Reglas para Bingbot
+# =============================================================================
+User-agent: Bingbot
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# =============================================================================
+# Bloquear bots de scraping conocidos (opcional)
+# =============================================================================
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# =============================================================================
+# Crawl-delay para bots que lo respetan (reduce carga del servidor)
+# =============================================================================
+User-agent: *
+Crawl-delay: 10
+
+# =============================================================================
+# Sitemaps
+# =============================================================================
+Sitemap: https://gnsadvisory.com/sitemap_index.xml
+Sitemap: https://gnsadvisory.com/sitemap.xml
+
+# =============================================================================
+# Host canonico (opcional, algunos bots lo usan)
+# =============================================================================
+Host: https://gnsadvisory.com
