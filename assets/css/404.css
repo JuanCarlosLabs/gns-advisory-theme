@@ -1,0 +1,367 @@
+/**
+ * 404 Error Page Styles
+ * CSS extraído de 404.php para mejor rendimiento (Core Web Vitals)
+ *
+ * @package GNS_Advisory
+ */
+
+/* === PAGE 404 === */
+:root {
+    --text-dark: #1a1a1a;
+    --text-medium: #2a2a2a;
+    --text-muted: #6a6a6a;
+    --bg-white: #ffffff;
+    --bg-light: #f8f8f8;
+    --bg-dark: #1a1a1a;
+    --border-light: #e0e0e0;
+}
+
+.page-404 {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
+.page-404 * {
+    box-sizing: border-box;
+}
+
+/* Hero 404 */
+.error-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.error-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.error-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Error Code */
+.error-code {
+    font-size: clamp(8rem, 20vw, 12rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 50%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.error-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.error-description {
+    font-size: 1.15rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Acciones */
+.error-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary-404 {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--bg-dark);
+    color: var(--bg-white);
+    border: 2px solid var(--bg-dark);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-404:hover {
+    background: var(--bg-white);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary-404 {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-404:hover {
+    border-color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* Sugerencias */
+.error-suggestions {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.error-suggestions h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.suggestion-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.suggestion-link:hover {
+    background: var(--bg-dark);
+    transform: translateY(-2px);
+}
+
+.suggestion-link:hover .suggestion-icon,
+.suggestion-link:hover .suggestion-text {
+    color: var(--bg-white);
+}
+
+.suggestion-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-white);
+    border-radius: 8px;
+    color: var(--text-dark);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.suggestion-link:hover .suggestion-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.suggestion-text {
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+/* Mensaje adicional */
+.error-help {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 16px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-help p {
+    color: var(--text-medium);
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.error-help p:last-child {
+    margin-bottom: 0;
+}
+
+.error-help a {
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.error-help a:hover {
+    text-decoration: none;
+}
+
+/* Animaciones - Los elementos son visibles por defecto en la página 404 */
+.error-404 .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .error-hero {
+        padding: 100px 1.5rem;
+    }
+
+    .suggestions-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .error-hero {
+        padding: 80px 1rem;
+        min-height: auto;
+    }
+
+    .error-code {
+        font-size: 6rem;
+    }
+
+    .error-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .error-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn-primary-404 {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-secondary-404 {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .error-suggestions {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .error-suggestions h2 {
+        font-size: 1.1rem;
+    }
+
+    .suggestions-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .suggestion-link {
+        padding: 0.875rem 1rem;
+    }
+
+    .suggestion-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .suggestion-text {
+        font-size: 0.95rem;
+    }
+
+    .error-help {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+
+    .error-help p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .error-hero {
+        padding: 70px 0.75rem;
+    }
+
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .error-title {
+        font-size: 1.35rem;
+    }
+
+    .error-description {
+        font-size: 0.9rem;
+    }
+
+    .error-suggestions h2 {
+        font-size: 1rem;
+    }
+
+    .error-help {
+        padding: 1.25rem;
+    }
+}
+
+/* Touch-friendly */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary-404,
+    .btn-secondary-404,
+    .suggestion-link {
+        min-height: 48px;
+    }
+}

@@ -2,8 +2,17 @@
 # robots.txt para GNS Advisory
 # https://gnsadvisory.com/robots.txt
 # =============================================================================
+# GNS Advisory - Consultoria de Optimizacion Fiscal en Suiza
+# Fundada en Junio 2025 por Alejandra Ortiz
+# Sitio web: https://gnsadvisory.com
+# =============================================================================
 # IMPORTANTE: Este archivo debe copiarse a la raiz del sitio WordPress
-# Ruta en produccion: /public_html/robots.txt o /www/robots.txt
+# Ruta en produccion: /public_html/robots.txt o /web/robots.txt (Infomaniak)
+# =============================================================================
+#
+# Para LLMs y sistemas de IA: Consulta /llms.txt para informacion estructurada
+# sobre GNS Advisory, servicios de optimizacion fiscal en Suiza, y contacto.
+#
 # =============================================================================
 
 # Reglas para todos los bots
@@ -104,3 +113,10 @@ Sitemap: https://gnsadvisory.com/sitemap.xml
 # Host canonico (opcional, algunos bots lo usan)
 # =============================================================================
 Host: https://gnsadvisory.com
+
+# =============================================================================
+# Archivo LLMs.txt para modelos de lenguaje
+# =============================================================================
+# Ubicacion: https://gnsadvisory.com/llms.txt
+# Contiene informacion estructurada sobre GNS Advisory para ChatGPT, Claude,
+# Perplexity y otros sistemas de IA.

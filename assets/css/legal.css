@@ -1,0 +1,224 @@
+/**
+ * Legal Pages Styles
+ * CSS para páginas legales: Política de Privacidad, Aviso Legal, Política de Cookies
+ *
+ * @package GNS_Advisory
+ */
+
+/* Legal Page Base */
+.legal-page {
+    font-family: 'Inter Tight', sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+.legal-page * {
+    box-sizing: border-box;
+}
+
+/* Breadcrumbs */
+.legal-page .breadcrumbs {
+    padding: 1rem 2rem;
+    max-width: 900px;
+    margin: 100px auto 0;
+}
+
+.legal-page .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.legal-page .breadcrumbs li {
+    display: flex;
+    align-items: center;
+}
+
+.legal-page .breadcrumbs li:not(:last-child)::after {
+    content: '›';
+    margin: 0 0.5rem;
+    color: #999;
+}
+
+.legal-page .breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-page .breadcrumbs a:hover {
+    color: #000;
+}
+
+.legal-page .breadcrumbs .current {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Legal Content Container */
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Legal Header */
+.legal-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.legal-header h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.legal-updated {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Legal Body */
+.legal-body {
+    line-height: 1.8;
+}
+
+.legal-body section {
+    margin-bottom: 2.5rem;
+}
+
+.legal-body h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.legal-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: #333;
+}
+
+.legal-body p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.legal-body ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.legal-body li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.legal-body a {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.legal-body a:hover {
+    opacity: 0.7;
+}
+
+.legal-body strong {
+    font-weight: 600;
+    color: #000;
+}
+
+/* Cookies Table */
+.cookies-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.cookies-table th,
+.cookies-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+.cookies-table th {
+    background: #f8f8f8;
+    font-weight: 600;
+    color: #000;
+}
+
+.cookies-table td {
+    background: #fff;
+    color: #333;
+}
+
+.cookies-table tr:hover td {
+    background: #fafafa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 1.5rem;
+    }
+
+    .legal-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .legal-body h2 {
+        font-size: 1.25rem;
+    }
+
+    .legal-body h3 {
+        font-size: 1.05rem;
+    }
+
+    .cookies-table {
+        font-size: 0.8rem;
+    }
+
+    .cookies-table th,
+    .cookies-table td {
+        padding: 0.5rem;
+    }
+
+    /* Make table scrollable on mobile */
+    .legal-body .cookies-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-page .breadcrumbs {
+        padding: 1rem;
+        margin-top: 80px;
+    }
+
+    .legal-content {
+        padding: 1rem;
+    }
+
+    .legal-header h1 {
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,6557 @@
+/**
+ * Servicios Fiscalidad Suiza - Estilos
+ * GNS Advisory Theme
+ *
+ * @package GNS_Advisory
+ * @version 2.0.0
+ */
+
+/* === PAGE SERVICIOS === */
+.page-servicios {
+    font-family: 'Inter Tight', sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+.page-servicios * {
+    box-sizing: border-box;
+}
+
+/* Container Global para Servicios */
+.page-servicios .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Hero */
+.servicios-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    position: relative;
+    text-align: center;
+}
+
+.servicios-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.servicios-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Breadcrumb SEO */
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '\2192';
+    margin-left: 0.5rem;
+    color: #4a4a4a;
+}
+
+.breadcrumb a {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #1a1a1a;
+}
+
+/* Bloque SEO Hero - Mejorado estilo Landing */
+.hero-seo-block {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-seo-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-seo-block:hover {
+    border-color: #1a1a1a;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hero-seo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-seo-text {
+    flex: 1;
+}
+
+.hero-seo-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.hero-seo-subtitle {
+    font-size: 1.15rem;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-seo-description {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.hero-seo-logo {
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-seo-block:hover .hero-seo-logo {
+    transform: scale(1.05);
+}
+
+.hero-seo-logo img {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.servicios-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.servicios-hero-subtitle {
+    font-size: 1.25rem;
+    color: #2a2a2a;
+    max-width: 600px;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+/* Subtitulo Visual del Hero */
+.servicios-hero-subtitle-visual {
+    font-size: 1.35rem;
+    color: #2a2a2a;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Hook de Seccion - Estilo Isra Bravo */
+.section-hook {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* Hook dentro de cards de servicio */
+.servicio-hook {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Bloques SEO de seccion */
+.section-seo-block {
+    background: #f8f9fa;
+    border-left: 4px solid #1a1a1a;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.section-seo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.section-seo-intro {
+    font-size: 0.95rem;
+    color: #495057;
+    line-height: 1.7;
+}
+
+.section-seo-intro a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+/* Selector Tabs */
+.servicios-selector {
+    padding: 4rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.servicios-selector .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.servicios-selector h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.servicios-selector > .container > p {
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Selector Links (botones de navegacion) */
+.selector-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.selector-link {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid #1a1a1a;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.selector-link:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.selector-link:focus {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 4px;
+}
+
+.selector-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.selector-tab {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #e0e0e0;
+    background: #ffffff;
+    color: #2a2a2a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.selector-tab:hover {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+}
+
+.selector-tab:focus {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+.selector-tab.active {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+}
+
+/* Contenido Servicios - SEO FIX: Usar visibility en lugar de display para indexacion */
+.servicios-content {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    /* Visible por defecto para SEO */
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Estado oculto - usa visibility para que Google pueda indexar */
+.servicios-content.visually-hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Mantener compatibilidad con clase hidden existente */
+.servicios-content.hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.servicios-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.servicios-content-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.servicios-content-header h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.servicios-content-header p {
+    color: #2a2a2a;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.servicios-content-header .section-hook {
+    text-align: center;
+}
+
+/* Grid de Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Grid variantes por columnas */
+.servicios-grid.servicios-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servicios-grid.servicios-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Proceso Grid y Steps */
+.proceso-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.proceso-step {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    position: relative;
+}
+
+.proceso-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.proceso-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+}
+
+.proceso-step h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.proceso-step p {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Section CTA Wrapper */
+.section-cta-wrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.servicio-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #c0c0c0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-left-color: #1a1a1a;
+}
+
+.servicio-card:hover::before {
+    opacity: 1;
+}
+
+/* Variantes de color para cards */
+.servicio-card:nth-child(1) { border-left-color: #2ecc71; }
+.servicio-card:nth-child(2) { border-left-color: #3498db; }
+.servicio-card:nth-child(3) { border-left-color: #9b59b6; }
+.servicio-card:nth-child(4) { border-left-color: #e67e22; }
+.servicio-card:nth-child(5) { border-left-color: #1abc9c; }
+.servicio-card:nth-child(6) { border-left-color: #e74c3c; }
+
+.servicio-card:nth-child(1):hover { border-left-color: #27ae60; }
+.servicio-card:nth-child(2):hover { border-left-color: #2980b9; }
+.servicio-card:nth-child(3):hover { border-left-color: #8e44ad; }
+.servicio-card:nth-child(4):hover { border-left-color: #d35400; }
+.servicio-card:nth-child(5):hover { border-left-color: #16a085; }
+.servicio-card:nth-child(6):hover { border-left-color: #c0392b; }
+
+.servicio-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.servicio-card:hover .servicio-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    position: relative;
+    z-index: 1;
+    line-height: 1.3;
+}
+
+/* Titulos SEO dentro de cards (mas discretos) */
+.servicio-seo-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.servicio-card > p {
+    color: #2a2a2a;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.servicio-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servicio-includes li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.servicio-includes li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: 700;
+}
+
+/* Estructuras */
+.servicios-estructuras {
+    padding: 5rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.servicios-estructuras .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.servicios-estructuras h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #000000;
+}
+
+.servicios-estructuras > .container > p {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servicios-estructuras .section-hook {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.servicios-estructuras > .container > p.section-hook + p {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.estructuras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.estructura-card {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.estructura-card:hover {
+    transform: translateX(8px);
+}
+
+.estructura-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.estructura-subtitle {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.estructura-seo-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.estructura-card > p {
+    color: #2a2a2a;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.estructura-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.detail-item {
+    background: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #2a2a2a;
+}
+
+/* Seccion SEO Informativa */
+.seo-info-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.seo-info-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.seo-info-header {
+    margin-bottom: 3rem;
+}
+
+.seo-info-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.seo-info-header > p {
+    color: #495057;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.seo-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.seo-info-block {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.seo-info-block h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.seo-info-block p {
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.seo-info-block p:last-child {
+    margin-bottom: 0;
+}
+
+.seo-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.seo-info-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #495057;
+    line-height: 1.7;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.seo-info-list li:last-child {
+    border-bottom: none;
+}
+
+.seo-info-list li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.seo-info-list li strong {
+    color: #1a1a1a;
+}
+
+/* CTA Servicios */
+.servicios-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.site-footer {
+    border-top: 3px solid #c0c0c0;
+    margin-top: 0;
+}
+
+.servicios-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 50%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.servicios-cta .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.servicios-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.servicios-cta-content .cta-photo-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin: 0 auto 2rem;
+}
+
+.servicios-cta-content .cta-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios-cta-content h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-seo-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.servicios-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.servicios-cta-content .cta-emphasis {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.servicios-cta-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.price-detail {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.servicios-cta-note {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.5rem;
+}
+
+.cta-slots {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* CTA Section (inline en paginas) */
+.servicios-cta-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.servicios-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 50%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.servicios-cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.servicios-cta-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.servicios-cta-wrapper .cta-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.servicios-cta-wrapper h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.servicios-cta-wrapper .cta-intro {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: #FF0000;
+    color: #ffffff;
+    border-color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Animations para Page Servicios */
+.page-servicios .animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.page-servicios .animate-on-scroll.animate-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Fade Up */
+.page-servicios .fade-up {
+    transform: translateY(40px);
+}
+
+.page-servicios .fade-up.animate-visible {
+    transform: translateY(0);
+}
+
+/* Slide Fade */
+.page-servicios .slide-fade {
+    transform: translateY(30px) scale(0.97);
+}
+
+.page-servicios .slide-fade.animate-visible {
+    transform: translateY(0) scale(1);
+}
+
+/* Zoom In */
+.page-servicios .zoom-in {
+    transform: scale(0.9);
+}
+
+.page-servicios .zoom-in.animate-visible {
+    transform: scale(1);
+}
+
+/* Stagger Delays */
+.page-servicios .animate-on-scroll.stagger-1 { transition-delay: 0.1s; }
+.page-servicios .animate-on-scroll.stagger-2 { transition-delay: 0.2s; }
+.page-servicios .animate-on-scroll.stagger-3 { transition-delay: 0.3s; }
+.page-servicios .animate-on-scroll.stagger-4 { transition-delay: 0.4s; }
+.page-servicios .animate-on-scroll.stagger-5 { transition-delay: 0.5s; }
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .servicios-grid,
+    .estructuras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios-grid.servicios-grid-3,
+    .servicios-grid.servicios-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-seo-content {
+        flex-direction: column;
+    }
+
+    .hero-seo-logo {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .servicios-cta-wrapper h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .servicios-hero {
+        padding: 80px 0 40px;
+    }
+
+    .hero-seo-block {
+        padding: 1.5rem;
+    }
+
+    .hero-seo-title {
+        font-size: 1.25rem;
+    }
+
+    .hero-seo-subtitle {
+        font-size: 1rem;
+    }
+
+    .servicios-hero-title {
+        font-size: 2rem;
+    }
+
+    .servicios-hero-subtitle-visual {
+        font-size: 1.1rem;
+    }
+
+    .selector-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .selector-link {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    .selector-tabs {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .selector-tab {
+        width: 100%;
+    }
+
+    .section-hook {
+        font-size: 1.4rem;
+    }
+
+    .servicio-hook {
+        font-size: 1rem;
+    }
+
+    .servicio-card {
+        padding: 1.5rem;
+    }
+
+    .estructura-card {
+        padding: 1.5rem;
+    }
+
+    .seo-info-block {
+        padding: 1.5rem;
+    }
+
+    .servicios-cta-content .cta-photo-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .price-amount {
+        font-size: 2.5rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    .servicios-content-header p {
+        text-align: left;
+    }
+
+    .proceso-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-step {
+        padding: 1.5rem;
+    }
+
+    .servicios-cta-wrapper .cta-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ==========================================================================
+   FAQ ACCORDION STYLES (Matching Landing)
+   ========================================================================== */
+
+.faq-section .faq-list {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.faq-section .faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section .faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-section .faq-item:hover {
+    background-color: #f8f8f8;
+}
+
+.faq-section .faq-question {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: color 0.3s ease;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+}
+
+.faq-section .faq-question:hover {
+    color: #4a4a4a;
+}
+
+.faq-section .faq-question:focus {
+    outline: 2px solid #1a1a1a;
+    outline-offset: -2px;
+}
+
+.faq-section .faq-question:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.faq-section .faq-question::after {
+    content: "\002B";
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: #c0c0c0;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.faq-section .faq-item.active .faq-question::after {
+    content: "\2212";
+    color: #1a1a1a;
+}
+
+.faq-section .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
+    color: #2a2a2a;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 2rem;
+}
+
+.faq-section .faq-answer[hidden] {
+    display: block;
+    max-height: 0;
+    padding: 0 2rem;
+}
+
+.faq-section .faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-section .faq-item.active .faq-answer[hidden] {
+    max-height: 0;
+    padding: 0 2rem;
+}
+
+.faq-section .faq-answer p {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   EFECTOS VISUALES AVANZADOS (Matching Landing)
+   ========================================================================== */
+
+/* Shine Effect */
+.page-servicios .shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-servicios .shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    transition: left 0.7s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.page-servicios .shine-effect.animate-visible::before {
+    left: 100%;
+}
+
+/* Shadow Grow */
+.page-servicios .shadow-grow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+.page-servicios .shadow-grow.animate-visible {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.page-servicios .shadow-grow:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18) !important;
+    transform: translateY(-10px) !important;
+}
+
+/* Glow on Appear */
+.page-servicios .glow-on-appear {
+    position: relative;
+}
+
+.page-servicios .glow-on-appear.animate-visible::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.4), transparent);
+    border-radius: inherit;
+    opacity: 0;
+    animation: glow-pulse-servicios 2s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes glow-pulse-servicios {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* ==========================================================================
+   BOTONES MEJORADOS
+   ========================================================================== */
+
+.page-servicios .btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #1a1a1a;
+    color: #ffffff !important;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-servicios .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 100%
+    );
+    transition: left 0.5s ease;
+}
+
+.page-servicios .btn-secondary:hover {
+    background: #FF0000;
+    color: #ffffff !important;
+    border-color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.35);
+}
+
+.page-servicios .btn-secondary:hover::before {
+    left: 100%;
+}
+
+.page-servicios .btn-primary {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #ffffff;
+    color: #000000 !important;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-servicios .btn-primary:hover {
+    background: #FF0000;
+    color: #ffffff !important;
+    border-color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 0, 0, 0.4);
+}
+
+/* CTA Section buttons */
+.servicios-cta-section .btn-primary {
+    background: #ffffff;
+    color: #000000 !important;
+    border: 2px solid #ffffff;
+}
+
+.servicios-cta-section .btn-primary:hover {
+    background: #FF0000;
+    color: #ffffff !important;
+    border-color: #FF0000;
+    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   PROCESO STEPS MEJORADOS
+   ========================================================================== */
+
+.proceso-step {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    position: relative;
+}
+
+.proceso-step:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.proceso-number {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceso-step:hover .proceso-number {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow on appear for proceso steps */
+.proceso-step.glow-on-appear.animate-visible::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.5), transparent);
+    border-radius: 18px;
+    opacity: 0;
+    animation: glow-pulse-servicios 2s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Counter glow for proceso numbers */
+.proceso-number.counter-glow {
+    position: relative;
+}
+
+.proceso-step.animate-visible .proceso-number.counter-glow {
+    animation: number-glow-servicios 2.5s ease-in-out;
+}
+
+/* ==========================================================================
+   SERVICIO ICON ANIMATIONS
+   ========================================================================== */
+
+.servicio-icon {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.servicio-card:hover .servicio-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   COUNTER GLOW EFFECT
+   ========================================================================== */
+
+.page-servicios .counter-glow {
+    position: relative;
+    display: inline-block;
+}
+
+.page-servicios .counter-glow.animate-visible {
+    animation: number-glow-servicios 2s ease-in-out;
+}
+
+@keyframes number-glow-servicios {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(192, 192, 192, 0);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(192, 192, 192, 0.8),
+                     0 0 30px rgba(192, 192, 192, 0.6);
+    }
+}
+
+/* ==========================================================================
+   EFECTOS ADICIONALES DEL CTA
+   ========================================================================== */
+
+/* Gradient Text Animation */
+.servicios-cta-section .gradient-text-animate {
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #c0c0c0 25%,
+        #ffffff 50%,
+        #c0c0c0 75%,
+        #ffffff 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift-servicios 4s ease infinite;
+}
+
+@keyframes gradient-shift-servicios {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Pulse Hover for CTA photo */
+.servicios-cta-wrapper .cta-photo.pulse-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicios-cta-wrapper .cta-photo.pulse-hover:hover {
+    animation: pulse-subtle-servicios 1s ease-in-out infinite;
+    box-shadow: 0 15px 45px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes pulse-subtle-servicios {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* CTA Price Animation */
+.servicios-cta-price .price-amount.counter-glow {
+    animation: price-glow-servicios 3s ease-in-out infinite;
+}
+
+@keyframes price-glow-servicios {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+                     0 0 50px rgba(192, 192, 192, 0.3);
+    }
+}
+
+/* ==========================================================================
+   PAGE GMBH SUIZA - ESTILOS ESPECIFICOS
+   ========================================================================== */
+
+/* Hero Stats Grid - Mejorado estilo Landing */
+.hero-stats-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+}
+
+.hero-stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(192, 192, 192, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(169, 169, 169, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a1a1a 0%, #4a4a4a 50%, #1a1a1a 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-stat:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hero-stat:hover::before {
+    transform: scaleX(1);
+}
+
+.hero-stat-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 16px;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.hero-stat:hover .hero-stat-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-stat-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-stat-label {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-cta-wrapper {
+    text-align: center;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Servicios Content Body */
+.servicios-content-body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.servicios-content-body p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-bottom: 1.5rem;
+}
+
+.servicios-content-body p:last-child {
+    margin-bottom: 0;
+}
+
+.servicios-content-body strong {
+    color: #1a1a1a;
+}
+
+/* Section Alt Background */
+.section-alt {
+    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+}
+
+/* Requisitos Lista - Mejorado estilo Landing */
+.requisitos-grid {
+    max-width: 850px;
+    margin: 2.5rem auto;
+}
+
+.requisitos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.requisitos-lista li {
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    position: relative;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1.1rem;
+    color: #2a2a2a;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+}
+
+.requisitos-lista li:last-child {
+    border-bottom: none;
+}
+
+.requisitos-lista li:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding-left: 4.5rem;
+}
+
+.requisitos-lista li::before {
+    content: '\2713';
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.requisitos-lista li:hover::before {
+    transform: translateY(-50%) scale(1.15);
+}
+
+.requisitos-lista li strong {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+/* Tabla Titulo */
+.tabla-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Tablas Costes Grid */
+.tablas-costes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tabla Comparativa Styles - Mejorado estilo Landing */
+.tabla-comparativa-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-comparativa {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tabla-comparativa thead {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+}
+
+.tabla-comparativa th {
+    padding: 1.5rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.tabla-comparativa th:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tabla-comparativa td {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1rem;
+    color: #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.tabla-comparativa tbody tr {
+    transition: all 0.3s ease;
+}
+
+.tabla-comparativa tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-comparativa tbody tr:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    transform: scale(1.01);
+}
+
+.tabla-comparativa tbody tr:hover td {
+    color: #1a1a1a;
+}
+
+.tabla-comparativa .fila-total {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.tabla-comparativa .fila-total td {
+    border-top: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.tabla-comparativa .fila-total strong {
+    color: #2ecc71;
+}
+
+/* Tabla Titulo mejorado */
+.tabla-titulo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.tabla-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1a1a1a 0%, #4a4a4a 100%);
+    border-radius: 2px;
+}
+
+/* Tabla Responsive */
+.tabla-responsive {
+    min-width: 600px;
+}
+
+/* Tabla Cantones */
+.tabla-cantones .tabla-comparativa {
+    min-width: 800px;
+}
+
+/* Proceso Timeline - Mejorado estilo Landing */
+.proceso-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    position: relative;
+}
+
+/* Linea conectora entre pasos */
+.proceso-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, #e0e0e0 0%, #1a1a1a 50%, #e0e0e0 100%);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.proceso-timeline .proceso-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.proceso-timeline .proceso-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center top, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.proceso-timeline .proceso-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.proceso-timeline .proceso-step:hover::before {
+    opacity: 1;
+}
+
+.proceso-timeline .proceso-number {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.proceso-timeline .proceso-step:hover .proceso-number {
+    transform: scale(1.15);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.proceso-timeline .proceso-content {
+    position: relative;
+    z-index: 1;
+}
+
+.proceso-timeline .proceso-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.proceso-timeline .proceso-content p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Highlight Box - Mejorado estilo Landing */
+.highlight-box {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e0e0e0;
+    border-left: 5px solid #1a1a1a;
+    border-radius: 0 20px 20px 0;
+    padding: 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at left center, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.highlight-box:hover {
+    border-left-color: #2ecc71;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateX(5px);
+}
+
+.highlight-box p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-box p strong {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+/* Para Quien Grid - Mejorado estilo Landing */
+.para-quien-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.para-quien-col {
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.para-quien-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.para-quien-col:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.para-quien-col.ideal {
+    border: 3px solid #2ecc71;
+}
+
+.para-quien-col.no-recomendada {
+    border: 3px solid #e74c3c;
+}
+
+.para-quien-col h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.para-quien-col h3::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.para-quien-col.ideal h3 {
+    color: #2ecc71;
+    border-bottom: 3px solid #2ecc71;
+}
+
+.para-quien-col.ideal h3::before {
+    content: '\2713';
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.para-quien-col.no-recomendada h3 {
+    color: #e74c3c;
+    border-bottom: 3px solid #e74c3c;
+}
+
+.para-quien-col.no-recomendada h3::before {
+    content: '\2717';
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.para-quien-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.para-quien-col li {
+    padding: 1rem 0 1rem 2.5rem;
+    position: relative;
+    font-size: 1.05rem;
+    color: #2a2a2a;
+    line-height: 1.6;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.para-quien-col li:last-child {
+    border-bottom: none;
+}
+
+.para-quien-col li:hover {
+    padding-left: 3rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.para-quien-col.ideal li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: 24px;
+    height: 24px;
+    background: #2ecc71;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.para-quien-col.ideal li:hover::before {
+    transform: scale(1.15);
+}
+
+.para-quien-col.no-recomendada li::before {
+    content: '\2717';
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: 24px;
+    height: 24px;
+    background: #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.para-quien-col.no-recomendada li:hover::before {
+    transform: scale(1.15);
+}
+
+/* Links Relacionados - Mejorado estilo Landing */
+.links-relacionados {
+    margin-top: 3.5rem;
+}
+
+.link-card {
+    display: block;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top center, rgba(192, 192, 192, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.link-card::after {
+    content: '\2192';
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%) translateX(-10px);
+    font-size: 1.5rem;
+    color: #c0c0c0;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-color: #1a1a1a;
+}
+
+.link-card:hover::before {
+    opacity: 1;
+}
+
+.link-card:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+    color: #1a1a1a;
+}
+
+.link-card h4 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.link-card:hover h4 {
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.link-card p {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.link-card:hover p {
+    color: #2a2a2a;
+}
+
+/* CTA Content */
+.cta-content {
+    margin-bottom: 2rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.cta-content p:last-child {
+    margin-bottom: 0;
+}
+
+.cta-content strong {
+    color: #ffffff;
+}
+
+/* Stagger 6 */
+.page-servicios .animate-on-scroll.stagger-6 { transition-delay: 0.6s; }
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .hero-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .tablas-costes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .para-quien-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-stat {
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .hero-stat-icon {
+        margin-bottom: 0;
+    }
+
+    .hero-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .proceso-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-timeline .proceso-step {
+        padding: 1.25rem;
+    }
+
+    .tabla-comparativa th,
+    .tabla-comparativa td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .para-quien-col {
+        padding: 1.5rem;
+    }
+
+    .para-quien-col h3 {
+        font-size: 1.25rem;
+    }
+
+    .highlight-box {
+        padding: 1.5rem;
+    }
+
+    .servicios-content-body p {
+        font-size: 1rem;
+    }
+
+    .faq-section .faq-question {
+        padding: 1.25rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .faq-section .faq-question::after {
+        font-size: 1.5rem;
+    }
+
+    .faq-section .faq-answer {
+        padding: 0 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .faq-section .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+
+    .page-servicios .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-servicios .shadow-grow:hover {
+        transform: translateY(-5px) !important;
+    }
+
+    /* Mobile adjustments para Para Quien */
+    .para-quien-col h3::before {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .para-quien-col li {
+        padding-left: 2.25rem;
+    }
+
+    .para-quien-col li:hover {
+        padding-left: 2.5rem;
+    }
+
+    /* Mobile adjustments para links relacionados */
+    .link-card::after {
+        display: none;
+    }
+
+    .link-card {
+        padding: 1.75rem;
+    }
+
+    /* Mobile adjustments para requisitos */
+    .requisitos-lista li {
+        padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+    }
+
+    .requisitos-lista li::before {
+        left: 1rem;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ==========================================================================
+   PAGE GMBH SUIZA - ESTILOS ADICIONALES
+   ========================================================================== */
+
+/* Mejoras visuales generales para fichas de servicio */
+.servicios-ficha-page .section-seo-block {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 5px solid #1a1a1a;
+    padding: 1.75rem 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.servicios-ficha-page .section-seo-block:hover {
+    border-left-color: #2ecc71;
+    transform: translateX(5px);
+}
+
+.servicios-ficha-page .section-seo-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0;
+}
+
+/* Animacion de entrada suave */
+.servicios-ficha-page .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-ficha-page .animate-on-scroll.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto pulse para valores importantes */
+@keyframes pulse-value {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.hero-stat-value {
+    animation: pulse-value 3s ease-in-out infinite;
+}
+
+.hero-stat:hover .hero-stat-value {
+    animation: none;
+}
+
+/* Gradiente de fondo para secciones alternas mejorado */
+.servicios-ficha-page .section-alt {
+    background: linear-gradient(180deg, #f5f5f5 0%, #fafafa 50%, #ffffff 100%);
+    position: relative;
+}
+
+.servicios-ficha-page .section-alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(192, 192, 192, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(169, 169, 169, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* CTA Section mejorada */
+.servicios-ficha-page .servicios-cta-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.servicios-ficha-page .servicios-cta-wrapper {
+    padding: 1rem 0;
+}
+
+.servicios-ficha-page .servicios-cta-wrapper h2 {
+    font-size: 2.25rem;
+    line-height: 1.3;
+}
+
+.servicios-ficha-page .servicios-cta-price {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servicios-ficha-page .servicios-cta-price .price-amount {
+    font-size: 4rem;
+    background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shimmer 3s ease infinite;
+    background-size: 200% auto;
+}
+
+@keyframes gradient-shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Foto CTA con efecto */
+.servicios-ficha-page .cta-photo {
+    border: 5px solid #ffffff;
+    box-shadow: 0 15px 50px rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-ficha-page .cta-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
+}
+
+/* Slots indicator */
+.servicios-ficha-page .cta-slots {
+    display: inline-block;
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    color: #e74c3c;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 2rem;
+}
+
+/* FAQ mejorado para fichas */
+.servicios-ficha-page .faq-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.servicios-ficha-page .faq-section .faq-list {
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-ficha-page .faq-item {
+    transition: all 0.3s ease;
+}
+
+.servicios-ficha-page .faq-item:hover {
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.servicios-ficha-page .faq-item.active {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 4px solid #1a1a1a;
+}
+
+/* Responsive adicional para fichas */
+@media (max-width: 1024px) {
+    .servicios-ficha-page .servicios-cta-price .price-amount {
+        font-size: 3rem;
+    }
+
+    .servicios-ficha-page .servicios-cta-wrapper h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-ficha-page .section-seo-title {
+        font-size: 1.25rem;
+    }
+
+    .servicios-ficha-page .servicios-cta-price {
+        padding: 1.5rem 2rem;
+    }
+
+    .servicios-ficha-page .servicios-cta-price .price-amount {
+        font-size: 2.5rem;
+    }
+
+    .servicios-ficha-page .cta-slots {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================================
+   PAGE CREAR EMPRESA SUIZA - ESTILOS ESPECIFICOS
+   ========================================================================== */
+
+/* CTA Note */
+.cta-note {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Razones Grid - 5 items centrados */
+.razones-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.razones-grid.servicios-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 1025px) {
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(4),
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .razones-grid.servicios-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(1),
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(2),
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .razones-grid.servicios-grid-3 .servicio-card:nth-child(5) {
+        grid-column: 4 / span 2;
+    }
+}
+
+/* Errores Grid */
+.errores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.error-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.error-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at left center, rgba(231, 76, 60, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.error-card:hover {
+    transform: translateX(10px);
+    border-color: #e74c3c;
+    box-shadow: 0 12px 40px rgba(231, 76, 60, 0.15);
+}
+
+.error-card:hover::before {
+    opacity: 1;
+}
+
+.error-number {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.error-card:hover .error-number {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+}
+
+.error-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.error-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.error-content p {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.error-content p a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.error-content p a:hover {
+    color: #e74c3c;
+}
+
+/* Tabla estructuras links */
+.tabla-estructuras a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.tabla-estructuras a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.tabla-estructuras tbody a {
+    color: #1a1a1a;
+}
+
+.tabla-estructuras tbody a:hover {
+    color: #2ecc71;
+}
+
+/* Responsive Errores */
+@media (max-width: 768px) {
+    .error-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .error-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .error-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .error-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .razones-grid.servicios-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Categoria page specific styles */
+.servicios-categoria-page .section-cta-wrapper p {
+    margin-bottom: 1.5rem;
+}
+
+.servicios-categoria-page .section-cta-wrapper p a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.servicios-categoria-page .section-cta-wrapper p a:hover {
+    color: #2ecc71;
+}
+
+/* ==========================================================================
+   CTA SECTION - LANDING STYLE (para servicios-ficha-page)
+   ========================================================================== */
+
+/* CTA Main Block - Layout de dos columnas */
+.servicios-cta-section .cta-main-block {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.servicios-cta-section .cta-photo-column {
+    width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.servicios-cta-section .cta-photo-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-cta-section .cta-photo-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+}
+
+.servicios-cta-section .cta-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios-cta-section .cta-photo-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.servicios-cta-section .cta-photo-role {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+}
+
+.servicios-cta-section .cta-content-column {
+    flex: 1;
+    text-align: left;
+}
+
+.servicios-cta-section .cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.servicios-cta-section .cta-seo-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.servicios-cta-section .cta-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.servicios-cta-section .cta-price-block {
+    margin: 2rem 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+}
+
+.servicios-cta-section .cta-price {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.servicios-cta-section .cta-price-detail {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.servicios-cta-section .cta-conditions {
+    margin-bottom: 1.5rem;
+}
+
+.servicios-cta-section .cta-conditions p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.servicios-cta-section .cta-honesty {
+    margin-bottom: 2rem;
+    border-left: 3px solid rgba(192, 192, 192, 0.5);
+    padding-left: 1.25rem;
+}
+
+.servicios-cta-section .cta-honesty p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.servicios-cta-section .cta-button {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(192, 192, 192, 0.3);
+    text-align: center;
+    display: block;
+}
+
+.servicios-cta-section .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+}
+
+.servicios-cta-section .cta-slots {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Responsive CTA Main Block */
+@media (max-width: 768px) {
+    .servicios-cta-section .cta-main-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .servicios-cta-section .cta-photo-column {
+        width: 100%;
+    }
+
+    .servicios-cta-section .cta-photo-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .servicios-cta-section .cta-photo-name {
+        font-size: 1.25rem;
+    }
+
+    .servicios-cta-section .cta-content-column {
+        text-align: center;
+    }
+
+    .servicios-cta-section .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .servicios-cta-section .cta-seo-title {
+        font-size: 1.1rem;
+    }
+
+    .servicios-cta-section .cta-text p {
+        font-size: 1rem;
+    }
+
+    .servicios-cta-section .cta-price-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .servicios-cta-section .cta-price {
+        font-size: 2.5rem;
+    }
+
+    .servicios-cta-section .cta-honesty {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid rgba(192, 192, 192, 0.3);
+        padding-top: 1.25rem;
+    }
+
+    .servicios-cta-section .cta-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   GOOGLE FAQ SECTION - Preguntas SEO
+   ========================================== */
+
+.google-faq-section {
+    background: #ffffff;
+}
+
+.google-faq-item {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.google-faq-item:hover {
+    border-color: #1a1a1a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.google-faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.google-faq-question {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.google-faq-snippet {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 4px solid #1a1a1a;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 12px 12px 0;
+}
+
+.google-faq-snippet p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2a2a2a;
+    margin: 0;
+}
+
+.google-faq-content {
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.google-faq-content p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.google-faq-content h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.google-faq-content .requisitos-lista {
+    margin-bottom: 1.5rem;
+}
+
+.google-faq-content .requisitos-lista li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+.google-faq-content .tabla-comparativa-wrapper {
+    margin: 1.5rem 0;
+}
+
+.google-faq-content .tabla-nota {
+    font-size: 0.9rem;
+    color: #666666;
+    font-style: italic;
+    margin-top: 0.75rem;
+}
+
+.google-faq-content .highlight-box {
+    margin: 1.5rem 0;
+}
+
+.google-faq-content .requisitos-detalle {
+    margin: 1.5rem 0;
+}
+
+/* Responsive Google FAQ */
+@media (max-width: 768px) {
+    .google-faq-item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .google-faq-question {
+        font-size: 1.25rem;
+    }
+
+    .google-faq-snippet {
+        padding: 1rem;
+    }
+
+    .google-faq-snippet p {
+        font-size: 1rem;
+    }
+
+    .google-faq-content h4 {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .google-faq-item {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .google-faq-question {
+        font-size: 1.1rem;
+    }
+
+    .google-faq-snippet {
+        padding: 0.875rem;
+        border-left-width: 3px;
+    }
+}
+
+/* ==========================================
+   MOBILE-FIRST RESPONSIVE IMPROVEMENTS
+   Optimizado para conversion en movil
+   ========================================== */
+
+/* Hero Stats Mobile */
+@media (max-width: 768px) {
+    .hero-stats-section {
+        padding: 1.5rem 0 2rem;
+    }
+
+    .hero-stats-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+
+    .hero-stat {
+        flex: 1;
+        min-width: 0;
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    .hero-stat-icon {
+        display: none;
+    }
+
+    .hero-stat-value {
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.7rem;
+        line-height: 1.2;
+        display: block;
+    }
+
+    .hero-cta-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    .hero-cta-wrapper .btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Grids Mobile - 2 columnas en tablet, 1 en movil */
+@media (max-width: 768px) {
+    .servicios-grid-2,
+    .servicios-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .servicio-card {
+        padding: 1.25rem;
+    }
+
+    .servicio-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .servicio-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .servicio-icon {
+        display: none;
+    }
+}
+
+/* Tablas Responsive - Scroll horizontal */
+@media (max-width: 768px) {
+    .tabla-comparativa-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+
+    .tabla-comparativa {
+        min-width: 100%;
+        font-size: 0.85rem;
+    }
+
+    .tabla-comparativa th,
+    .tabla-comparativa td {
+        padding: 0.75rem 0.5rem;
+        white-space: nowrap;
+    }
+
+    .tabla-comparativa td:first-child {
+        white-space: normal;
+        min-width: 150px;
+    }
+
+    .tablas-costes-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tabla-titulo {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Requisitos Lista Mobile */
+@media (max-width: 768px) {
+    .requisitos-lista {
+        padding-left: 1.25rem;
+    }
+
+    .requisitos-lista li {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+}
+
+/* Proceso Timeline Compacto - 4 columnas para fichas de servicio */
+.proceso-timeline.proceso-compact {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.proceso-timeline.proceso-compact::before {
+    display: none; /* Ocultar línea conectora en layout compacto */
+}
+
+.proceso-timeline.proceso-compact .proceso-step {
+    padding: 1.5rem;
+}
+
+.proceso-timeline.proceso-compact .proceso-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.proceso-timeline.proceso-compact .proceso-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.proceso-timeline.proceso-compact .proceso-content p {
+    font-size: 0.9rem;
+}
+
+/* Proceso Timeline Compacto Tablet */
+@media (max-width: 1024px) {
+    .proceso-timeline.proceso-compact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Proceso Timeline Compacto Mobile */
+@media (max-width: 768px) {
+    .proceso-timeline {
+        gap: 1rem;
+    }
+
+    .proceso-timeline.proceso-compact {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-timeline.proceso-compact .proceso-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border-left: 4px solid #1a1a1a;
+    }
+
+    .proceso-step .proceso-number {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 0.9rem;
+        line-height: 32px;
+    }
+
+    .proceso-step .proceso-content h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .proceso-step .proceso-content p {
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.4;
+    }
+}
+
+/* Para Quien Grid Mobile */
+@media (max-width: 768px) {
+    .para-quien-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .para-quien-col {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .para-quien-col h3 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .para-quien-col ul {
+        padding-left: 1rem;
+    }
+
+    .para-quien-col li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+}
+
+/* Highlight Box Mobile */
+@media (max-width: 768px) {
+    .highlight-box {
+        padding: 1rem 1.25rem;
+        margin: 1.25rem 0;
+        border-radius: 10px;
+    }
+
+    .highlight-box p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* FAQ Mobile */
+@media (max-width: 768px) {
+    .faq-list {
+        gap: 0.75rem;
+    }
+
+    .faq-item {
+        border-radius: 10px;
+    }
+
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Links Relacionados Mobile */
+@media (max-width: 768px) {
+    .links-relacionados {
+        gap: 0.75rem;
+    }
+
+    .link-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .link-card h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .link-card p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}
+
+/* CTA Compacto Mobile */
+@media (max-width: 768px) {
+    .cta-main-block.cta-compact {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .cta-compact .cta-photo-column {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .cta-compact .cta-photo-circle {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .cta-compact .cta-photo-circle img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cta-compact .cta-photo-name {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .cta-compact .cta-photo-role {
+        font-size: 0.8rem;
+    }
+
+    .cta-compact .cta-seo-title {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .cta-compact .cta-text p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .cta-compact .cta-price-block {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .cta-compact .cta-price {
+        font-size: 2rem;
+    }
+
+    .cta-compact .cta-price-detail {
+        font-size: 0.85rem;
+    }
+
+    .cta-compact .cta-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .cta-compact .cta-slots {
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+    }
+}
+
+/* Section Titles Mobile */
+@media (max-width: 768px) {
+    .section-seo-block {
+        margin-bottom: 1.25rem;
+    }
+
+    .section-seo-title {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .servicios-content-body p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Container Mobile */
+@media (max-width: 768px) {
+    .servicios-content .container {
+        padding: 0 1rem;
+    }
+
+    .servicios-content {
+        padding: 2rem 0;
+    }
+
+    .servicios-content.section-alt {
+        padding: 2rem 0;
+    }
+}
+
+/* Extra Small Screens (iPhone SE, etc) */
+@media (max-width: 375px) {
+    .hero-stat-value {
+        font-size: 1rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.65rem;
+    }
+
+    .servicio-card {
+        padding: 1rem;
+    }
+
+    .cta-compact .cta-price {
+        font-size: 1.75rem;
+    }
+
+    .btn-primary {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE-FIRST OPTIMIZATIONS - AUDITORIA ENERO 2026
+   Optimizaciones adicionales para móviles pequeños y mejora UX táctil
+   ========================================================================== */
+
+/* --- Breakpoint 480px (Móviles pequeños) --- */
+@media (max-width: 480px) {
+    /* Container con padding reducido */
+    .page-servicios .container {
+        padding: 0 1rem;
+    }
+
+    /* Hero más compacto */
+    .servicios-hero {
+        padding: 60px 0 30px;
+    }
+
+    .servicios-hero-title {
+        font-size: 1.75rem;
+        line-height: 1.25;
+    }
+
+    .servicios-hero-subtitle-visual {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Hero SEO Block más compacto */
+    .hero-seo-block {
+        padding: 1.25rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+    }
+
+    .hero-seo-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-seo-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-seo-description {
+        font-size: 0.85rem;
+    }
+
+    .hero-seo-logo img {
+        max-width: 120px;
+    }
+
+    /* Breadcrumb con wrap */
+    .breadcrumb ol {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.25rem;
+    }
+
+    .breadcrumb li {
+        font-size: 0.8rem;
+    }
+
+    /* Section hooks más pequeños */
+    .section-hook {
+        font-size: 1.2rem;
+        line-height: 1.35;
+    }
+
+    /* Servicio cards ultra compactas */
+    .servicio-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .servicio-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .servicio-card > p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    .servicio-hook {
+        font-size: 0.9rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .servicio-includes li {
+        font-size: 0.85rem;
+        padding: 0.375rem 0;
+        padding-left: 1.25rem;
+    }
+
+    /* Proceso steps compactos */
+    .proceso-grid {
+        gap: 1rem;
+    }
+
+    .proceso-step {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .proceso-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .proceso-step h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .proceso-step p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Timeline compacto */
+    .proceso-timeline {
+        padding-left: 50px;
+    }
+
+    .proceso-timeline::before {
+        left: 16px;
+        width: 3px;
+    }
+
+    .proceso-timeline .proceso-number {
+        left: -50px;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .proceso-timeline .proceso-step {
+        padding: 1rem;
+    }
+
+    .proceso-timeline .proceso-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .proceso-timeline .proceso-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Tablas más compactas */
+    .tabla-comparativa-wrapper {
+        margin: 1rem -1rem;
+        border-radius: 0;
+    }
+
+    .tabla-comparativa {
+        font-size: 0.8rem;
+    }
+
+    .tabla-comparativa thead th {
+        padding: 0.875rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .tabla-comparativa tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .tabla-titulo {
+        font-size: 0.95rem;
+    }
+
+    /* Highlight box compacto */
+    .highlight-box {
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left-width: 4px;
+    }
+
+    .highlight-box p {
+        font-size: 0.875rem;
+        line-height: 1.55;
+    }
+
+    /* Para quien grid */
+    .para-quien-grid {
+        gap: 1rem;
+    }
+
+    .para-quien-col,
+    .para-quien-box {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .para-quien-col h3,
+    .para-quien-box h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .para-quien-col h3::before {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .para-quien-col li,
+    .para-quien-box ul li {
+        font-size: 0.875rem;
+        padding: 0.625rem 0 0.625rem 2rem;
+    }
+
+    /* Requisitos lista */
+    .requisitos-grid {
+        margin: 1.5rem auto;
+    }
+
+    .requisitos-lista li {
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 0.9rem;
+    }
+
+    .requisitos-lista li::before {
+        left: 0.75rem;
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+
+    /* FAQ compacto */
+    .faq-section .faq-list {
+        border-radius: 12px;
+    }
+
+    .faq-section .faq-question {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-section .faq-question::after {
+        font-size: 1.25rem;
+    }
+
+    .faq-section .faq-answer {
+        padding: 0 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .faq-section .faq-item.active .faq-answer {
+        padding: 0 1.25rem 1rem 1.25rem;
+    }
+
+    /* CTA Section */
+    .servicios-cta-section .cta-photo-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .servicios-cta-section .cta-photo-name {
+        font-size: 1.1rem;
+    }
+
+    .servicios-cta-section .cta-title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .servicios-cta-section .cta-seo-title {
+        font-size: 1rem;
+    }
+
+    .servicios-cta-section .cta-text p {
+        font-size: 0.9rem;
+    }
+
+    .servicios-cta-section .cta-price-block {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .servicios-cta-section .cta-price {
+        font-size: 2rem;
+    }
+
+    .servicios-cta-section .cta-button {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    /* Hero Stats Grid horizontal */
+    .hero-stats-grid {
+        gap: 0.375rem;
+    }
+
+    .hero-stat {
+        padding: 0.75rem 0.5rem;
+        border-radius: 10px;
+    }
+
+    .hero-stat-value {
+        font-size: 0.95rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.6rem;
+    }
+
+    /* Comparativa grid */
+    .comparativa-grid {
+        gap: 1rem;
+    }
+
+    .comparativa-box {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .comparativa-box h4 {
+        font-size: 0.95rem;
+    }
+
+    .comparativa-box ul li {
+        font-size: 0.875rem;
+    }
+
+    /* Error cards */
+    .error-card {
+        padding: 1.25rem;
+        gap: 1rem;
+        border-radius: 12px;
+    }
+
+    .error-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+    }
+
+    .error-content h3 {
+        font-size: 1rem;
+    }
+
+    .error-content p {
+        font-size: 0.875rem;
+    }
+
+    /* Estructura cards */
+    .estructura-card {
+        padding: 1.25rem;
+    }
+
+    .estructura-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .estructura-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .estructura-card > p {
+        font-size: 0.9rem;
+    }
+
+    /* Newsletter banner */
+    .newsletter-conversion-banner {
+        padding: 1.5rem 1.25rem;
+        margin: 0 0.5rem;
+        border-radius: 12px;
+    }
+
+    .newsletter-conversion-banner .hook-text {
+        font-size: 1rem;
+    }
+
+    .newsletter-conversion-banner .hook-text:first-child {
+        font-size: 1.1rem;
+    }
+
+    .newsletter-conversion-banner .banner-agitation {
+        padding: 0.875rem;
+    }
+
+    .newsletter-conversion-banner .banner-agitation p,
+    .newsletter-conversion-banner .banner-solution p {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-conversion-banner .newsletter-input {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .newsletter-conversion-banner .newsletter-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Selector links compactos */
+    .selector-links {
+        gap: 0.75rem;
+    }
+
+    .selector-link {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    /* Google FAQ */
+    .google-faq-item {
+        padding: 1.25rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+    }
+
+    .google-faq-question {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .google-faq-snippet {
+        padding: 0.875rem;
+        border-left-width: 3px;
+    }
+
+    .google-faq-snippet p {
+        font-size: 0.95rem;
+    }
+
+    /* Botones táctiles - mínimo 44px de altura para accesibilidad */
+    .btn-primary,
+    .btn-secondary,
+    .selector-link,
+    .newsletter-button,
+    .cta-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* --- Breakpoint 375px (iPhone SE, dispositivos muy pequeños) --- */
+@media (max-width: 375px) {
+    .page-servicios .container {
+        padding: 0 0.875rem;
+    }
+
+    .servicios-hero {
+        padding: 50px 0 25px;
+    }
+
+    .servicios-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .servicios-hero-subtitle-visual {
+        font-size: 0.9rem;
+    }
+
+    .hero-seo-block {
+        padding: 1rem;
+    }
+
+    .hero-seo-title {
+        font-size: 1rem;
+    }
+
+    .hero-seo-logo img {
+        max-width: 100px;
+    }
+
+    .section-hook {
+        font-size: 1.1rem;
+    }
+
+    .servicio-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .proceso-timeline {
+        padding-left: 45px;
+    }
+
+    .proceso-timeline .proceso-number {
+        left: -45px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .hero-stats-grid {
+        gap: 0.25rem;
+    }
+
+    .hero-stat {
+        padding: 0.5rem 0.375rem;
+    }
+
+    .hero-stat-value {
+        font-size: 0.875rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.55rem;
+    }
+
+    .servicios-cta-section .cta-photo-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .servicios-cta-section .cta-title {
+        font-size: 1.15rem;
+    }
+
+    .servicios-cta-section .cta-price {
+        font-size: 1.75rem;
+    }
+
+    .faq-section .faq-question {
+        font-size: 0.85rem;
+        padding: 0.875rem 1rem;
+    }
+
+    .newsletter-conversion-banner {
+        padding: 1.25rem 1rem;
+    }
+
+    .newsletter-conversion-banner .hook-text {
+        font-size: 0.95rem;
+    }
+
+    .newsletter-conversion-banner .hook-text:first-child {
+        font-size: 1rem;
+    }
+}
+
+/* --- Breakpoint 320px (Dispositivos muy pequeños) --- */
+@media (max-width: 320px) {
+    .page-servicios .container {
+        padding: 0 0.75rem;
+    }
+
+    .servicios-hero-title {
+        font-size: 1.35rem;
+    }
+
+    .servicios-hero-subtitle-visual {
+        font-size: 0.85rem;
+    }
+
+    .hero-seo-block {
+        padding: 0.875rem;
+    }
+
+    .hero-seo-logo img {
+        max-width: 80px;
+    }
+
+    .section-hook {
+        font-size: 1rem;
+    }
+
+    .servicio-card {
+        padding: 0.875rem;
+    }
+
+    .servicio-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .servicio-card > p {
+        font-size: 0.8rem;
+    }
+
+    .tabla-comparativa {
+        font-size: 0.75rem;
+    }
+
+    .hero-stat-value {
+        font-size: 0.8rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.5rem;
+    }
+}
+
+/* ==========================================================================
+   MEJORAS DE ACCESIBILIDAD TÁCTIL
+   Asegura que los elementos interactivos sean fáciles de tocar
+   ========================================================================== */
+
+@media (pointer: coarse) {
+    /* Dispositivos táctiles */
+    .faq-question,
+    .selector-link,
+    .btn-primary,
+    .btn-secondary,
+    .cta-button,
+    .newsletter-button,
+    .link-card {
+        min-height: 48px;
+    }
+
+    /* Más espacio entre items en listas */
+    .servicio-includes li,
+    .requisitos-lista li,
+    .para-quien-col li {
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+    }
+
+    /* FAQ con área táctil más grande */
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   INDICADOR DE SCROLL HORIZONTAL PARA TABLAS
+   Muestra al usuario que puede hacer scroll
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .tabla-comparativa-wrapper {
+        position: relative;
+    }
+
+    .tabla-comparativa-wrapper::before {
+        content: '← Desliza →';
+        position: absolute;
+        top: -24px;
+        right: 0;
+        font-size: 0.7rem;
+        color: #6c757d;
+        background: #f8f9fa;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        z-index: 5;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .tabla-comparativa-wrapper:hover::before {
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   OPTIMIZACIONES DE RENDIMIENTO MÓVIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Desactivar efectos hover en móvil para mejor rendimiento */
+    .servicio-card:hover,
+    .proceso-step:hover,
+    .estructura-card:hover,
+    .para-quien-col:hover,
+    .error-card:hover {
+        transform: none;
+    }
+
+    /* Reducir sombras para mejor rendimiento */
+    .servicio-card,
+    .proceso-step,
+    .estructura-card,
+    .faq-section .faq-list,
+    .highlight-box {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Simplificar gradientes */
+    .servicios-hero {
+        background: #f8f8f8;
+    }
+
+    .servicios-content {
+        background: #ffffff;
+    }
+
+    .section-alt {
+        background: #f5f5f5;
+    }
+}
+
+/* ========================================
+   PREGUNTAS SEO DETALLADAS
+   ======================================== */
+
+.pregunta-seo-block {
+    background: #ffffff;
+    border: 2px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pregunta-seo-block:hover {
+    border-color: #d0d0d0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.section-alt .pregunta-seo-block {
+    background: #ffffff;
+}
+
+.pregunta-seo-titulo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.pregunta-seo-snippet {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+    border-left: 4px solid #2ecc71;
+    border-radius: 0 12px 12px 0;
+}
+
+.pregunta-seo-snippet strong {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.pregunta-seo-contenido {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+}
+
+.pregunta-seo-contenido p {
+    margin-bottom: 1.25rem;
+}
+
+.pregunta-seo-contenido h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 2rem 0 1rem 0;
+}
+
+.pregunta-seo-contenido ul.requisitos-lista {
+    margin: 1rem 0 1.5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pregunta-seo-contenido ul.requisitos-lista li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #2a2a2a;
+}
+
+.pregunta-seo-contenido ul.requisitos-lista li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 8px;
+    height: 8px;
+    background: #2ecc71;
+    border-radius: 50%;
+}
+
+.pregunta-seo-contenido ul.requisitos-lista li strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.pregunta-seo-contenido .tabla-comparativa-wrapper {
+    margin: 1.5rem 0;
+}
+
+.pregunta-seo-contenido .highlight-box {
+    margin-top: 2rem;
+}
+
+.tabla-nota {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Preguntas SEO */
+@media (max-width: 768px) {
+    .pregunta-seo-block {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .pregunta-seo-titulo {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .pregunta-seo-snippet {
+        font-size: 1rem;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pregunta-seo-contenido {
+        font-size: 1rem;
+    }
+
+    .pregunta-seo-contenido h4 {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.75rem 0;
+    }
+
+    .pregunta-seo-contenido ul.requisitos-lista li {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pregunta-seo-block {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+
+    .pregunta-seo-titulo {
+        font-size: 1.15rem;
+    }
+
+    .pregunta-seo-snippet {
+        font-size: 0.95rem;
+        padding: 1rem;
+        border-left-width: 3px;
+    }
+
+    .pregunta-seo-contenido {
+        font-size: 0.95rem;
+    }
+
+    .pregunta-seo-contenido ul.requisitos-lista li {
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================================================
+   CORRECCIONES GMBH SUIZA Y FICHAS DE SERVICIO - FEB 2026
+   Mejoras de visibilidad, animaciones y compatibilidad móvil
+   ========================================================================== */
+
+/* --- Animate On Scroll BASE para servicios-ficha-page (CRÍTICO) --- */
+.servicios-ficha-page .animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.servicios-ficha-page .animate-on-scroll.animate-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- Stagger Delays para servicios-ficha-page --- */
+.servicios-ficha-page .animate-on-scroll.stagger-1 { transition-delay: 0.1s; }
+.servicios-ficha-page .animate-on-scroll.stagger-2 { transition-delay: 0.2s; }
+.servicios-ficha-page .animate-on-scroll.stagger-3 { transition-delay: 0.3s; }
+.servicios-ficha-page .animate-on-scroll.stagger-4 { transition-delay: 0.4s; }
+.servicios-ficha-page .animate-on-scroll.stagger-5 { transition-delay: 0.5s; }
+.servicios-ficha-page .animate-on-scroll.stagger-6 { transition-delay: 0.6s; }
+
+/* --- Slide Fade para servicios-ficha-page --- */
+.servicios-ficha-page .slide-fade {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-ficha-page .slide-fade.animate-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Fade Up para servicios-ficha-page --- */
+.servicios-ficha-page .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-ficha-page .fade-up.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Zoom In para servicios-ficha-page --- */
+.servicios-ficha-page .zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios-ficha-page .zoom-in.animate-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- Shadow Grow para servicios-ficha-page --- */
+.servicios-ficha-page .shadow-grow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+.servicios-ficha-page .shadow-grow.animate-visible {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.servicios-ficha-page .shadow-grow:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18) !important;
+    transform: translateY(-10px) !important;
+}
+
+/* --- Shine Effect para servicios-ficha-page --- */
+.servicios-ficha-page .shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.servicios-ficha-page .shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    transition: left 0.7s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.servicios-ficha-page .shine-effect.animate-visible::before {
+    left: 100%;
+}
+
+/* --- Counter Glow para servicios-ficha-page --- */
+.servicios-ficha-page .counter-glow {
+    animation: none;
+}
+
+.servicios-ficha-page .counter-glow.animate-visible {
+    animation: counter-glow-ficha 2s ease-in-out infinite;
+}
+
+@keyframes counter-glow-ficha {
+    0%, 100% {
+        text-shadow: 0 0 0 transparent;
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(46, 204, 113, 0.5);
+    }
+}
+
+/* --- Mejoras visuales para tablas sin thead --- */
+.servicios-ficha-page .tabla-comparativa tbody tr:first-child td {
+    padding-top: 1.5rem;
+}
+
+.servicios-ficha-page .tabla-comparativa tbody tr:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* --- Mejor contraste y visibilidad en tablas --- */
+.servicios-ficha-page .tabla-comparativa td:first-child {
+    font-weight: 500;
+    color: #1a1a1a;
+    background: rgba(248, 249, 250, 0.5);
+}
+
+.servicios-ficha-page .tabla-comparativa td:last-child {
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: right;
+}
+
+/* --- Fila total más prominente --- */
+.servicios-ficha-page .tabla-comparativa .fila-total {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-top: 3px solid #2ecc71;
+}
+
+.servicios-ficha-page .tabla-comparativa .fila-total td {
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 1.25rem;
+}
+
+.servicios-ficha-page .tabla-comparativa .fila-total td:last-child {
+    color: #2ecc71;
+    background: transparent;
+}
+
+/* --- Mejor visibilidad de Hero Stats --- */
+.servicios-ficha-page .hero-stat {
+    background: #ffffff;
+    border: 2px solid #e8e8e8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.servicios-ficha-page .hero-stat:hover {
+    border-color: #1a1a1a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.servicios-ficha-page .hero-stat-value {
+    font-size: 2rem;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.servicios-ficha-page .hero-stat-label {
+    font-size: 0.85rem;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* --- CTA wrapper centrado --- */
+.servicios-ficha-page .hero-cta-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* --- Mejoras Para Quien Grid --- */
+.servicios-ficha-page .para-quien-col.ideal {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 2px solid #86efac;
+}
+
+.servicios-ficha-page .para-quien-col.ideal h3 {
+    color: #166534;
+}
+
+.servicios-ficha-page .para-quien-col.no-recomendada {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 2px solid #fca5a5;
+}
+
+.servicios-ficha-page .para-quien-col.no-recomendada h3 {
+    color: #991b1b;
+}
+
+/* --- Mejoras FAQ --- */
+.servicios-ficha-page .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.servicios-ficha-page .faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #6c757d;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.servicios-ficha-page .faq-item.active .faq-question::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.servicios-ficha-page .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    padding: 0 1.5rem;
+}
+
+.servicios-ficha-page .faq-answer[hidden] {
+    display: block;
+    max-height: 0;
+    padding: 0 1.5rem;
+}
+
+.servicios-ficha-page .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.servicios-ficha-page .faq-item.active .faq-answer[hidden] {
+    max-height: 0;
+    padding: 0 1.5rem;
+}
+
+.servicios-ficha-page .faq-list {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.servicios-ficha-page .faq-item {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.servicios-ficha-page .faq-item:last-child {
+    border-bottom: none;
+}
+
+/* --- CTA Main Block mejorado --- */
+.servicios-ficha-page .cta-main-block {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.servicios-ficha-page .cta-photo-column {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.servicios-ficha-page .cta-photo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.servicios-ficha-page .cta-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios-ficha-page .cta-photo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.servicios-ficha-page .cta-photo-role {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.servicios-ficha-page .cta-content-column {
+    flex: 1;
+}
+
+.servicios-ficha-page .cta-seo-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.servicios-ficha-page .cta-text p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.servicios-ficha-page .cta-price-block {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servicios-ficha-page .cta-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2ecc71;
+    display: block;
+}
+
+.servicios-ficha-page .cta-price-detail {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.servicios-ficha-page .cta-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: #2ecc71;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.servicios-ficha-page .cta-button:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+}
+
+.servicios-ficha-page .cta-slots {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+/* --- Links relacionados mejorados --- */
+.servicios-ficha-page .link-card {
+    display: block;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.servicios-ficha-page .link-card:hover {
+    border-color: #1a1a1a;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-ficha-page .link-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.servicios-ficha-page .link-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* --- Proceso Timeline para 4 pasos --- */
+.servicios-ficha-page .proceso-timeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.servicios-ficha-page .proceso-timeline::before {
+    top: 45px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: linear-gradient(90deg, #e0e0e0 0%, #1a1a1a 20%, #1a1a1a 80%, #e0e0e0 100%);
+    opacity: 0.4;
+}
+
+.servicios-ficha-page .proceso-timeline .proceso-step {
+    padding: 1.75rem 1.25rem;
+}
+
+.servicios-ficha-page .proceso-timeline .proceso-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+}
+
+.servicios-ficha-page .proceso-timeline .proceso-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicios-ficha-page .proceso-timeline .proceso-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE MÓVIL - FICHAS DE SERVICIO
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .servicios-ficha-page .cta-main-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .servicios-ficha-page .cta-content-column {
+        width: 100%;
+    }
+
+    /* Proceso Timeline en tablet */
+    .servicios-ficha-page .proceso-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline::before {
+        display: none;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-step {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-content h3 {
+        font-size: 1rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-content p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero Stats en móvil */
+    .servicios-ficha-page .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .servicios-ficha-page .hero-stat {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 1.25rem;
+    }
+
+    .servicios-ficha-page .hero-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .servicios-ficha-page .hero-stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Tablas en móvil */
+    .servicios-ficha-page .tabla-comparativa-wrapper {
+        margin: 1.5rem -0.5rem;
+        padding: 0 0.5rem;
+        border-radius: 12px;
+    }
+
+    .servicios-ficha-page .tabla-comparativa {
+        min-width: 100%;
+        border-radius: 12px;
+    }
+
+    .servicios-ficha-page .tabla-comparativa td {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+
+    .servicios-ficha-page .tabla-comparativa td:first-child {
+        min-width: 55%;
+    }
+
+    .servicios-ficha-page .tabla-comparativa td:last-child {
+        min-width: 45%;
+        text-align: right;
+    }
+
+    .servicios-ficha-page .tabla-comparativa .fila-total td {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .servicios-ficha-page .tabla-titulo {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Proceso Timeline móvil */
+    .servicios-ficha-page .proceso-timeline {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline::before {
+        display: none;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-step {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        border-left: 4px solid #1a1a1a;
+        border-radius: 0 12px 12px 0;
+        background: #f8f9fa;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-number {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-content h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .servicios-ficha-page .proceso-timeline .proceso-content p {
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    /* Para quien grid */
+    .servicios-ficha-page .para-quien-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .servicios-ficha-page .para-quien-col {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .servicios-ficha-page .para-quien-col h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .servicios-ficha-page .para-quien-col li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* FAQ móvil */
+    .servicios-ficha-page .faq-question {
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .servicios-ficha-page .faq-answer {
+        padding: 0 1.25rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* CTA móvil */
+    .servicios-ficha-page .cta-main-block {
+        padding: 1.5rem;
+        border-radius: 16px;
+        gap: 1.5rem;
+    }
+
+    .servicios-ficha-page .cta-photo-column {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .servicios-ficha-page .cta-photo-circle {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .servicios-ficha-page .cta-seo-title {
+        font-size: 1.35rem;
+    }
+
+    .servicios-ficha-page .cta-text p {
+        font-size: 0.9rem;
+    }
+
+    .servicios-ficha-page .cta-price-block {
+        padding: 1rem;
+    }
+
+    .servicios-ficha-page .cta-price {
+        font-size: 2rem;
+    }
+
+    .servicios-ficha-page .cta-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Links relacionados */
+    .servicios-ficha-page .links-relacionados {
+        gap: 0.75rem;
+    }
+
+    .servicios-ficha-page .link-card {
+        padding: 1rem 1.25rem;
+    }
+
+    .servicios-ficha-page .link-card h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Stats extra pequeño */
+    .servicios-ficha-page .hero-stat {
+        padding: 0.875rem 1rem;
+    }
+
+    .servicios-ficha-page .hero-stat-value {
+        font-size: 1.25rem;
+    }
+
+    .servicios-ficha-page .hero-stat-label {
+        font-size: 0.7rem;
+    }
+
+    /* Tablas compactas */
+    .servicios-ficha-page .tabla-comparativa td {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.85rem;
+    }
+
+    .servicios-ficha-page .tabla-titulo {
+        font-size: 1rem;
+    }
+
+    /* CTA ultra compacto */
+    .servicios-ficha-page .cta-main-block {
+        padding: 1.25rem;
+    }
+
+    .servicios-ficha-page .cta-photo-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .servicios-ficha-page .cta-seo-title {
+        font-size: 1.15rem;
+    }
+
+    .servicios-ficha-page .cta-price {
+        font-size: 1.75rem;
+    }
+
+    .servicios-ficha-page .cta-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    /* FAQ compacto */
+    .servicios-ficha-page .faq-question {
+        font-size: 0.9rem;
+        padding: 0.875rem 1rem;
+    }
+
+    .servicios-ficha-page .faq-question::after {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .servicios-ficha-page .hero-stat-value {
+        font-size: 1.1rem;
+    }
+
+    .servicios-ficha-page .hero-stat-label {
+        font-size: 0.65rem;
+    }
+
+    .servicios-ficha-page .cta-price {
+        font-size: 1.5rem;
+    }
+
+    .servicios-ficha-page .tabla-comparativa td {
+        padding: 0.625rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ==========================================================================
+   NEWSLETTER CONVERSION BANNER - Estilos para fichas de servicio
+   Copiado de servicios-page.css para disponibilidad en todas las fichas
+   ========================================================================== */
+
+.newsletter-conversion-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.newsletter-conversion-section.newsletter-conversion-final {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.newsletter-conversion-banner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    text-align: left;
+}
+
+.newsletter-conversion-final .newsletter-conversion-banner {
+    background: #ffffff;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Banner Hook */
+.newsletter-conversion-banner .banner-hook {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-conversion-banner .hook-text {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0 0 0.4rem 0;
+}
+
+.newsletter-conversion-banner .hook-text:first-child {
+    font-size: 1.25rem;
+}
+
+.newsletter-conversion-banner .hook-text strong {
+    color: #000000;
+}
+
+/* Banner Agitation */
+.newsletter-conversion-banner .banner-agitation {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-left: 4px solid #dc3545;
+    border-radius: 0 8px 8px 0;
+}
+
+.newsletter-conversion-banner .banner-agitation p {
+    font-size: 1rem;
+    color: #2a2a2a;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+}
+
+.newsletter-conversion-banner .banner-agitation p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Banner Solution */
+.newsletter-conversion-banner .banner-solution {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-conversion-banner .banner-solution p {
+    font-size: 1rem;
+    color: #2a2a2a;
+    line-height: 1.6;
+    margin: 0 0 0.4rem 0;
+}
+
+.newsletter-conversion-banner .banner-solution p strong {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+/* Banner CTA */
+.newsletter-conversion-banner .banner-cta {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-conversion-banner .cta-urgency {
+    font-size: 0.95rem;
+    color: #495057;
+    line-height: 1.5;
+    margin: 0 0 0.4rem 0;
+}
+
+.newsletter-conversion-banner .cta-main {
+    font-size: 1.05rem;
+    color: #1a1a1a;
+    margin: 0.5rem 0 0 0;
+}
+
+.newsletter-conversion-banner .cta-main strong {
+    color: #28a745;
+}
+
+/* Banner Form */
+.newsletter-conversion-banner .banner-form {
+    margin-bottom: 1.25rem;
+}
+
+.newsletter-conversion-banner .newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.newsletter-conversion-banner .newsletter-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1a1a1a;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-conversion-banner .newsletter-input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+}
+
+.newsletter-conversion-banner .newsletter-input::placeholder {
+    color: #adb5bd;
+}
+
+.newsletter-conversion-banner .newsletter-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter-conversion-banner .newsletter-button:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Banner Postdata */
+.newsletter-conversion-banner .banner-postdata {
+    padding-top: 1.25rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.newsletter-conversion-banner .banner-postdata p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Variante 2 */
+.newsletter-conversion-banner.banner-variant-2 .banner-agitation {
+    border-left-color: #0077b6;
+    background: linear-gradient(135deg, #e7f5ff 0%, #f8f9fa 100%);
+}
+
+/* Fallback notice */
+.newsletter-fallback-notice {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+}
+
+/* Newsletter Responsive */
+@media (max-width: 768px) {
+    .newsletter-conversion-section {
+        padding: 2rem 0;
+    }
+
+    .newsletter-conversion-banner {
+        padding: 1.5rem 1.25rem;
+        margin: 0 0.5rem;
+        border-radius: 12px;
+    }
+
+    .newsletter-conversion-banner .hook-text {
+        font-size: 1rem;
+    }
+
+    .newsletter-conversion-banner .hook-text:first-child {
+        font-size: 1.1rem;
+    }
+
+    .newsletter-conversion-banner .banner-agitation {
+        padding: 1rem;
+    }
+
+    .newsletter-conversion-banner .banner-agitation p,
+    .newsletter-conversion-banner .banner-solution p {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-conversion-banner .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-conversion-banner .newsletter-input {
+        min-width: 100%;
+        padding: 0.875rem 1rem;
+    }
+
+    .newsletter-conversion-banner .newsletter-button {
+        width: 100%;
+        padding: 0.875rem 1.25rem;
+        min-height: 48px;
+    }
+
+    .newsletter-conversion-banner .banner-postdata p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-conversion-banner {
+        padding: 1.25rem 1rem;
+    }
+
+    .newsletter-conversion-banner .hook-text {
+        font-size: 0.95rem;
+    }
+
+    .newsletter-conversion-banner .hook-text:first-child {
+        font-size: 1rem;
+    }
+
+    .newsletter-conversion-banner .banner-agitation {
+        padding: 0.875rem;
+        border-left-width: 3px;
+    }
+
+    .newsletter-conversion-banner .cta-urgency,
+    .newsletter-conversion-banner .cta-main {
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================================
+   COMPRESION DE ESPACIADO EN DESKTOP
+   Reducir padding vertical en secciones para paginas mas compactas
+   ========================================================================== */
+
+/* Secciones mas compactas en desktop */
+.servicios-ficha-page .servicios-content {
+    padding: 3.5rem 0;
+}
+
+.servicios-ficha-page .servicios-content.hero-stats-section {
+    padding: 2.5rem 0;
+}
+
+.servicios-ficha-page .servicios-content.faq-section {
+    padding: 3rem 0;
+}
+
+.servicios-ficha-page .servicios-content.links-section {
+    padding: 2.5rem 0;
+}
+
+.servicios-ficha-page .servicios-content.servicios-cta-section {
+    padding: 3rem 0;
+}
+
+.servicios-ficha-page .servicios-content.newsletter-conversion-section {
+    padding: 2.5rem 0;
+}
+
+/* Section SEO block mas compacto */
+.servicios-ficha-page .section-seo-block {
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.servicios-ficha-page .section-seo-title {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+}
+
+/* Highlight boxes mas compactos */
+.servicios-ficha-page .highlight-box {
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+/* Grid gaps reducidos */
+.servicios-ficha-page .servicios-grid {
+    gap: 1.5rem;
+}
+
+.servicios-ficha-page .tablas-costes-grid {
+    gap: 1.5rem;
+}
+
+/* Cards mas compactas */
+.servicios-ficha-page .servicio-card {
+    padding: 1.75rem;
+}
+
+.servicios-ficha-page .servicio-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicios-ficha-page .servicio-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* CTA compacto */
+.servicios-ficha-page .cta-main-block.cta-compact {
+    gap: 40px;
+    max-width: 850px;
+}
+
+.servicios-ficha-page .cta-compact .cta-photo-column {
+    width: 160px;
+}
+
+.servicios-ficha-page .cta-compact .cta-photo-circle {
+    width: 140px;
+    height: 140px;
+}
+
+.servicios-ficha-page .cta-compact .cta-photo-name {
+    font-size: 1.25rem;
+}
+
+.servicios-ficha-page .cta-compact .cta-photo-role {
+    font-size: 0.85rem;
+}
+
+.servicios-ficha-page .cta-compact .cta-seo-title {
+    font-size: 1.5rem;
+}
+
+.servicios-ficha-page .cta-compact .cta-text p {
+    font-size: 1rem;
+}
+
+.servicios-ficha-page .cta-compact .cta-price-block {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+}
+
+.servicios-ficha-page .cta-compact .cta-price {
+    font-size: 2.5rem;
+}
+
+/* ==========================================================================
+   TABLAS RESPONSIVAS MEJORADAS - Formato card en movil
+   Sin scroll horizontal, cada fila se convierte en bloque
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    /* Tablas tipo card en movil pequeno */
+    .servicios-ficha-page .tabla-comparativa-wrapper {
+        margin: 1rem 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .servicios-ficha-page .tabla-comparativa {
+        min-width: 100%;
+        display: block;
+        background: transparent;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody {
+        display: block;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.875rem 1rem;
+        margin-bottom: 0.5rem;
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        transition: all 0.2s ease;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr:hover {
+        transform: none;
+        background: #f8f9fa;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr td {
+        display: block;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr td:first-child {
+        flex: 1;
+        font-size: 0.9rem;
+        color: #2a2a2a;
+        padding-right: 1rem;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr td:last-child {
+        flex-shrink: 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-align: right;
+    }
+
+    /* Fila total destacada */
+    .servicios-ficha-page .tabla-comparativa tbody tr.fila-total {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        border-color: #1a1a1a;
+        margin-top: 0.75rem;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr.fila-total td:first-child {
+        color: #ffffff;
+    }
+
+    .servicios-ficha-page .tabla-comparativa tbody tr.fila-total td:last-child {
+        color: #2ecc71;
+    }
+
+    /* Titulo de tabla */
+    .servicios-ficha-page .tabla-titulo {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        text-align: left;
+        padding-bottom: 0.5rem;
+    }
+
+    .servicios-ficha-page .tabla-titulo::after {
+        display: none;
+    }
+
+    /* Ocultar indicador de scroll */
+    .servicios-ficha-page .tabla-comparativa-wrapper::before {
+        display: none;
+    }
+
+    /* Tablas costes grid en columna */
+    .servicios-ficha-page .tablas-costes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESKTOP COMPRESION - Mantener movil intacto
+   ========================================================================== */
+
+@media (min-width: 769px) {
+    /* Solo aplicar compresion en desktop */
+    .servicios-ficha-page .servicios-content-body p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .servicios-ficha-page .requisitos-lista li {
+        padding: 1rem 1rem 1rem 3.5rem;
+        font-size: 1rem;
+    }
+
+    .servicios-ficha-page .para-quien-col {
+        padding: 2rem;
+    }
+
+    .servicios-ficha-page .para-quien-col li {
+        font-size: 1rem;
+        padding: 0.75rem 0 0.75rem 2rem;
+    }
+}
+
+/* ==========================================================================
+   TABLAS PAGINA DECLARACION RENTA SUIZA - Responsive perfecto
+   ========================================================================== */
+
+/* Desktop - Tablas normales con mejor espaciado */
+.page-declaracion-renta-suiza .tabla-comparativa-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa thead {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: #333;
+    vertical-align: top;
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.page-declaracion-renta-suiza .tabla-comparativa tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.page-declaracion-renta-suiza .tabla-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+.page-declaracion-renta-suiza .tabla-titulo:first-of-type {
+    margin-top: 0;
+}
+
+.page-declaracion-renta-suiza .tabla-titulo-separado {
+    margin-top: 3rem;
+}
+
+/* Tablet - Ajustes menores */
+@media (max-width: 900px) {
+    .page-declaracion-renta-suiza .tabla-comparativa th,
+    .page-declaracion-renta-suiza .tabla-comparativa td {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile - Tablas como cards apiladas */
+@media (max-width: 768px) {
+    .page-declaracion-renta-suiza .tabla-comparativa-wrapper {
+        margin: 1rem 0;
+        box-shadow: none;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa {
+        background: transparent;
+        border-radius: 0;
+    }
+
+    /* Ocultar thead en movil */
+    .page-declaracion-renta-suiza .tabla-comparativa thead {
+        display: none;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody {
+        display: block;
+    }
+
+    /* Cada fila es una card */
+    .page-declaracion-renta-suiza .tabla-comparativa tbody tr {
+        display: block;
+        background: #ffffff;
+        border-radius: 12px;
+        margin-bottom: 0.75rem;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        border: 1px solid #e9ecef;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody tr:hover {
+        background: #ffffff;
+        transform: none;
+    }
+
+    /* Cada celda como bloque con label */
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.9rem;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td:first-child {
+        padding-top: 0;
+    }
+
+    /* Data label como encabezado */
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        color: #666;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        min-width: 35%;
+    }
+
+    /* Valor de la celda */
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td {
+        text-align: right;
+        color: #1a1a1a;
+    }
+
+    /* Titulo de tabla en movil */
+    .page-declaracion-renta-suiza .tabla-titulo {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        margin-top: 2rem;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .page-declaracion-renta-suiza .tabla-titulo::after {
+        display: none;
+    }
+
+    .page-declaracion-renta-suiza .tabla-titulo-separado {
+        margin-top: 2.5rem;
+    }
+}
+
+/* Mobile pequeno - Ajustes finos */
+@media (max-width: 480px) {
+    .page-declaracion-renta-suiza .tabla-comparativa tbody tr {
+        padding: 0.875rem;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.25rem;
+    }
+
+    .page-declaracion-renta-suiza .tabla-comparativa tbody td::before {
+        min-width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.125rem;
+    }
+
+    .page-declaracion-renta-suiza .tabla-titulo {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================================================
+   TABLA DECISION (Te conviene vs Hazlo solo) - Estilo especial
+   ========================================================================== */
+
+/* Desktop - Tabla de decision con colores diferenciados */
+.page-declaracion-renta-suiza .tabla-decision thead th:first-child {
+    background: linear-gradient(135deg, #1a5c1a 0%, #228B22 100%);
+}
+
+.page-declaracion-renta-suiza .tabla-decision thead th:last-child {
+    background: linear-gradient(135deg, #4a4a4a 0%, #666 100%);
+}
+
+.page-declaracion-renta-suiza .tabla-decision tbody td:first-child {
+    border-left: 3px solid #228B22;
+}
+
+.page-declaracion-renta-suiza .tabla-decision tbody td:last-child {
+    border-left: 3px solid #999;
+    color: #666;
+}
+
+/* Mobile - Cards con colores diferenciados */
+@media (max-width: 768px) {
+    .page-declaracion-renta-suiza .tabla-decision tbody tr {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody td {
+        border-bottom: none;
+        padding: 0.75rem;
+        border-left: none !important;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody td:first-child {
+        background: linear-gradient(135deg, #f0fff0 0%, #e8f5e9 100%);
+        border-radius: 8px 8px 0 0;
+        border-top: 3px solid #228B22;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody td:first-child::before {
+        color: #228B22;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody td:last-child {
+        background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+        border-radius: 0 0 8px 8px;
+        border-top: 3px solid #999;
+        color: #555;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody td:last-child::before {
+        color: #666;
+    }
+
+    .page-declaracion-renta-suiza .tabla-decision tbody tr {
+        margin-bottom: 1rem;
+        border: none;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+}
+
+/* ==========================================================================
+   NEWSLETTER BANNER COMPACTO - Version horizontal para paginas de servicio
+   ========================================================================== */
+
+.newsletter-compact-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.newsletter-compact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.newsletter-compact-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.newsletter-compact-headline {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin: 0 0 0.35rem 0;
+    line-height: 1.4;
+}
+
+.newsletter-compact-headline strong {
+    color: #000000;
+}
+
+.newsletter-compact-subtext {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.newsletter-compact-form {
+    flex-shrink: 0;
+}
+
+/* Estilos para el formulario dentro del banner compacto */
+.newsletter-compact-form .newsletter-form,
+.newsletter-compact-form .sib-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.newsletter-compact-form .newsletter-input,
+.newsletter-compact-form .sib-form input[type="email"] {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    min-width: 220px;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-compact-form .newsletter-input:focus,
+.newsletter-compact-form .sib-form input[type="email"]:focus {
+    outline: none;
+    border-color: #1a1a1a;
+}
+
+.newsletter-compact-form .newsletter-button,
+.newsletter-compact-form .sib-form button[type="submit"] {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.newsletter-compact-form .newsletter-button:hover,
+.newsletter-compact-form .sib-form button[type="submit"]:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .newsletter-compact-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    .newsletter-compact-form {
+        width: 100%;
+    }
+
+    .newsletter-compact-form .newsletter-form,
+    .newsletter-compact-form .sib-form {
+        justify-content: center;
+    }
+
+    .newsletter-compact-form .newsletter-input,
+    .newsletter-compact-form .sib-form input[type="email"] {
+        min-width: 180px;
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .newsletter-compact-banner {
+        padding: 1.25rem 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .newsletter-compact-headline {
+        font-size: 1rem;
+    }
+
+    .newsletter-compact-subtext {
+        font-size: 0.85rem;
+    }
+
+    .newsletter-compact-form .newsletter-form,
+    .newsletter-compact-form .sib-form {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .newsletter-compact-form .newsletter-input,
+    .newsletter-compact-form .sib-form input[type="email"] {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .newsletter-compact-form .newsletter-button,
+    .newsletter-compact-form .sib-form button[type="submit"] {
+        width: 100%;
+        min-height: 48px;
+    }
+}
+
+/* ==========================================================================
+   CTA COMPACTO - Version directa y optimizada
+   ========================================================================== */
+
+.servicios-cta-compact {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 3rem 0;
+}
+
+.cta-compact-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-compact-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+}
+
+.cta-compact-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+}
+
+.cta-compact-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-highlight-item {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+}
+
+.cta-highlight-separator {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.cta-compact-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cta-button-large {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #ffffff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button-large:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-compact-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .cta-compact-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-compact-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .servicios-cta-compact {
+        padding: 2rem 0;
+    }
+
+    .cta-compact-title {
+        font-size: 1.25rem;
+    }
+
+    .cta-compact-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .cta-compact-highlights {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .cta-highlight-separator {
+        display: none;
+    }
+
+    .cta-button-large {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   PAGE FISCALIDAD CANTONES SUIZA - ESTILOS ESPECIFICOS
+   ========================================================================== */
+
+/* Proceso Timeline - Numero encima del texto */
+.page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-number {
+    margin-bottom: 1.25rem;
+}
+
+.page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-content {
+    text-align: center;
+}
+
+/* Tablas - Ocupar todo el ancho y responsive */
+.page-fiscalidad-cantones-suiza .tabla-comparativa-wrapper {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.page-fiscalidad-cantones-suiza .tabla-comparativa {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.page-fiscalidad-cantones-suiza .tablas-costes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-fiscalidad-cantones-suiza .tablas-costes-grid .tabla-comparativa-wrapper {
+    margin: 0;
+}
+
+.page-fiscalidad-cantones-suiza .tablas-costes-grid .tabla-titulo {
+    margin-bottom: 1rem;
+}
+
+/* Boton Hero Stats - Estilo paginas de servicio (texto negro antes del hover) */
+.page-fiscalidad-cantones-suiza .hero-cta-wrapper .btn-primary,
+.page-fiscalidad-cantones-suiza .hero-stats-section .btn-primary {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-fiscalidad-cantones-suiza .hero-cta-wrapper .btn-primary:hover,
+.page-fiscalidad-cantones-suiza .hero-stats-section .btn-primary:hover {
+    background: #FF0000;
+    color: #ffffff;
+    border-color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .page-fiscalidad-cantones-suiza .tablas-costes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Proceso Timeline mobile - numero encima */
+    .page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid #1a1a1a;
+        padding: 1.5rem 1rem;
+    }
+
+    .page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-number {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-content {
+        text-align: center;
+    }
+
+    .page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-content h3 {
+        text-align: center;
+    }
+
+    .page-fiscalidad-cantones-suiza .proceso-timeline.proceso-compact .proceso-content p {
+        text-align: center;
+    }
+
+    /* Tablas responsive */
+    .page-fiscalidad-cantones-suiza .tabla-comparativa {
+        table-layout: auto;
+    }
+
+    /* Boton responsive */
+    .page-fiscalidad-cantones-suiza .hero-cta-wrapper .btn-primary,
+    .page-fiscalidad-cantones-suiza .hero-stats-section .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================================================
+   PAGE CAMBIO RESIDENCIA FISCAL SUIZA - ESTILOS ESPECIFICOS
+   ========================================================================== */
+
+/* Proceso Timeline - Numero encima del texto */
+.page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-number {
+    margin-bottom: 1.25rem;
+}
+
+.page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-content {
+    text-align: center;
+}
+
+/* Tablas - Ocupar todo el ancho y responsive */
+.page-cambio-residencia-fiscal-suiza .tabla-comparativa-wrapper {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.page-cambio-residencia-fiscal-suiza .tabla-comparativa {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Boton Hero Stats - Estilo paginas de servicio (texto negro antes del hover) */
+.page-cambio-residencia-fiscal-suiza .hero-cta-wrapper .btn-primary,
+.page-cambio-residencia-fiscal-suiza .hero-stats-section .btn-primary {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-cambio-residencia-fiscal-suiza .hero-cta-wrapper .btn-primary:hover,
+.page-cambio-residencia-fiscal-suiza .hero-stats-section .btn-primary:hover {
+    background: #FF0000;
+    color: #ffffff;
+    border-color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Proceso Timeline mobile - numero encima */
+    .page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid #1a1a1a;
+        padding: 1.5rem 1rem;
+    }
+
+    .page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-number {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-content {
+        text-align: center;
+    }
+
+    .page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-content h3 {
+        text-align: center;
+    }
+
+    .page-cambio-residencia-fiscal-suiza .proceso-timeline.proceso-compact .proceso-content p {
+        text-align: center;
+    }
+
+    /* Tablas responsive */
+    .page-cambio-residencia-fiscal-suiza .tabla-comparativa {
+        table-layout: auto;
+    }
+
+    /* Boton responsive */
+    .page-cambio-residencia-fiscal-suiza .hero-cta-wrapper .btn-primary,
+    .page-cambio-residencia-fiscal-suiza .hero-stats-section .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}

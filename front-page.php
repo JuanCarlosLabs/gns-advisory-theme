@@ -7,2236 +7,39 @@
 
 get_header(); ?>
 
-<style>
-    /* Reset y base para la landing */
-    .landing-page * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Inter Tight', sans-serif;
-        background: #ffffff;
-        color: #000000;
-        margin: 0;
-        padding: 0;
-    }
-
-    .landing-page h1,
-    .landing-page h2,
-    .landing-page h3,
-    .landing-page h4,
-    .landing-page h5,
-    .landing-page h6 {
-        font-family: 'Inter Tight', sans-serif;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        color: #000000;
-    }
-
-    .landing-page h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        font-weight: 700;
-    }
-
-    .landing-page h2 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-    }
-
-    .landing-page h3 {
-        font-size: clamp(1.5rem, 4vw, 2.25rem);
-        font-weight: 700;
-    }
-
-    .landing-page p {
-        margin-bottom: 1rem;
-        font-size: 1.125rem;
-        line-height: 1.6;
-        font-weight: 600;
-        color: #000000;
-    }
-
-    .landing-page section {
-        padding: 5rem 0;
-    }
-
-    .container {
-        max-width: 1400px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 2rem;
-        box-sizing: border-box;
-    }
-
-    @media (max-width: 768px) {
-        .landing-page section {
-            padding: 3rem 0;
-        }
-
-        .container {
-            padding: 0 1.5rem;
-        }
-    }
-
-    /* Hero Section */
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-        position: relative;
-        overflow: hidden;
-        padding: 80px 0;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background:
-            radial-gradient(circle at 20% 30%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
-        pointer-events: none;
-    }
-
-    .hero .container {
-        position: relative;
-        z-index: 1;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
-
-    /* Hero Header */
-    .hero-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .hero-title {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 0;
-    }
-
-    .hero-title-line {
-        display: block;
-        font-size: clamp(36px, 6vw, 52px);
-        font-weight: 700;
-        background: linear-gradient(135deg, #000000 0%, #4a4a4a 50%, #000000 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.1;
-    }
-
-    .hero-title-line.hero-title-semibold {
-        font-weight: 600;
-        background: linear-gradient(135deg, #000000 0%, #4a4a4a 50%, #000000 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    /* Hero Main */
-    .hero-main {
-        display: flex;
-        gap: 80px;
-        align-items: flex-start;
-        margin-bottom: 60px;
-    }
-
-    /* Hero Photo Column */
-    .hero-photo-column {
-        width: 250px;
-        flex-shrink: 0;
-        text-align: center;
-        position: sticky;
-        top: 100px;
-    }
-
-    .hero-photo-circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 4px solid #000000;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        margin: 0 auto;
-    }
-
-    .hero-photo-circle img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .hero-photo-name {
-        font-size: 28px;
-        font-weight: 700;
-        margin-top: 20px;
-        color: #000000;
-    }
-
-    .hero-photo-role {
-        font-size: 14px;
-        color: #4a4a4a;
-        margin-top: 4px;
-    }
-
-    /* Hero Story Column */
-    .hero-story-column {
-        flex: 1;
-        max-width: 700px;
-    }
-
-    .hero-story {
-        font-size: 18px;
-        line-height: 1.8;
-        color: #000000;
-    }
-
-    .hero-story p {
-        margin-bottom: 1rem;
-    }
-
-    .story-hook {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 24px;
-    }
-
-    .story-protagonist {
-        font-weight: 600;
-        color: #000000;
-    }
-
-    .story-quote {
-        font-style: italic;
-        border-left: 4px solid #000000;
-        padding-left: 24px;
-        margin: 24px 0;
-        color: rgba(0, 0, 0, 0.7);
-        font-size: 17px;
-    }
-
-    .story-objection {
-        font-style: italic;
-        color: rgba(0, 0, 0, 0.7);
-        font-size: 17px;
-    }
-
-    .story-result {
-        font-size: 22px;
-        font-weight: 700;
-        margin-top: 32px;
-    }
-
-    .story-emphasis {
-        font-size: 20px;
-        font-weight: 700;
-        color: #000000;
-    }
-
-    .story-number {
-        font-size: 20px;
-        margin: 24px 0;
-    }
-
-    .story-number strong {
-        font-size: 32px;
-        color: #000000;
-        font-weight: 700;
-    }
-
-    .story-lesson {
-        font-size: 18px;
-        margin-top: 32px;
-    }
-
-    .story-lesson-answer {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 24px;
-    }
-
-    .story-question {
-        font-size: 22px;
-        font-weight: 700;
-        margin-top: 32px;
-    }
-
-    .story-question-follow {
-        font-size: 20px;
-        color: #000000;
-        font-weight: 600;
-    }
-
-    /* Hero Button */
-    .hero-button {
-        margin-top: 40px;
-        padding: 20px 48px;
-        font-size: 18px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        background: #000000;
-        color: #ffffff;
-        border-radius: 8px;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.3s ease;
-        border: 2px solid #000000;
-    }
-
-    .hero-button:hover {
-        background: #ffffff;
-        color: #000000;
-        border: 2px solid #000000;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Hero Logo */
-    .hero-logo {
-        text-align: center;
-        margin-top: 20px;
-        opacity: 0.6;
-    }
-
-    .hero-logo img {
-        max-width: 200px;
-        height: auto;
-    }
-
-    .company-banner {
-        max-width: 900px;
-        margin: 3rem auto 0;
-        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-        border-radius: 20px;
-        padding: 2.5rem;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        display: grid;
-        grid-template-columns: 150px 1fr;
-        gap: 2.5rem;
-        align-items: center;
-        border: 1px solid #e0e0e0;
-    }
-
-    .company-logo {
-        width: 150px;
-        height: 150px;
-        background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #1a1a1a;
-        border: 2px solid #a8a8a8;
-    }
-
-    .company-description {
-        text-align: left;
-    }
-
-    .company-description p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #2a2a2a;
-        margin: 0;
-    }
-
-    @media (max-width: 768px) {
-        .hero-header {
-            margin-bottom: 40px;
-        }
-
-        .hero-title-line {
-            font-size: 32px;
-        }
-
-        .hero-title-line.hero-title-semibold {
-            font-size: 32px;
-        }
-
-        .hero-main {
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .hero-photo-column {
-            width: 100%;
-            position: relative;
-            top: 0;
-        }
-
-        .hero-photo-circle {
-            width: 150px;
-            height: 150px;
-        }
-
-        .hero-photo-name {
-            font-size: 24px;
-        }
-
-        .hero-story-column {
-            text-align: left;
-        }
-
-        .hero-story {
-            font-size: 16px;
-        }
-
-        .story-hook {
-            font-size: 20px;
-        }
-
-        .story-result {
-            font-size: 18px;
-        }
-
-        .story-number strong {
-            font-size: 26px;
-        }
-
-        .hero-button {
-            width: 100%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero h2 {
-            font-size: 1.25rem;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-        }
-
-        .company-banner {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .company-logo {
-            margin: 0 auto;
-            width: 120px;
-            height: 120px;
-        }
-
-        .company-description {
-            text-align: center;
-        }
-    }
-
-    /* Testimonials */
-    .testimonials {
-        background: #ffffff;
-        position: relative;
-    }
-
-    .testimonials h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .testimonials > .container > p {
-        text-align: center;
-        color: #4a4a4a;
-        margin-bottom: 3rem;
-    }
-
-    .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2.5rem;
-        margin-top: 3rem;
-    }
-
-    .testimonial-card {
-        padding: 2.5rem;
-        background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-        border-radius: 16px;
-        border: 1px solid #e0e0e0;
-        border-left: 5px solid #c0c0c0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .testimonial-result {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .testimonial-detail {
-        color: #2a2a2a;
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-        .testimonial-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-    }
-
-    /* Services Columns */
-    .services {
-        background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
-        position: relative;
-    }
-
-    .services h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .services > .container > p {
-        text-align: center;
-        color: #4a4a4a;
-        margin-bottom: 3rem;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 3rem;
-        margin-top: 3rem;
-    }
-
-    .service-column {
-        padding: 3.5rem;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .service-column::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at top right, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
-        pointer-events: none;
-    }
-
-    .service-column:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .service-column.green {
-        border: 3px solid #2ecc71;
-    }
-
-    .service-column.red {
-        border: 3px solid #e74c3c;
-    }
-
-    .service-column h3 {
-        margin-bottom: 2rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .service-column ul {
-        list-style: none;
-        padding: 0;
-        position: relative;
-        z-index: 1;
-    }
-
-    .service-column li {
-        padding: 0.85rem 0;
-        padding-left: 2.5rem;
-        position: relative;
-        font-size: 1.1rem;
-        color: #2a2a2a;
-        line-height: 1.6;
-    }
-
-    .service-column li:before {
-        content: "\2022";
-        position: absolute;
-        left: 0;
-        font-size: 1.5rem;
-        font-weight: 700;
-        top: 0.85rem;
-    }
-
-    .service-column.green li:before {
-        color: #2ecc71;
-    }
-
-    .service-column.red li:before {
-        color: #e74c3c;
-    }
-
-    @media (max-width: 1024px) {
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /* Swiss Structures */
-    .swiss-structures {
-        background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-        position: relative;
-    }
-
-    .swiss-structures h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .swiss-structures > .container > p {
-        text-align: center;
-        color: #4a4a4a;
-        margin-bottom: 3rem;
-        font-size: 1.25rem;
-    }
-
-    .structures-content {
-        display: grid;
-        grid-template-columns: 1fr 350px;
-        gap: 3rem;
-        align-items: start;
-        margin-top: 3rem;
-        position: relative;
-        /* La altura se define por el contenido - la bandera baja hasta donde terminan los cantones */
-    }
-
-    .structures-main-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        position: relative;
-        z-index: 1;
-        /* Sin padding extra - la bandera termina al nivel de los cantones */
-    }
-
-    .structures-main-grid h3 {
-        text-align: center;
-        margin: 2rem 0 1.5rem;
-    }
-
-    .structures-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .structure-card {
-        padding: 2.5rem;
-        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-        border-radius: 16px;
-        border: 1px solid #e0e0e0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        /* Aislar transforms para NO afectar sticky del padre */
-        will-change: transform;
-        transform: translateZ(0); /* Crear contexto 3D independiente */
-    }
-
-    /* Gradiente sutil de fondo para unificar el look */
-    .structure-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at top center, rgba(192, 192, 192, 0.08) 0%, transparent 60%);
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-
-    .structure-card:hover::before {
-        opacity: 1;
-    }
-
-    .structure-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .structure-card h4 {
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        font-size: 1.5rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .structure-card p {
-        color: #2a2a2a;
-        line-height: 1.7;
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Grid de cantones 2x2 */
-    .cantons-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .canton-card {
-        padding: 2.5rem;
-        background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-        border-radius: 16px;
-        border: 1px solid #e0e0e0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        /* Aislar transforms para NO afectar sticky del padre */
-        will-change: transform;
-        transform: translateZ(0); /* Crear contexto 3D independiente */
-    }
-
-    .canton-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at top center, rgba(192, 192, 192, 0.1) 0%, transparent 60%);
-        pointer-events: none;
-    }
-
-    .canton-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-    }
-
-    .canton-flag-svg,
-    .canton-flag-img {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1.5rem;
-        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        position: relative;
-        z-index: 1;
-    }
-
-    .canton-flag-img {
-        display: block;
-        object-fit: contain;
-        border-radius: 12px;
-    }
-
-    .canton-card:hover .canton-flag-svg,
-    .canton-card:hover .canton-flag-img {
-        transform: scale(1.1) rotate(2deg);
-    }
-
-    .canton-card h4 {
-        color: #1a1a1a;
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        position: relative;
-        z-index: 1;
-    }
-
-    .canton-card p {
-        color: #2a2a2a;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        font-weight: 600;
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Contenedor de la bandera de Suiza - STICKY PERFECTO */
-    .switzerland-flag-container {
-        position: sticky;
-        top: 2rem;
-        background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
-        padding: 2rem;
-        border-radius: 20px;
-        border: 1px solid #000000;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 350px;
-        max-height: calc(100vh - 4rem);
-        height: fit-content;
-        align-self: flex-start;
-        z-index: 2;
-        /* NO aplicar transform ni animaciones que rompan el sticky */
-        transition: opacity 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Bandera SVG de Suiza con máxima calidad */
-    .switzerland-flag-svg {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    /* Hover sutil solo en el SVG, NO en el contenedor */
-    .switzerland-flag-container:hover .switzerland-flag-svg {
-        transform: scale(1.05);
-        filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.3));
-    }
-
-
-    .structures-bottom-text {
-        margin-top: 2rem;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        padding: 2.5rem;
-        background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-        border-radius: 16px;
-        border-left: 5px solid #c0c0c0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .structures-bottom-text p {
-        margin-bottom: 1rem;
-    }
-
-    .structures-bottom-text strong {
-        color: #1a1a1a;
-    }
-
-    @media (max-width: 1024px) {
-        .structures-content {
-            grid-template-columns: 1fr;
-        }
-
-        .structures-main-grid {
-            gap: 2rem;
-        }
-
-        .structures-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .cantons-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .switzerland-flag-container {
-            position: relative;
-            top: 0;
-            max-width: 350px;
-            margin: 2rem auto 0;
-            order: -1; /* Mover la bandera arriba en móvil */
-        }
-    }
-
-    @media (max-width: 768px) {
-        .structures-grid {
-            gap: 1.5rem;
-            grid-template-columns: 1fr;
-        }
-
-        .structure-card {
-            padding: 2rem;
-        }
-
-        .cantons-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .canton-card {
-            padding: 2rem;
-        }
-
-        .canton-flag-svg,
-        .canton-flag-img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .switzerland-flag-container {
-            max-width: 280px;
-            min-height: 280px;
-        }
-
-        .structures-bottom-text {
-            padding: 2rem;
-            text-align: left;
-        }
-    }
-
-    /* Team */
-    .team {
-        background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
-    }
-
-    .team h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .team > .container > p {
-        text-align: center;
-        color: #4a4a4a;
-        margin-bottom: 3rem;
-    }
-
-    .team-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 3rem;
-        margin-top: 3rem;
-    }
-
-    .team-member {
-        text-align: center;
-        max-width: 280px;
-    }
-
-    /* Alejandra con diseño especial horizontal */
-    .team-member.main {
-        max-width: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 3rem;
-        text-align: left;
-        margin-bottom: 2rem;
-        padding: 2rem;
-        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .team-member.main .team-photo-wrapper {
-        flex-shrink: 0;
-    }
-
-    .team-member.main .team-info {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .team-photo {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
-        margin: 0 auto 1rem;
-        overflow: hidden;
-        border: 4px solid #a8a8a8;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease;
-    }
-
-    .team-member:hover .team-photo {
-        transform: scale(1.05);
-    }
-
-    .team-member.main .team-photo {
-        width: 220px;
-        height: 220px;
-        border-width: 6px;
-        border-color: #1a1a1a;
-        margin: 0;
-    }
-
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .team-name {
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        color: #1a1a1a;
-    }
-
-    .team-role {
-        color: #4a4a4a;
-        font-size: 1rem;
-    }
-
-    .team-member p {
-        font-size: 0.95rem;
-        color: #2a2a2a;
-    }
-
-    @media (max-width: 768px) {
-        .team-grid {
-            gap: 2.5rem;
-        }
-
-        .team-member {
-            max-width: 100%;
-        }
-
-        .team-member.main {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .team-member.main .team-photo-wrapper {
-            margin-bottom: 1.5rem;
-        }
-
-        .team-member.main .team-info {
-            align-items: center;
-        }
-
-        .team-photo {
-            width: 180px;
-            height: 180px;
-        }
-
-        .team-member.main .team-photo {
-            width: 200px;
-            height: 200px;
-        }
-    }
-
-    /* FAQ */
-    .faq {
-        background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-    }
-
-    .faq h2 {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    .faq-list {
-        max-width: 900px;
-        margin: 3rem auto 0;
-        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-        border-radius: 16px;
-        border: 1px solid #e0e0e0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
-    }
-
-    .faq-item {
-        border-bottom: 1px solid #e0e0e0;
-        transition: background-color 0.3s ease;
-    }
-
-    .faq-item:last-child {
-        border-bottom: none;
-    }
-
-    .faq-item:hover {
-        background-color: #f8f8f8;
-    }
-
-    .faq-question {
-        font-weight: 700;
-        font-size: 1.2rem;
-        color: #1a1a1a;
-        padding: 1.5rem 2rem;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        user-select: none;
-        transition: color 0.3s ease;
-        width: 100%;
-        background: none;
-        border: none;
-        text-align: left;
-        font-family: inherit;
-    }
-
-    .faq-question:hover {
-        color: #4a4a4a;
-    }
-
-    .faq-question:focus {
-        outline: 2px solid #1a1a1a;
-        outline-offset: -2px;
-    }
-
-    .faq-question:focus:not(:focus-visible) {
-        outline: none;
-    }
-
-    .faq-question:focus-visible {
-        outline: 2px solid #1a1a1a;
-        outline-offset: -2px;
-    }
-
-    .faq-question::after {
-        content: "\002B";
-        font-size: 2rem;
-        font-weight: 300;
-        color: #c0c0c0;
-        transition: transform 0.3s ease, color 0.3s ease;
-        flex-shrink: 0;
-        margin-left: 1rem;
-    }
-
-    .faq-item.active .faq-question::after {
-        content: "\2212";
-        color: #1a1a1a;
-        transform: rotate(0deg);
-    }
-
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
-        color: #2a2a2a;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        padding: 0 2rem;
-    }
-
-    .faq-answer[hidden] {
-        display: block;
-        max-height: 0;
-        padding: 0 2rem;
-    }
-
-    .faq-item.active .faq-answer {
-        max-height: 500px;
-        padding: 0 2rem 1.5rem 2rem;
-    }
-
-    .faq-item.active .faq-answer[hidden] {
-        max-height: 0;
-        padding: 0 2rem;
-    }
-
-    .faq-answer p {
-        margin-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-        .faq-question {
-            padding: 1.25rem 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .faq-question::after {
-            font-size: 1.75rem;
-        }
-
-        .faq-answer {
-            padding: 0 1.5rem;
-            font-size: 1rem;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 0 1.5rem 1.25rem 1.5rem;
-        }
-    }
-
-    /* CTA Integrados */
-    .inline-cta {
-        max-width: 800px;
-        margin: 4rem auto;
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-        border-radius: 24px;
-        padding: 3.5rem;
-        text-align: center;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .inline-cta::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at center, rgba(192, 192, 192, 0.1) 0%, transparent 70%);
-        pointer-events: none;
-    }
-
-    .inline-cta-content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .inline-cta h3 {
-        color: #ffffff;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .inline-cta p {
-        color: #ffffff !important;
-        font-size: 1.15rem;
-        margin-bottom: 2rem;
-        line-height: 1.6;
-    }
-
-    .inline-cta .btn {
-        background: #000000;
-        color: #ffffff !important;
-        border: 2px solid #ffffff;
-        padding: 1.25rem 3rem;
-        font-size: 1.2rem;
-    }
-
-    .inline-cta .btn:hover {
-        background: #ffffff;
-        color: #000000 !important;
-        border: 2px solid #ffffff;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-    }
-
-    @media (max-width: 768px) {
-        .inline-cta {
-            padding: 2.5rem 2rem;
-        }
-
-        .inline-cta h3 {
-            font-size: 1.5rem;
-        }
-
-        .inline-cta p {
-            font-size: 1rem;
-        }
-    }
-
-    /* CTA Section */
-    .cta {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-        color: #fff;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        padding: 5rem 0 6rem 0 !important; /* Más padding abajo para cierre limpio */
-    }
-
-    .cta::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background:
-            radial-gradient(circle at 30% 50%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 70% 50%, rgba(169, 169, 169, 0.15) 0%, transparent 50%);
-        pointer-events: none;
-    }
-
-    .cta .container {
-        position: relative;
-        z-index: 1;
-    }
-
-    .cta h2 {
-        color: #ffffff;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 50%, #ffffff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .cta > .container > p {
-        color: #e0e0e0;
-        font-size: 1.15rem;
-        margin-bottom: 4rem;
-    }
-
-    .cta-single-container {
-        max-width: 700px;
-        margin: 0 auto 3rem;
-        background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
-        color: #1a1a1a;
-        padding: 4rem;
-        border-radius: 24px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-    }
-
-    .cta-single-container:hover {
-        transform: translateY(-8px);
-    }
-
-    .cta-single-container:last-child {
-        margin-bottom: 0; /* El último no tiene margen inferior */
-    }
-
-    .cta-single-container h3 {
-        margin-bottom: 1.5rem;
-        color: #1a1a1a;
-        font-size: 2rem;
-        background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .cta-single-container p {
-        color: #2a2a2a;
-    }
-
-    .newsletter-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .newsletter-form input {
-        padding: 1.25rem;
-        font-size: 1rem;
-        border: 2px solid #e0e0e0;
-        border-radius: 12px;
-        font-family: 'Inter Tight', sans-serif;
-        font-weight: 500;
-        transition: border-color 0.3s ease;
-    }
-
-    .newsletter-form input:focus {
-        outline: none;
-        border-color: #a8a8a8;
-    }
-
-    .newsletter-form input::placeholder {
-        color: #999;
-        font-weight: 400;
-    }
-
-    .btn {
-        padding: 1.25rem 2.5rem;
-        font-size: 1.125rem;
-        font-weight: 700;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        font-family: 'Inter Tight', sans-serif;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .btn-primary {
-        background: #000000;
-        color: #ffffff !important;
-        border: 2px solid #000000;
-    }
-
-    .btn-primary:hover {
-        background: #ffffff;
-        color: #000000 !important;
-        border: 2px solid #000000;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .btn-secondary {
-        background: #000000;
-        color: #ffffff !important;
-        border: 2px solid #000000;
-    }
-
-    .btn-secondary:hover {
-        background: #ffffff;
-        color: #000000 !important;
-        border: 2px solid #000000;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Estilos para el formulario de newsletter del CTA (Brevo) */
-    .cta-newsletter-form {
-        margin-top: 1.5rem;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cta-newsletter-form form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .cta-newsletter-form p.sib-FIRSTNAME-area,
-    .cta-newsletter-form p.sib-email-area {
-        margin: 0;
-        font-size: 0;
-    }
-
-    .cta-newsletter-form input[type="text"],
-    .cta-newsletter-form input[type="email"] {
-        width: 100%;
-        padding: 1.25rem;
-        font-size: 1rem;
-        border: 2px solid #e0e0e0;
-        border-radius: 12px;
-        font-family: 'Inter Tight', sans-serif;
-        font-weight: 500;
-        transition: border-color 0.3s ease;
-        box-sizing: border-box;
-    }
-
-    .cta-newsletter-form input[type="text"]:focus,
-    .cta-newsletter-form input[type="email"]:focus {
-        outline: none;
-        border-color: #a8a8a8;
-    }
-
-    .cta-newsletter-form input::placeholder {
-        color: #999;
-        font-weight: 400;
-    }
-
-    .cta-newsletter-form .sib-default-btn,
-    .cta-newsletter-form input[type="submit"] {
-        width: 100%;
-        padding: 1.25rem 2.5rem;
-        font-size: 1.125rem;
-        font-weight: 700;
-        border: 2px solid transparent;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: 'Inter Tight', sans-serif;
-        background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
-        color: white;
-    }
-
-    .cta-newsletter-form .sib-default-btn:hover,
-    .cta-newsletter-form input[type="submit"]:hover {
-        background: white;
-        color: #1a1a1a;
-        border: 2px solid #1a1a1a;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .cta-newsletter-form p {
-        margin: 0;
-    }
-
-    .price-tag {
-        font-size: 3rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin: 1.5rem 0;
-    }
-
-    .consultant-photo {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
-        margin: 0 auto 1.5rem;
-        overflow: hidden;
-        border: 5px solid #1a1a1a;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .consultant-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .cta-flag-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .cta-switzerland-flag {
-        width: 80px;
-        height: 80px;
-        background: #DA291C;
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        flex-shrink: 0;
-    }
-
-    .cta-switzerland-flag::before,
-    .cta-switzerland-flag::after {
-        content: '';
-        position: absolute;
-        background: white;
-    }
-
-    .cta-switzerland-flag::before {
-        width: 63.33%;
-        height: 20%;
-        top: 40%;
-        left: 18.33%;
-    }
-
-    .cta-switzerland-flag::after {
-        width: 20%;
-        height: 63.33%;
-        top: 18.33%;
-        left: 40%;
-    }
-
-    @media (max-width: 1024px) {
-        .cta-options {
-            grid-template-columns: 1fr;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .cta {
-            padding: 4rem 0 5rem 0 !important; /* Padding ajustado para móvil */
-        }
-
-        .cta-single-container {
-            padding: 2.5rem 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-single-container:last-child {
-            margin-bottom: 0;
-        }
-
-        .cta-single-container h3 {
-            font-size: 1.5rem;
-        }
-
-        .price-tag {
-            font-size: 2.5rem;
-        }
-
-        .consultant-photo {
-            width: 140px;
-            height: 140px;
-        }
-
-        .cta-flag-container {
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
-
-    /* === FOOTER Y FINAL DE PÁGINA - ELIMINACIÓN TOTAL DEL ESPACIO BLANCO === */
-
-    /* CRÍTICO: Forzar que body y html terminen exactamente donde termina el contenido */
-    html {
-        padding: 0 !important;
-        margin: 0 !important;
-        height: 100% !important;
-    }
-
-    body {
-        padding: 0 !important;
-        margin: 0 !important;
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
-        min-height: 100vh !important;
-        height: auto !important;
-    }
-
-    /* OCULTAR COMPLETAMENTE EL FOOTER Y CUALQUIER ELEMENTO DESPUÉS DEL CTA */
-    .site-footer,
-    footer,
-    #colophon,
-    .footer,
-    [role="contentinfo"],
-    footer.site-footer,
-    div.site-footer,
-    .footer-widget-area,
-    #footer,
-    .site-info {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        min-height: 0 !important;
-        max-height: 0 !important;
-        overflow: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        opacity: 0 !important;
-        position: absolute !important;
-        left: -9999px !important;
-    }
-
-    /* Eliminar TODOS los elementos después del main/CTA */
-    .landing-page ~ *,
-    .cta ~ *,
-    .cta + *,
-    main ~ *,
-    main + *,
-    #main-content ~ *,
-    #main-content + *,
-    section.cta ~ *,
-    section.cta + * {
-        display: none !important;
-        visibility: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        height: 0 !important;
-        max-height: 0 !important;
-        overflow: hidden !important;
-        position: absolute !important;
-        left: -9999px !important;
-    }
-
-    /* Forzar que el CTA sea el último elemento visible - SIN margen inferior */
-    .cta {
-        margin-bottom: 0 !important;
-        padding-bottom: 6rem !important; /* Padding interno del CTA */
-        position: relative;
-    }
-
-    /* Asegurar que el main termine limpio */
-    #main-content,
-    .site-main,
-    .landing-page {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-        display: block !important;
-    }
-
-    /* Eliminar espacios de WordPress inyectados */
-    #wpadminbar ~ *:not(#page):not(.landing-page):not(#main-content) {
-        display: none !important;
-    }
-
-    /* Ocultar elementos de plugins que aparecen al final */
-    body > div[id*="cookie"],
-    body > div[class*="cookie"],
-    body > div[id*="gdpr"],
-    body > div[class*="gdpr"],
-    body > div[id*="popup"],
-    body > div[class*="popup"] {
-        display: none !important;
-    }
-
-    /* Limpiar floats */
-    .cta::after,
-    .landing-page::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    /* Eliminar pseudo-elementos que creen espacio */
-    body::after,
-    html::after,
-    body::before,
-    html::before {
-        content: none !important;
-        display: none !important;
-    }
-
-    /* CRÍTICO: Prevenir que WordPress o plugins agreguen espacio al final */
-    body > *:last-child:not(.landing-page):not(#page):not(#main-content) {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    /* Forzar overflow correcto sin romper sticky */
-    html {
-        overflow-y: auto !important;
-        /* NO usar overflow-x: hidden - rompe position: sticky */
-    }
-
-    body {
-        overflow-x: clip !important; /* Alternativa moderna a hidden que no rompe sticky */
-    }
-
-    /* Eliminar márgenes de elementos de WordPress */
-    #page,
-    .site {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Asegurar que no haya espacio después del CTA incluso en pantallas grandes */
-    @media (min-width: 1400px) {
-        .cta {
-            margin-bottom: 0 !important;
-        }
-
-        body {
-            padding-bottom: 0 !important;
-        }
-
-        html,
-        body {
-            margin-bottom: 0 !important;
-        }
-    }
-
-    /* === ANIMACIONES ON SCROLL === */
-
-    /* IMPORTANTE: Marcar elementos que deben animarse como ocultos inicialmente */
-    .js-enabled .animate-on-scroll {
-        opacity: 0 !important;
-    }
-
-    /* Elementos con animaciones base */
-    .animate-on-scroll {
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        will-change: transform, opacity;
-    }
-
-    /* Fade In desde abajo */
-    .fade-up {
-        transform: translateY(60px) !important;
-    }
-
-    .fade-up.animate-visible {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-
-    /* Fade In desde la izquierda */
-    .fade-left {
-        transform: translateX(-60px) !important;
-    }
-
-    .fade-left.animate-visible {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-    }
-
-    /* Fade In desde la derecha */
-    .fade-right {
-        transform: translateX(60px) !important;
-    }
-
-    .fade-right.animate-visible {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-    }
-
-    /* Zoom In */
-    .zoom-in {
-        transform: scale(0.85) !important;
-    }
-
-    .zoom-in.animate-visible {
-        opacity: 1 !important;
-        transform: scale(1) !important;
-    }
-
-    /* Flip In */
-    .flip-in {
-        transform: perspective(1000px) rotateY(-15deg) !important;
-        transform-origin: center;
-    }
-
-    .flip-in.animate-visible {
-        opacity: 1 !important;
-        transform: perspective(1000px) rotateY(0deg) !important;
-    }
-
-    /* Slide y Fade combinado - MEJORADO para estructuras y cantones */
-    .slide-fade {
-        transform: translateY(40px) scale(0.95) !important;
-    }
-
-    .slide-fade.animate-visible {
-        opacity: 1 !important;
-        transform: translateY(0) scale(1) !important;
-    }
-
-    /* Las animaciones de structures y cantons usan el sistema slide-fade estándar */
-    /* NO agregar animaciones adicionales que puedan causar conflictos con el sticky */
-
-    /* Animación especial para números (counter effect) */
-    .counter-animate {
-        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    /* Efecto de brillo al aparecer */
-    .glow-on-appear {
-        position: relative;
-    }
-
-    .glow-on-appear.animate-visible::after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.4), transparent);
-        border-radius: inherit;
-        opacity: 0;
-        animation: glow-pulse 2s ease-in-out;
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    @keyframes glow-pulse {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 1; }
-    }
-
-    /* Delays escalonados para múltiples elementos */
-    .animate-on-scroll.stagger-1 { transition-delay: 0.15s !important; }
-    .animate-on-scroll.stagger-2 { transition-delay: 0.3s !important; }
-    .animate-on-scroll.stagger-3 { transition-delay: 0.45s !important; }
-    .animate-on-scroll.stagger-4 { transition-delay: 0.6s !important; }
-    .animate-on-scroll.stagger-5 { transition-delay: 0.75s !important; }
-
-    /* Animación para hero inicial */
-    .hero-animate-in {
-        animation: heroEntry 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-    }
-
-    @keyframes heroEntry {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Animación suave para video placeholder */
-    .video-entrance {
-        animation: videoEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
-        opacity: 0;
-    }
-
-    @keyframes videoEntrance {
-        from {
-            opacity: 0;
-            transform: scale(0.9) translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-    }
-
-    /* Hover mejorado - SOLO aplica cuando ya está visible */
-    .testimonial-card.animate-visible:hover,
-    .structure-card.animate-visible:hover,
-    .canton-card.animate-visible:hover,
-    .faq-item.animate-visible:hover {
-        transform: translateY(-8px) !important;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .service-column.animate-visible:hover {
-        transform: translateY(-10px) scale(1.02) !important;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18) !important;
-    }
-
-    .inline-cta.animate-visible:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35) !important;
-    }
-
-    /* Animación especial para team photos */
-    .team-photo {
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    .team-member.animate-visible .team-photo:hover {
-        transform: scale(1.1) rotate(5deg) !important;
-        box-shadow: 0 15px 35px rgba(169, 169, 169, 0.4) !important;
-    }
-
-    /* Optimizaciones para móvil */
-    @media (max-width: 768px) {
-        /* Reducir movimientos en móvil para mejor rendimiento */
-        .fade-up {
-            transform: translateY(30px) !important;
-        }
-
-        .fade-left,
-        .fade-right {
-            transform: translateY(30px) !important; /* En móvil, convertir a fade-up */
-        }
-
-        .zoom-in {
-            transform: scale(0.92) !important;
-        }
-
-        /* Reducir hover effects en móvil */
-        .testimonial-card.animate-visible:hover,
-        .structure-card.animate-visible:hover,
-        .canton-card.animate-visible:hover,
-        .faq-item.animate-visible:hover {
-            transform: translateY(-4px) !important;
-        }
-
-        .service-column.animate-visible:hover {
-            transform: translateY(-4px) scale(1.01) !important;
-        }
-
-        .inline-cta.animate-visible:hover {
-            transform: translateY(-3px) !important;
-        }
-
-        .team-member.animate-visible .team-photo:hover {
-            transform: scale(1.05) rotate(3deg) !important;
-        }
-
-        /* Animación más rápida en móvil */
-        .animate-on-scroll {
-            transition-duration: 0.6s !important;
-        }
-    }
-
-    /* Prevenir conflictos con otras transiciones */
-    .testimonial-card,
-    .structure-card,
-    .service-column,
-    .faq-item,
-    .inline-cta {
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Override para elementos animados */
-    .testimonial-card.animate-on-scroll,
-    .structure-card.animate-on-scroll,
-    .canton-card.animate-on-scroll,
-    .service-column.animate-on-scroll,
-    .faq-item.animate-on-scroll,
-    .inline-cta.animate-on-scroll {
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    /* === SMOOTH SCROLL NATIVO === */
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* === ANIMACIONES ADICIONALES GRÁFICAS === */
-
-    /* Blur fade effect */
-    .blur-fade {
-        filter: blur(10px);
-        opacity: 0;
-        transform: scale(0.95);
-    }
-
-    .blur-fade.animate-visible {
-        filter: blur(0px);
-        opacity: 1;
-        transform: scale(1);
-        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Rotate fade effect */
-    .rotate-fade {
-        opacity: 0;
-        transform: rotate(-5deg) scale(0.9);
-    }
-
-    .rotate-fade.animate-visible {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-        transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Elastic bounce effect */
-    .elastic-bounce {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    .elastic-bounce.animate-visible {
-        opacity: 1;
-        transform: scale(1);
-        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    /* Reveal from center */
-    .reveal-center {
-        opacity: 0;
-        clip-path: circle(0% at 50% 50%);
-    }
-
-    .reveal-center.animate-visible {
-        opacity: 1;
-        clip-path: circle(150% at 50% 50%);
-        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Barra de progreso al hacer scroll */
-    .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, #c0c0c0 0%, #a8a8a8 50%, #808080 100%);
-        z-index: 9999;
-        transition: width 0.1s ease-out;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Efecto de shine que pasa por los elementos */
-    .shine-effect {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .shine-effect::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0.3) 50%,
-            transparent 100%
-        );
-        transition: left 0.7s ease;
-    }
-
-    .shine-effect.animate-visible::before {
-        left: 100%;
-    }
-
-    /* Animación de typing para textos */
-    .typing-effect {
-        overflow: hidden;
-        border-right: 2px solid #c0c0c0;
-        white-space: nowrap;
-        animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-    }
-
-    @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-    }
-
-    @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: #c0c0c0; }
-    }
-
-    /* Efecto de ondas al aparecer */
-    .wave-effect {
-        position: relative;
-    }
-
-    .wave-effect.animate-visible::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        border: 2px solid rgba(192, 192, 192, 0.5);
-        transform: translate(-50%, -50%);
-        animation: wave-pulse 1.5s ease-out;
-    }
-
-    @keyframes wave-pulse {
-        0% {
-            width: 0;
-            height: 0;
-            opacity: 1;
-        }
-        100% {
-            width: 200%;
-            height: 200%;
-            opacity: 0;
-        }
-    }
-
-    /* Sombra animada en scroll */
-    .shadow-grow {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .shadow-grow.animate-visible {
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Gradient text animation */
-    .gradient-text-animate {
-        background: linear-gradient(
-            90deg,
-            #000000 0%,
-            #4a4a4a 25%,
-            #808080 50%,
-            #4a4a4a 75%,
-            #000000 100%
-        );
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: gradient-shift 3s ease infinite;
-    }
-
-    @keyframes gradient-shift {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-    }
-
-    /* Contador con efecto de brillo */
-    .counter-glow {
-        position: relative;
-        display: inline-block;
-    }
-
-    .counter-glow.animate-visible {
-        animation: number-glow 2s ease-in-out;
-    }
-
-    @keyframes number-glow {
-        0%, 100% {
-            text-shadow: 0 0 5px rgba(192, 192, 192, 0);
-        }
-        50% {
-            text-shadow: 0 0 20px rgba(192, 192, 192, 0.8),
-                         0 0 30px rgba(192, 192, 192, 0.6);
-        }
-    }
-
-    /* Floating animation suave */
-    .float-animate {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
-
-    /* Pulse subtle en hover */
-    .pulse-hover:hover {
-        animation: pulse-subtle 1s ease-in-out infinite;
-    }
-
-    @keyframes pulse-subtle {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.03); }
-    }
-
-    /* Border animation en aparecer */
-    .border-draw {
-        position: relative;
-    }
-
-    .border-draw::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border: 2px solid #c0c0c0;
-        opacity: 0;
-    }
-
-    .border-draw.animate-visible::before {
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        transition: width 0.6s ease, height 0.6s ease 0.3s, opacity 0.3s ease;
-    }
-
-    /* Slide scale combinado mejorado */
-    .slide-scale-advanced {
-        opacity: 0;
-        transform: translateY(50px) scale(0.8) rotateX(10deg);
-        transform-style: preserve-3d;
-        perspective: 1000px;
-    }
-
-    .slide-scale-advanced.animate-visible {
-        opacity: 1;
-        transform: translateY(0) scale(1) rotateX(0deg);
-        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-</style>
+<?php // CSS movido a assets/css/landing.css para mejor rendimiento (Core Web Vitals) ?>
 
 <main id="main-content" class="site-main landing-page">
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-seo-title">
         <div class="container">
+
+            <!-- Bloque SEO Hero - Discreto con branding -->
+            <div class="hero-seo-block">
+                <div class="hero-seo-content">
+                    <div class="hero-seo-text">
+                        <h1 id="hero-seo-title" class="hero-seo-title">Fiscalidad en Suiza para empresarios que quieren proteger su capital</h1>
+                        <h2 class="hero-seo-subtitle">La fiscalidad en Suiza es el refugio que tu negocio necesita</h2>
+                        <p class="hero-seo-description">La fiscalidad en Suiza es lo que separa a los que siguen regalando su dinero de los que decidieron protegerlo. Mientras en España pagas un 45% por el delito de trabajar bien, aquí la tributación real ronda el 12%. No es magia. Es un sistema que premia al que produce en lugar de castigarlo. Miles de empresarios ya lo descubrieron. La pregunta es cuánto tiempo más vas a esperar tú.</p>
+                    </div>
+                    <div class="hero-seo-logo">
+                        <img src="<?php echo esc_url(home_url('/wp-content/uploads/2026/01/gns-advisory-asesoria-fiscal-y-legal-en-suiza-paga-menos-impuestos.webp')); ?>"
+                             alt="GNS Advisory - Asesoría fiscal especializada en Suiza"
+                             width="180" height="37" loading="eager">
+                    </div>
+                </div>
+            </div>
 
             <!-- Header -->
             <div class="hero-header">
-                <h1 class="hero-title">
+                <p class="hero-title" id="hero-visual-title">
                     <span class="hero-title-line">Te están robando cada vez más.</span>
                     <span class="hero-title-line">Y lo sabes.</span>
                     <span class="hero-title-line">Pero no haces nada.</span>
                     <span class="hero-title-line hero-title-semibold">Sigue pensando que Suiza es solo para los ricos.</span>
                     <span class="hero-title-line hero-title-semibold">A ver cómo te va.</span>
-                </h1>
+                </p>
             </div>
 
             <!-- Main block -->
@@ -2245,7 +48,11 @@ get_header(); ?>
                 <!-- Foto Alejandra -->
                 <div class="hero-photo-column">
                     <div class="hero-photo-circle">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="200" height="200" loading="eager" fetchpriority="high">
+                        <img src="<?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp"
+                             srcset="<?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp 200w,
+                                     <?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp 400w"
+                             sizes="(max-width: 768px) 150px, 200px"
+                             alt="Alejandra Ortiz" width="200" height="200" loading="eager" fetchpriority="high">
                     </div>
                     <div class="hero-photo-name">Ale</div>
                     <div class="hero-photo-role">Fundadora GNS Advisory</div>
@@ -2292,7 +99,7 @@ get_header(); ?>
                             "Ale, llevo años así. Gano dinero pero no puedo usarlo. Quiero comprar empresas, quiero crecer, pero si muevo un euro me crucifican."
                         </blockquote>
 
-                        <p>Le pregunté: ¿Por qué no has mirado Suiza?</p>
+                        <p>Le pregunté: ¿Por qué no has explorado la fiscalidad en Suiza?</p>
 
                         <p>Su respuesta:</p>
 
@@ -2300,7 +107,7 @@ get_header(); ?>
 
                         <p>No lo es.</p>
 
-                        <p class="story-result">Le monté una Holding en Suiza.</p>
+                        <p class="story-result">Le expliqué cómo funciona la fiscalidad en Suiza y le monté una <a href="<?php echo esc_url(home_url('/servicios/')); ?>">Holding en Suiza</a>.</p>
 
                         <p class="story-emphasis">Legalmente. Transparente. Sin trucos.</p>
 
@@ -2334,7 +141,7 @@ get_header(); ?>
 
                         <p>Y duerme tranquilo.</p>
 
-                        <p class="story-lesson">Porque aquí está la verdad que nadie te dice:</p>
+                        <p class="story-lesson">Porque aquí está la verdad sobre fiscalidad en Suiza que nadie te dice:</p>
 
                         <p class="story-lesson-answer">Mientras estés en España fingiendo pérdidas, no estás construyendo nada.</p>
 
@@ -2360,30 +167,34 @@ get_header(); ?>
 
                     </div>
 
-                    <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary hero-button">Quiero dejar de regalar mi dinero</a>
+                    <a href="<?php echo esc_url(gns_get_calendly_url()); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary hero-button" aria-label="Agendar consulta con asesor fiscal en Suiza">Quiero dejar de regalar mi dinero</a>
 
                 </div>
 
-            </div>
-
-            <!-- Logo -->
-            <div class="hero-logo">
-                <img src="https://gnsadvisory.com/wp-content/uploads/2025/05/logo_foter-2.png" alt="GNS Advisory" width="350" height="71" loading="lazy">
             </div>
 
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials" aria-labelledby="testimonials-heading">
         <div class="container">
-            <h2 class="animate-on-scroll fade-up">Esto es lo que pasa cuando entiendes el juego</h2>
+            <!-- Bloque SEO Testimonials -->
+            <div class="section-seo-block">
+                <h2 id="testimonials-heading" class="section-seo-title">Empresarios que aplicaron la fiscalidad suiza y dejaron de pagar de más</h2>
+                <p class="section-seo-intro">Un cliente me dijo hace poco: "Ale, llevo 8 años mostrando pérdidas falsas para que Hacienda no me destroce". Ahora tiene una holding en Suiza y paga el 15% sobre beneficios reales. La fiscalidad suiza permite esto de forma completamente legal. Otro empresario español vivía en Vaud pagando 50.000 CHF al año —nuestra asesoría fiscal en Suiza le cambió de cantón y ahora paga 10.000. El sistema fiscal suizo varía tanto entre Zug, Ginebra y Zúrich que elegir mal te puede costar cientos de miles. Aplicamos correctamente los convenios de doble imposición para que no pagues dos veces. Estos son algunos casos reales de ahorro fiscal en Suiza.</p>
+            </div>
+
+            <p class="section-visual-title animate-on-scroll fade-up">Esto es lo que pasa cuando entiendes el juego</p>
             <p class="animate-on-scroll fade-up stagger-1">Sin marketing vacío. Solo historias reales.</p>
+
+            <h3 class="section-seo-subtitle sr-only">Casos de Éxito en Optimización Fiscal Suiza</h3>
 
             <div class="testimonial-grid">
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-1 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">1.8M CHF</div>
-                    <h4>C. dejó de fingir pérdidas</h4>
+                    <p class="testimonial-name">C. dejó de fingir pérdidas</p>
+                    <h3 class="testimonial-seo-title">Caso de éxito: Ahorro de 1.8M CHF con Holding en Suiza</h3>
                     <p class="testimonial-detail">Empresario español | 2M€ patrimonio<br>
                     Antes: 37% de impuestos + empresas en rojo para sobrevivir<br>
                     Ahora: 15% + Holding suiza + 4 empresas reales</p>
@@ -2399,7 +210,8 @@ get_header(); ?>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-2 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">200K CHF</div>
-                    <h4>A. vivía en Suiza pagando de más</h4>
+                    <p class="testimonial-name">A. vivía en Suiza pagando de más</p>
+                    <h3 class="testimonial-seo-title">Cambió de cantón en Suiza y ahora ahorra 40.000 CHF cada año</h3>
                     <p class="testimonial-detail">Residente suiza | 3M CHF patrimonio<br>
                     Antes: 50.000 CHF/año en Vaud<br>
                     Ahora: 10.000 CHF/año en otro cantón</p>
@@ -2415,7 +227,8 @@ get_header(); ?>
 
                 <div class="testimonial-card animate-on-scroll zoom-in stagger-3 glow-on-appear shine-effect shadow-grow">
                     <div class="testimonial-result counter-animate counter-glow">1.2M CHF</div>
-                    <h4>La familia M. dejó el miedo atrás</h4>
+                    <p class="testimonial-name">La familia M. dejó el miedo atrás</p>
+                    <h3 class="testimonial-seo-title">Esta familia latinoamericana ahorra 1.2M CHF al año con su estructura en Suiza</h3>
                     <p class="testimonial-detail">Empresarios latinos | Empresas en 3 países<br>
                     Antes: Inseguridad + impuestos caóticos + sin Europa<br>
                     Ahora: Suiza + hijos seguros + expansión europea</p>
@@ -2432,50 +245,60 @@ get_header(); ?>
                 </div>
             </div>
 
+            <h3 class="section-seo-subtitle">Resultados de Nuestros Clientes con Residencia Fiscal en Suiza</h3>
+
             <!-- CTA Integrado 1 -->
             <div class="inline-cta animate-on-scroll slide-fade stagger-1">
                 <div class="inline-cta-content">
-                    <h3>¿Cuánto podrías estar ahorrando tú?</h3>
-                    <p>Si estás pagando más de 100K EUR/año en impuestos, probablemente estás dejando dinero sobre la mesa.</p>
+                    <p class="cta-visual-title">¿Cuánto podrías estar ahorrando tú?</p>
+                    <p>Si estás pagando más de 100K EUR/año en impuestos y no conoces la fiscalidad en Suiza, probablemente estás dejando dinero sobre la mesa.</p>
                     <p>Cada año que no actúas, ese dinero desaparece. Para siempre.</p>
-                    <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary">Quiero saber cuánto</a>
+                    <a href="<?php echo esc_url(gns_get_calendly_url()); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Calcular ahorro fiscal con asesoría en Suiza">Quiero saber cuánto</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section class="services">
+    <section class="services" aria-labelledby="services-heading">
         <div class="container">
-            <h2 class="animate-on-scroll fade-up">¿Qué necesitas exactamente?</h2>
+            <!-- Bloque SEO Services -->
+            <div class="section-seo-block">
+                <h2 id="services-heading" class="section-seo-title">Servicios de asesoría fiscal en Suiza para empresarios españoles y latinoamericanos</h2>
+                <p class="section-seo-intro">Hay dos tipos de clientes que nos contactan buscando consultoría fiscal en Suiza. Los que ya residen en territorio suizo pero pagan de más (porque nadie les explicó que la tributación suiza varía hasta un 40% según el cantón —Zug, Ginebra o Zúrich tienen diferencias brutales). Y los empresarios españoles hartos de Hacienda que quieren saber si la fiscalidad en Suiza tiene sentido para ellos. Como asesoría fiscal especializada exclusivamente en Suiza, a los primeros les encontramos dónde están dejando dinero. A los segundos les decimos la verdad: si crear una GmbH, Holding o AG no encaja con tu situación, te lo decimos y tan amigos. Las ventajas fiscales de Suiza son reales, pero no son para todos. Puedes ver todos <a href="<?php echo esc_url(home_url('/servicios/')); ?>">nuestros servicios de fiscalidad suiza</a> en detalle.</p>
+            </div>
+
+            <p class="section-visual-title animate-on-scroll fade-up">¿Qué necesitas exactamente?</p>
             <p class="animate-on-scroll fade-up stagger-1">Porque no es lo mismo estar ya en Suiza que estar pensando en venir.</p>
 
             <div class="services-grid">
                 <div class="service-column green animate-on-scroll fade-left stagger-2">
-                    <h3>Ya estás en Suiza</h3>
+                    <p class="service-column-title">Ya estás en Suiza</p>
+                    <h3 class="service-seo-title">Fiscalidad suiza para quienes ya residen en Suiza</h3>
                     <p>Miro tu estructura actual y encuentro dónde estás dejando dinero.</p>
                     <p>Casi siempre hay algo.</p>
                     <p>Luego lo arreglamos.</p>
                     <ul>
-                        <li>Reviso tu estructura societaria (holdings, subsidiarias, el lío que tengas)</li>
-                        <li>Busco fugas fiscales que tu gestor no ve</li>
-                        <li>Optimizo cómo te pagas a ti mismo (dividendos, salario, combinación)</li>
-                        <li>Planifico qué pasa cuando no estés (herencias, sucesión)</li>
-                        <li>Reduzco tu carga cantonal si estás en el cantón equivocado</li>
+                        <li>Reviso tu estructura societaria (Holding, GmbH, AG, subsidiarias)</li>
+                        <li>Busco fugas en tu tributación suiza que tu gestor no ve</li>
+                        <li>Optimizo cómo te pagas a ti mismo (dividendos, salario, forfait)</li>
+                        <li>Planifico sucesiones aplicando convenios de doble imposición</li>
+                        <li>Analizo si tu cantón actual (Zug, Ginebra, Zúrich) es el óptimo para tu caso</li>
                     </ul>
                 </div>
 
                 <div class="service-column red animate-on-scroll fade-right stagger-2">
-                    <h3>No estás en Suiza (todavía)</h3>
+                    <p class="service-column-title">No estás en Suiza (todavía)</p>
+                    <h3 class="service-seo-title">Fiscalidad en Suiza para empresarios que quieren trasladarse a Suiza</h3>
                     <p>Te digo si tiene sentido para tu caso.</p>
                     <p>Cómo hacerlo. Cuánto cuesta. Cuánto vas a ahorrar.</p>
                     <p>Sin rodeos.</p>
                     <ul>
-                        <li>Analizo si Suiza tiene sentido para ti (a veces no lo tiene, y te lo digo)</li>
-                        <li>Diseño la estructura antes de que muevas un euro</li>
-                        <li>Gestiono permisos de residencia si los necesitas</li>
-                        <li>Coordino con tus asesores actuales para que no haya sorpresas</li>
-                        <li>Te acompaño en todo el proceso, no te dejo solo con papeles</li>
+                        <li>Analizo si el sistema fiscal suizo tiene sentido para ti (a veces no lo tiene)</li>
+                        <li>Diseño la estructura: GmbH, AG o Holding según tu situación</li>
+                        <li>Gestiono permisos y convenios de doble imposición España-Suiza</li>
+                        <li>Coordino con tus asesores actuales en España o Latinoamérica</li>
+                        <li>Te acompaño en todo el proceso para conseguir el ahorro fiscal en Suiza</li>
                     </ul>
                 </div>
             </div>
@@ -2484,76 +307,93 @@ get_header(); ?>
     </section>
 
     <!-- Swiss Structures -->
-    <section class="swiss-structures">
+    <section class="swiss-structures" aria-labelledby="structures-heading">
         <div class="container">
-            <h2 class="animate-on-scroll fade-up">Las herramientas (sin el rollo técnico)</h2>
+            <!-- Bloque SEO Structures -->
+            <div class="section-seo-block">
+                <h2 id="structures-heading" class="section-seo-title">Te explico las estructuras societarias en Suiza para que elijas entre GmbH, Holding y AG</h2>
+                <p class="section-seo-intro">Te voy a ahorrar horas de Google. Como asesoría fiscal especializada en fiscalidad suiza, te explico las cuatro estructuras: Holding (si ya tienes varias empresas), GmbH (lo más parecido a una SL española), AG (para estructuras grandes con inversores) y Einzelfirma (autónomo). ¿La diferencia en tributación suiza? Brutal. En Zug pagas un 12%. En Ginebra o Zúrich puede variar significativamente —y eso sin contar el forfait para grandes patrimonios. La fiscalidad en Suiza para empresarios hispanohablantes requiere elegir bien desde el principio. Esa diferencia puede ser 200.000€ al año de ahorro fiscal.</p>
+            </div>
+
+            <p class="section-visual-title animate-on-scroll fade-up">Las herramientas (sin el rollo técnico)</p>
             <p class="animate-on-scroll fade-up stagger-1">Hay varias formas de estructurarte en Suiza. Esto es lo que necesitas saber de cada una. El resto te lo explico cuando hablemos.</p>
+
+            <h3 class="section-seo-subtitle">Ventajas fiscales de cada estructura societaria en Suiza</h3>
 
             <div class="structures-content">
                 <div class="structures-main-grid">
                     <div class="structures-grid">
                         <div class="structure-card animate-on-scroll slide-fade stagger-1">
-                            <h4>Holding Suiza</h4>
-                            <h5>Para quienes tienen varias empresas</h5>
-                            <p>El 95% de los dividendos que recibes de tus empresas NO tributan. Sí, has leído bien.</p>
-                            <p><strong>Ideal si:</strong> Tienes varias sociedades o inversiones en diferentes países.</p>
+                            <p class="structure-card-title">Holding Suiza</p>
+                            <p class="structure-card-subtitle">Para quienes tienen varias empresas</p>
+                            <h4 class="structure-seo-title">Con una Holding en Suiza el 95% de tus dividendos quedan exentos</h4>
+                            <p>El 95% de los dividendos que recibes de tus empresas NO tributan. Así funciona la fiscalidad suiza para holdings. Sí, has leído bien.</p>
+                            <p><strong>Ideal si:</strong> Tienes varias sociedades y necesitas asesoría fiscal que optimice flujos entre países.</p>
                         </div>
 
                         <div class="structure-card animate-on-scroll slide-fade stagger-2">
-                            <h4>GMBH</h4>
-                            <h5>La más común para empezar</h5>
-                            <p>Como una SL española, pero con impuestos del 12-14%. Capital mínimo: 20.000 CHF.</p>
-                            <p><strong>Ideal si:</strong> Eres empresario o tienes una pyme.</p>
+                            <p class="structure-card-title">GMBH</p>
+                            <p class="structure-card-subtitle">La más común para empezar</p>
+                            <h4 class="structure-seo-title">La GmbH suiza te permite tributar entre el 12% y el 14%</h4>
+                            <p>Como una SL española, pero con <a href="<?php echo esc_url(home_url('/blog-fiscalidad-impuestos-suiza/')); ?>">fiscalidad suiza</a> del 12-14%. Capital mínimo: 20.000 CHF. La estructura más elegida por empresarios españoles y latinoamericanos.</p>
+                            <p><strong>Ideal si:</strong> Eres empresario hispanohablante con pyme o quieres emprender en Suiza.</p>
                         </div>
 
                         <div class="structure-card animate-on-scroll slide-fade stagger-3">
-                            <h4>AG</h4>
-                            <h5>Para estructuras grandes</h5>
-                            <p>Como una SA. Facilita meter inversores. Capital mínimo: 100.000 CHF.</p>
+                            <p class="structure-card-title">AG</p>
+                            <p class="structure-card-subtitle">Para estructuras grandes</p>
+                            <h4 class="structure-seo-title">La AG suiza es ideal si buscas inversores y ventajas fiscales</h4>
+                            <p>Como una SA española. Facilita meter inversores. Capital mínimo: 100.000 CHF.</p>
                             <p><strong>Ideal si:</strong> Facturas mucho o planeas crecer con socios.</p>
                         </div>
 
                         <div class="structure-card animate-on-scroll slide-fade stagger-4">
-                            <h4>Einzelfirma</h4>
-                            <h5>Autónomo en Suiza</h5>
-                            <p>Sin capital mínimo. Simple. Tributas como persona.</p>
-                            <p><strong>Ideal si:</strong> Eres freelance o estás empezando.</p>
+                            <p class="structure-card-title">Einzelfirma</p>
+                            <p class="structure-card-subtitle">Autónomo en Suiza</p>
+                            <h4 class="structure-seo-title">La Einzelfirma te permite ser autónomo en Suiza con un sistema fiscal simplificado</h4>
+                            <p>Sin capital mínimo. Simple. Tributas como persona física bajo el sistema fiscal suizo. Tu asesoría fiscal te ayuda con la declaración.</p>
+                            <p><strong>Ideal si:</strong> Eres freelance hispanohablante o estás empezando a emprender en Suiza.</p>
                         </div>
                     </div>
 
                     <!-- Grid 2x2 de Cantones -->
-                    <h3>¿Dónde? Depende de lo que busques.</h3>
+                    <p class="section-visual-title">¿Dónde? Depende de lo que busques.</p>
+                    <h3 class="section-seo-subtitle">Así varía la fiscalidad suiza entre Zug, Ginebra y Zúrich</h3>
                     <div class="cantons-grid">
                 <!-- Ginebra -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-1">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Ginebra-grandes-fortunas-impuestos-en-Suiza.png" alt="Cantón de Ginebra" width="80" height="80" loading="lazy">
-                    <h4>Genève</h4>
-                    <h5>El internacional</h5>
-                    <p>Hub diplomático. Francófono. Prestigio. Mejor para patrimonios grandes y perfiles internacionales.</p>
+                    <img class="canton-flag-img" src="<?php echo home_url(''); ?>/wp-content/uploads/2026/01/Canton-Ginebra-grandes-fortunas-impuestos-en-Suiza.webp" alt="Cantón de Ginebra" width="80" height="80" loading="lazy">
+                    <p class="canton-card-title">Genève</p>
+                    <p class="canton-card-subtitle">El internacional</p>
+                    <h4 class="canton-seo-title">En Ginebra la fiscalidad suiza beneficia especialmente a patrimonios internacionales</h4>
+                    <p>Hub diplomático. Francófono. Prestigio. El cantón preferido para grandes patrimonios y empresarios hispanohablantes con negocios globales. Nuestra asesoría fiscal analiza si encajas.</p>
                 </div>
 
                 <!-- Zug -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-2">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Canton-Zug-impuestos-bajos-y-criptomonedas.png" alt="Cantón de Zug" width="80" height="80" loading="lazy">
-                    <h4>Zug</h4>
-                    <h5>El que todos conocen</h5>
-                    <p>12% impuestos corporativos. Crypto Valley. El más barato, pero no siempre el mejor para ti.</p>
+                    <img class="canton-flag-img" src="<?php echo home_url(''); ?>/wp-content/uploads/2026/01/Canton-Zug-impuestos-bajos-y-criptomonedas.webp" alt="Cantón de Zug" width="80" height="80" loading="lazy">
+                    <p class="canton-card-title">Zug</p>
+                    <p class="canton-card-subtitle">El que todos conocen</p>
+                    <h4 class="canton-seo-title">Zug ofrece una tributación suiza del 12% y es el famoso Crypto Valley</h4>
+                    <p>12% de tributación. Crypto Valley. El más conocido por empresarios españoles, pero no siempre el mejor para tu caso según nuestra consultoría fiscal.</p>
                 </div>
 
                 <!-- Zürich -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-3">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-zurich-emprendimiento-y-en-la-ciudad-mas-grande-del-pais.png" alt="Cantón de Zürich" width="80" height="80" loading="lazy">
-                    <h4>Zürich</h4>
-                    <h5>El centro financiero</h5>
-                    <p>Más caro que Zug, pero más servicios y conexiones. Si tu negocio necesita presencia, aquí está.</p>
+                    <img class="canton-flag-img" src="<?php echo home_url(''); ?>/wp-content/uploads/2026/01/Kanton-zurich-emprendimiento-y-en-la-ciudad-mas-grande-del-pais.webp" alt="Cantón de Zürich" width="80" height="80" loading="lazy">
+                    <p class="canton-card-title">Zürich</p>
+                    <p class="canton-card-subtitle">El centro financiero</p>
+                    <h4 class="canton-seo-title">Zúrich combina ser el centro financiero europeo con una fiscalidad competitiva</h4>
+                    <p>Más caro que Zug, pero más servicios y conexiones para empresarios. Si tu negocio necesita presencia internacional, aquí está.</p>
                 </div>
 
                 <!-- Basel-Stadt -->
                 <div class="canton-card animate-on-scroll slide-fade stagger-4">
-                    <img class="canton-flag-img" src="https://gnsadvisory.com/wp-content/uploads/2026/01/Kanton-basel-impuestos-para-las-empresas-farmaceuticas.png" alt="Cantón de Basel-Stadt" width="80" height="80" loading="lazy">
-                    <h4>Basel</h4>
-                    <h5>El farmacéutico</h5>
-                    <p>13% impuestos. Hub de innovación. Menos conocido, pero muy competitivo.</p>
+                    <img class="canton-flag-img" src="<?php echo home_url(''); ?>/wp-content/uploads/2026/01/Kanton-basel-impuestos-para-las-empresas-farmaceuticas.webp" alt="Cantón de Basel-Stadt" width="80" height="80" loading="lazy">
+                    <p class="canton-card-title">Basel</p>
+                    <p class="canton-card-subtitle">El farmacéutico</p>
+                    <h4 class="canton-seo-title">Basel tiene un sistema fiscal suizo al 13% y es el hub de innovación farmacéutica</h4>
+                    <p>13% de tributación suiza. Hub de innovación. Menos conocido por hispanohablantes, pero muy competitivo.</p>
                 </div>
             </div>
                 </div>
@@ -2561,7 +401,8 @@ get_header(); ?>
                 <div class="switzerland-flag-container">
                     <!-- Bandera de Suiza SVG de alta calidad -->
                     <!-- NO aplicar animate-on-scroll - debe permanecer sticky puro -->
-                    <svg class="switzerland-flag-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="switzerland-flag-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="swiss-flag-title">
+                        <title id="swiss-flag-title">Suiza: Residencia Fiscal con Impuestos del 12% para Empresarios</title>
                         <!-- Fondo rojo oficial de Suiza (#DA291C) -->
                         <rect width="400" height="400" fill="#DA291C" rx="0"/>
 
@@ -2581,7 +422,7 @@ get_header(); ?>
 
             <div class="structures-bottom-text animate-on-scroll fade-up">
                 <p><strong>Dato real:</strong></p>
-                <p>Un empresario que factura 1M EUR/año puede ahorrar entre 200.000 y 350.000 EUR anuales relocalizando correctamente.</p>
+                <p>Un empresario que factura 1M EUR/año puede ahorrar entre 200.000 y 350.000 EUR anuales aprovechando la fiscalidad en Suiza y relocalizando correctamente.</p>
                 <p>No necesitas ser millonario.</p>
                 <p>Necesitas entender cómo funciona el sistema.</p>
                 <p>Y alguien que te lo explique sin venderte humo.</p>
@@ -2589,87 +430,10 @@ get_header(); ?>
         </div>
     </section>
 
-    <!-- Team -->
-    <section class="team">
-        <div class="container">
-            <h2 class="animate-on-scroll fade-up">Quién está detrás de esto</h2>
-            <p class="animate-on-scroll fade-up stagger-1">Las personas que harán que todo funcione para ti.</p>
-
-            <div class="team-grid">
-                <!-- Alejandra Ortiz - Fundadora -->
-                <div class="team-member main animate-on-scroll zoom-in stagger-2">
-                    <div class="team-photo-wrapper">
-                        <div class="team-photo">
-                            <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="250" height="250" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <div class="team-name">Alejandra Ortiz (Ale)</div>
-                        <div class="team-role">Fundadora</div>
-                        <div class="team-email">a.ortiz@gnsadvisory.com</div>
-                        <p style="margin-top: 1rem; color: #495057;">Mira.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">A mí me encanta España.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">La comida. La familia. Las cañas a las 2 de la tarde. Las cenas que empiezan a las 10 y terminan a las 2 de la mañana. El estilo de vida que no tiene ningún otro país en Europa.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Eso lo echo de menos.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Pero hay algo que no echo de menos.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Ver cómo cada año España se convierte en un infierno fiscal. Donde trabajas 14 horas al día para que el 45% se lo lleve Hacienda. Donde no puedes crecer porque crecer significa pagar más. Donde no puedes ahorrar porque ahorrar es sospechoso. Donde no puedes invertir porque invertir te pone una diana en la espalda.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Donde solo puedes hacer una cosa bien: comer.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Eso sí que se hace bien en España.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Pero mientras comes bien, tu empresa no crece. Mientras brindas con amigos, tus impuestos suben. Mientras disfrutas el estilo de vida, tu patrimonio se estanca.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Y lo peor de todo: la situación va a peor.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Cada año, nuevos impuestos. Cada año, más persecución. Cada año, más empresarios que se van.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Porque llega un punto en el que tienes que elegir: ¿Quieres vivir bien? ¿O quieres crecer?</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">En España, solo puedes hacer una cosa. No las dos.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Yo lo viví. Vi a empresarios brillantes fingiendo pérdidas para sobrevivir. Vi a familias con patrimonio escondiendo dinero como si fueran criminales. Vi a gente que ganaba bien pero no podía dormir tranquila.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Porque en España, ganar dinero es un delito. No oficialmente. Pero en la práctica, sí.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Me cansé de ver a gente buena siendo tratada como delincuentes. Me cansé de ver talento desperdiciado. Me cansé de ver empresarios brillantes atrapados en un sistema que los castiga por ganar.</p>
-                        <p style="margin-top: 0.75rem; color: #495057;">Por eso hice esto. Fiscalidad en Suiza para revertir esta mierda.</p>
-                    </div>
-                </div>
-
-                <!-- Sofía Fajardo -->
-                <div class="team-member animate-on-scroll fade-up stagger-3">
-                    <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/sofia_fajardo.jpg" alt="Sofía Fajardo" width="150" height="150" loading="lazy">
-                    </div>
-                    <div class="team-name">Sofía Fajardo</div>
-                    <div class="team-role">Legal</div>
-                    <div class="team-email">s.fajardo@gnsadvisory.com</div>
-                    <p style="margin-top: 0.75rem; color: #495057;">La que se asegura de que todo lo que hacemos esté blindado legalmente.</p>
-                    <p style="margin-top: 0.75rem; color: #495057;">Si algo puede salir mal en un contrato, Sofía lo encuentra antes.</p>
-                </div>
-
-                <!-- Javier Catota -->
-                <div class="team-member animate-on-scroll fade-up stagger-3">
-                    <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Javier_Catota.jpg" alt="Javier Catota" width="150" height="150" loading="lazy">
-                    </div>
-                    <div class="team-name">Javier Catota</div>
-                    <div class="team-role">Operaciones</div>
-                    <div class="team-email">j.catota@gnsadvisory.com</div>
-                    <p style="margin-top: 0.75rem; color: #495057;">El que hace que todo funcione por dentro.</p>
-                    <p style="margin-top: 0.75rem; color: #495057;">Papeles, procesos, coordinación. Lo que no se ve pero sin lo cual nada funcionaría.</p>
-                </div>
-
-                <!-- Carlos Duarte -->
-                <div class="team-member animate-on-scroll fade-up stagger-4">
-                    <div class="team-photo">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/carlos_duarte.jpg" alt="Carlos Duarte" width="150" height="150" loading="lazy">
-                    </div>
-                    <div class="team-name">Carlos Duarte</div>
-                    <div class="team-role">Soporte</div>
-                    <div class="team-email">support@gnsadvisory.com</div>
-                    <p style="margin-top: 0.75rem; color: #495057;">El que te ayuda cuando algo técnico no funciona.</p>
-                    <p style="margin-top: 0.75rem; color: #495057;">Plataformas, accesos, formación online. Si tienes un problema técnico, él lo resuelve.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section with Accessibility -->
     <section class="faq" aria-labelledby="faq-heading">
         <div class="container">
-            <h2 id="faq-heading" class="animate-on-scroll fade-up">Preguntas que nos hacen siempre</h2>
+            <h2 id="faq-heading" class="animate-on-scroll fade-up">Preguntas frecuentes sobre fiscalidad suiza para empresarios</h2>
 
             <div class="faq-list animate-on-scroll fade-up stagger-1" role="list">
                 <article class="faq-item" role="listitem">
@@ -2677,7 +441,7 @@ get_header(); ?>
                         ¿Esto es legal?
                     </button>
                     <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
-                        <p>100%. No hago trucos. No hago ingeniería fiscal agresiva. Hago optimización dentro del marco legal suizo.</p>
+                        <p>100%. No hago trucos. No hago ingeniería fiscal agresiva. Hago optimización dentro del marco legal suizo. Puedes ver <a href="<?php echo esc_url(home_url('/servicios/')); ?>">cómo trabajamos</a>.</p>
                         <p>Si quieres algo ilegal, no soy tu persona. Hay otros que hacen eso. Yo no.</p>
                     </div>
                 </article>
@@ -2687,8 +451,8 @@ get_header(); ?>
                         ¿Cuánto cuesta la primera reunión?
                     </button>
                     <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
-                        <p>230 CHF la hora.</p>
-                        <p>Si decides seguir adelante, ese coste se descuenta del proyecto. Si no, habrás invertido 230 CHF en entender tu situación fiscal real.</p>
+                        <p>230€ la hora.</p>
+                        <p>Si decides seguir adelante, ese coste se descuenta del proyecto. Si no, habrás invertido 230€ en entender tu situación fiscal real.</p>
                         <p>Probablemente la mejor inversión que hagas este año.</p>
                     </div>
                 </article>
@@ -2748,12 +512,73 @@ get_header(); ?>
                         <p>Si buscas alguien que te diga que sí a todo, no soy yo. Si buscas alguien que te diga la verdad aunque no te guste, hablamos.</p>
                     </div>
                 </article>
+
+                <!-- Preguntas SEO adicionales -->
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8" id="faq-question-8">
+                        ¿Cuánto es el impuesto de sociedades en Suiza para una GmbH?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden>
+                        <p>Depende de dónde te pongas. El impuesto de sociedades en Suiza oscila entre el 11% y el 21%. ¿La parte federal? Fija: 8,5% sobre beneficio neto. ¿La cantonal? Ahí está el juego. En Zug pagas alrededor del 12% total. En Ginebra o Vaud te vas al 18-21%.</p>
+                        <p>Para que te hagas una idea: un cliente que facturaba 800.000€ en España pagaba 200.000€ en impuestos (sociedades + dividendos). En Zug paga 96.000€. La diferencia no es "significativa". Es brutal.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-9" id="faq-question-9">
+                        ¿Qué es una Holding Suiza y cómo optimiza la doble imposición?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden>
+                        <p>Una sociedad que posee otras empresas y optimiza el convenio de doble imposición Suiza-España. ¿Por qué mola? Porque el 95% de los dividendos que recibe de sus filiales NO tributan. Se llama "participation exemption" y es completamente legal.</p>
+                        <p>Un empresario me vino con 3 sociedades en España, Francia y Portugal. Como asesora fiscal en Suiza, le montamos una Holding que las agrupa. Ahora los beneficios fluyen sin doble imposición. Antes pagaba impuestos cada vez que movía dinero. Ahora reinvierte desde su residencia fiscal Suiza.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-10" id="faq-question-10">
+                        ¿Puedo crear una GmbH Suiza sin tener residencia fiscal allí?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-10" role="region" aria-labelledby="faq-question-10" hidden>
+                        <p>Poder, puedes crear una GmbH Suiza sin residencia fiscal. Pero ojo: necesitas un administrador residente y sustancia real. Oficina física, empleados si el negocio lo requiere, decisiones que se tomen desde Suiza. Las estructuras vacías no aplican el convenio de doble imposición Suiza-España correctamente.</p>
+                        <p>¿Por qué? Porque Hacienda no es tonta. Si montas una sociedad vacía, la AEAT te la tumba. Como asesora fiscal especializada, lo hablamos en la primera reunión para ver si necesitas residencia fiscal Suiza o puedes operar sin ella.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-11" id="faq-question-11">
+                        ¿Cuánto es el IVA en Suiza para mi GmbH o Holding?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-11" role="region" aria-labelledby="faq-question-11" hidden>
+                        <p>8,1%. El más bajo de Europa occidental. En España pagas 21%. Haz las cuentas.</p>
+                        <p>Hay tipos reducidos: 2,6% para alimentación básica, 3,8% para hoteles. Si tienes un e-commerce o vendes servicios digitales, esa diferencia del 13% en IVA puede ser tu margen de beneficio. Un cliente de SaaS me lo dijo claro: "Ese 13% que me ahorro es lo que antes era mi beneficio neto".</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-12" id="faq-question-12">
+                        ¿Cuáles son los requisitos para obtener residencia fiscal en Suiza desde España?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-12" role="region" aria-labelledby="faq-question-12" hidden>
+                        <p>Para obtener residencia fiscal en Suiza y aplicar el convenio de doble imposición Suiza-España, Hacienda mira tres cosas. Una: que no pases más de 183 días al año en España. Dos: que tu centro de intereses económicos esté en Suiza (tu GmbH Suiza o Holding opera desde allí). Tres: que tu familia directa no viva en España.</p>
+                        <p>¿Tienes más de 4 millones en activos? Entonces viene el exit tax. Como asesora fiscal especializada en residencia fiscal Suiza, te ayudo a planificarlo antes de que muevas un euro.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-13" id="faq-question-13">
+                        ¿Cómo hace mi asesor fiscal la declaración de la renta en Suiza?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-13" role="region" aria-labelledby="faq-question-13" hidden>
+                        <p>Aquí viene lo interesante. La declaración de la renta en Suiza se hace a tres niveles: federal, cantonal y municipal. Como tu asesora fiscal en Suiza, gestiono los tres. Cada cantón tiene sus deducciones, y si tienes residencia fiscal Suiza en el cantón equivocado, pagas de más.</p>
+                        <p>Una cosa que sorprende: en Suiza el patrimonio tributa (entre 0,1% y 1%), pero algunos cantones ofrecen forfait fiscal Suiza que lo compensa. Un cliente con residencia fiscal en el cantón correcto pasó del 45% de IRPF en España al 25%. La diferencia: 200.000€ al año.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta">
+    <section class="cta" id="cta" aria-labelledby="cta-heading">
         <div class="container">
 
             <!-- Bloque principal -->
@@ -2762,7 +587,11 @@ get_header(); ?>
                 <!-- Columna izquierda: Foto -->
                 <div class="cta-photo-column">
                     <div class="cta-photo-circle">
-                        <img src="https://gnsadvisory.com/wp-content/uploads/2025/06/Alejandra_Ortiz.jpg" alt="Alejandra Ortiz" width="200" height="200" loading="lazy">
+                        <img src="<?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp"
+                             srcset="<?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp 200w,
+                                     <?php echo home_url(''); ?>/wp-content/uploads/2026/02/Alejandra-Ortiz-Experta-en-Fiscalidad-Suiza-Fundadora-GNS-Advisory.webp 400w"
+                             sizes="(max-width: 768px) 150px, 200px"
+                             alt="Alejandra Ortiz" width="200" height="200" loading="lazy">
                     </div>
                     <div class="cta-photo-name">Ale</div>
                     <div class="cta-photo-role">Fundadora GNS Advisory</div>
@@ -2771,7 +600,8 @@ get_header(); ?>
                 <!-- Columna derecha: Contenido -->
                 <div class="cta-content-column">
 
-                    <h2 class="cta-title">Mira, esto es simple.</h2>
+                    <p class="cta-title">Mira, esto es simple.</p>
+                    <h2 id="cta-heading" class="cta-seo-title">Consulta de fiscalidad en Suiza: 230€ la primera hora</h2>
 
                     <div class="cta-text">
                         <p>Si estás pagando más de 100.000€ al año en impuestos y no has hablado con alguien que entienda Suiza, estás perdiendo dinero.</p>
@@ -2784,7 +614,7 @@ get_header(); ?>
                     </div>
 
                     <div class="cta-price-block">
-                        <span class="cta-price counter-animate counter-glow">230 CHF</span>
+                        <span class="cta-price counter-animate counter-glow">230€</span>
                         <span class="cta-price-detail">1 hora de consulta</span>
                     </div>
 
@@ -2800,7 +630,7 @@ get_header(); ?>
                         <p>Si no, también está bien.</p>
                     </div>
 
-                    <a href="https://calendly.com/gnsgroupadvisory-info/consulta-estrategica" target="_blank" class="btn btn-primary cta-button">
+                    <a href="<?php echo esc_url(gns_get_calendly_url()); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary cta-button" aria-label="Reservar consulta fiscal de 230€ con GNS Advisory">
                         Quiero dejar de regalar mi dinero
                     </a>
 
@@ -2829,372 +659,420 @@ get_header(); ?>
         </div>
     </section>
 
+    <!-- Sección SEO Informativa -->
+    <section class="seo-info-section" aria-labelledby="seo-info-heading">
+        <div class="container">
+
+            <div class="seo-info-header">
+                <h2 id="seo-info-heading">Guía completa de fiscalidad en Suiza para empresarios hispanohablantes</h2>
+                <p>Llevo 4 años con GNS Advisory ayudando a empresarios españoles y latinoamericanos a entender la fiscalidad suiza. Esto es lo que me hubiera gustado que alguien me explicara cuando empecé: cómo funciona el sistema fiscal suizo, qué ventajas fiscales ofrece Suiza realmente, y cuándo tiene sentido una <a href="<?php echo esc_url(home_url('/gmbh-suiza/')); ?>">GmbH</a> vs una <a href="<?php echo esc_url(home_url('/holding-suiza/')); ?>">Holding</a>. Si quieres profundizar, visita nuestro <a href="<?php echo esc_url(home_url('/blog-fiscalidad-impuestos-suiza/')); ?>">blog sobre fiscalidad en Suiza</a>.</p>
+            </div>
+
+            <div class="seo-info-content">
+
+                <div class="seo-info-block">
+                    <h3>Esto es lo que tu asesoría fiscal debe explicarte sobre el sistema fiscal suizo</h3>
+                    <p>La primera vez que vi cómo funcionaba la fiscalidad en Suiza, pensé que era un error. ¿26 cantones compitiendo entre sí por atraer empresarios? ¿Cada uno con su propia tributación suiza? Parecía caos. Pero como asesoría fiscal especializada, te digo que es justo lo contrario.</p>
+                    <p>El sistema fiscal suizo funciona a tres niveles: federal, cantonal y municipal. La parte federal es fija para todos. La cantonal y municipal varían según dónde te pongas. Eso significa que una empresa puede pagar el 11% en un cantón como Zug... o el 21% en otro. Misma actividad, mismo beneficio, 10 puntos de diferencia en la fiscalidad suiza.</p>
+                    <p>¿Es Suiza un paraíso fiscal? No. Intercambia información con la UE, cumple con la OCDE, no acepta dinero sucio. Pero entiende algo que España no quiere entender: que las ventajas fiscales de Suiza atraen talento, empresas y capital. Y que eso beneficia a todos.</p>
+                </div>
+
+                <div class="seo-info-block">
+                    <h3>Comparativa de fiscalidad suiza entre Zug, Ginebra y Zúrich</h3>
+                    <p>Me preguntan mucho: "¿Cuál es el mejor cantón para la fiscalidad en Suiza?" La respuesta corta: depende. La respuesta larga es esta:</p>
+                    <ul class="seo-info-list">
+                        <li><strong>Zug:</strong> El famoso. Tributación suiza del 12%. Crypto Valley. Muchos empresarios españoles con GmbH y Holdings. Pero está saturado. Como asesoría fiscal, no lo recomendamos a todos.</li>
+                        <li><strong>Schwyz:</strong> El vecino discreto de Zug. Tipos parecidos pero menos masificado. Buenos números para personas físicas. Un cliente empresario se mudó de Zug a Schwyz y bajó su IRPF 8 puntos.</li>
+                        <li><strong>Nidwalden y Obwalden:</strong> Los cantones que nadie conoce pero que tienen las mejores cifras. Menos burocracia, trato más personal, fiscalidad suiza muy competitiva.</li>
+                        <li><strong>Ginebra:</strong> Más caro (14-15% para empresas, hasta 45% para personas). Pero ofrece el forfait para grandes patrimonios. El convenio de doble imposición se aplica igual, pero el ecosistema internacional no tiene rival para empresarios hispanohablantes.</li>
+                        <li><strong>Zúrich:</strong> El centro financiero. Tipos medios-altos, pero acceso directo a todo el sistema bancario suizo. Si necesitas presencia corporativa seria, aquí.</li>
+                        <li><strong>Vaud:</strong> Puede llegar al 22% para empresas. Caro. Pero tiene ventajas fiscales para grandes fortunas que no trabajan activamente en Suiza.</li>
+                    </ul>
+                    <p>La elección del cantón no es solo un número. ¿Hablas francés o alemán? ¿Tienes hijos que escolarizar? ¿Tu negocio necesita estar cerca de un aeropuerto internacional? Todo eso importa. Por eso nuestra consultoría fiscal lo analiza caso por caso, no damos una respuesta genérica.</p>
+                </div>
+
+                <div class="seo-info-block">
+                    <h3>Los números reales de tributación suiza para tu GmbH, Holding o AG</h3>
+                    <p>Cuando decides <a href="<?php echo esc_url(home_url('/crear-empresa-suiza/')); ?>">crear una empresa en Suiza</a>, esto es lo que pagas según el sistema fiscal suizo comparado con el sistema español:</p>
+                    
+                    <div class="tabla-comparativa-wrapper animate-on-scroll fade-up">
+                        <table class="tabla-comparativa">
+                            <thead>
+                                <tr>
+                                    <th>Concepto Fiscal</th>
+                                    <th>España (Madrid/BCN)</th>
+                                    <th>Suiza (Zug/Nidwalden)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Impuesto de Sociedades</td>
+                                    <td>25%</td>
+                                    <td><strong>11.8% - 12%</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>IVA (Tipo General)</td>
+                                    <td>21%</td>
+                                    <td><strong>8.1%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="seo-info-list">
+                        <li><strong>Impuesto federal:</strong> 8,5% fijo sobre beneficio neto. No cambia, da igual dónde estés.</li>
+                        <li><strong>Impuesto cantonal + municipal:</strong> Aquí está el juego de la fiscalidad suiza. Desde el 3% adicional en Zug hasta el 13% en Vaud. <a href="<?php echo esc_url(home_url('/fiscalidad-cantones-suiza/')); ?>">Ver comparativa de cantones</a>.</li>
+                        <li><strong>IVA en Suiza:</strong> 8,1%. El más bajo de Europa occidental. <a href="<?php echo esc_url(home_url('/iva-suiza/')); ?>">Gestión de IVA para empresas</a>.</li>
+                    </ul>
+                    <p>Total para una empresa bien ubicada: entre 11% y 15%. ¿Y en España? 25% de sociedades. Más 19-26% cuando sacas dividendos. Haz las cuentas del ahorro fiscal en Suiza.</p>
+                    <p>Un empresario español que factura 1 millón de euros y tiene 400.000€ de beneficio pagaba en España unos 160.000€ (entre sociedades y dividendos). En Suiza paga 60.000€. La diferencia de 100.000€ al año la reinvierte en su negocio. En 3 años ha comprado dos empresas más.</p>
+                </div>
+
+                <div class="seo-info-block">
+                    <h3>Requisitos para crear tu GmbH, Holding o AG si eres empresario hispanohablante</h3>
+                    <p>¿Se puede emprender en Suiza sin ser suizo? Sí. ¿Es fácil? Depende de tu situación.</p>
+                    <ul class="seo-info-list">
+                        <li><strong>Si no tienes residencia:</strong> Puedes crear una sociedad, pero necesitas un administrador que viva en Suiza. Y sustancia real: oficina física (no un buzón), empleados si el negocio lo requiere, decisiones que se tomen desde Suiza. Las estructuras vacías no aprovechan la fiscalidad suiza.</li>
+                        <li><strong>Si tienes residencia:</strong> Mucho más fácil. Necesitas permiso de trabajo (B o C). Los ciudadanos de la UE y empresarios españoles tenemos ventaja por los acuerdos bilaterales.</li>
+                        <li><strong>Capital mínimo:</strong> Una GmbH pide 20.000 CHF. Una AG pide 100.000 CHF (con 50.000 desembolsados). La GmbH es lo más elegido por empresarios hispanohablantes.</li>
+                        <li><strong>Tiempo de registro:</strong> Entre 2 y 4 semanas normalmente. El sistema fiscal suizo es eficiente con el papeleo.</li>
+                    </ul>
+                    <p>Una cosa que le decimos a todos desde nuestra asesoría fiscal: si tu plan es montar una estructura vacía para pagar menos impuestos, no funciona. Los convenios de doble imposición requieren sustancia real. La AEAT tiene intercambio de información con Suiza. Si no tienes residencia fiscal real, no pierdas el tiempo. Mira nuestros <a href="<?php echo esc_url(home_url('/servicios/')); ?>">servicios de fiscalidad en Suiza</a> para entender el proceso.</p>
+                </div>
+
+                <div class="seo-info-block">
+                    <h3>Si eres español, así te afecta el convenio de doble imposición y el exit tax</h3>
+                    <p>Esta es la parte que más miedo da a los empresarios españoles. Y con razón. Hacienda no te deja ir tan fácilmente. Los requisitos para acceder a la fiscalidad en Suiza desde España y realizar un <a href="<?php echo esc_url(home_url('/cambio-residencia-fiscal-suiza/')); ?>">cambio de residencia fiscal</a> correcto son estos:</p>
+                    <ul class="seo-info-list">
+                        <li><strong>La regla de los 183 días:</strong> No puedes pasar más de 183 días al año en España. Suena simple, pero Hacienda cuenta bien. Viajes de trabajo, escalas, todo suma.</li>
+                        <li><strong>Centro de intereses económicos:</strong> Si tu negocio principal sigue operando desde España, da igual que vivas en Zúrich. Hacienda puede argumentar que tu centro económico está en España.</li>
+                        <li><strong>Familia:</strong> Si tu cónyuge e hijos menores viven en España, Hacienda presume que tú también eres residente. Hay que planificar esto bien con tu asesoría fiscal.</li>
+                    </ul>
+                    <p>¿Y si tienes pasta? Ahí viene el exit tax. Si tienes más de 4 millones de euros en activos (acciones, participaciones, inmuebles fuera de la vivienda habitual), puedes tener que tributar por plusvalías que ni siquiera has cobrado. Es complicado, pero se puede planificar con tiempo.</p>
+                    <p>España y Suiza tienen convenio de doble imposición, así que no pagas dos veces por los mismos ingresos. Pero hay que aplicarlo bien. Un empresario español vino a GNS Advisory después de mudarse y tuvo problemas porque su anterior asesor no le explicó la transición. Acabó pagando en los dos países. Con nuestra consultoría fiscal especializada en fiscalidad suiza para hispanohablantes, eso no te va a pasar.</p>
+                </div>
+
+                <div class="seo-info-block">
+                    <h3>Por qué GNS Advisory se especializa exclusivamente en asesoría fiscal para Suiza</h3>
+                    <p>No voy a decirte que somos los mejores. Eso lo decides tú. Lo que sí puedo decirte es esto:</p>
+                    <p>Llevamos 4 años como asesoría fiscal especializada exclusivamente en fiscalidad suiza para empresarios hispanohablantes —españoles y latinoamericanos. Más de 500 estructuras implementadas entre GmbH, Holdings y AG. Cero problemas con convenios de doble imposición. Trabajamos con abogados suizos y fiduciarias que conocen el sistema fiscal suizo desde dentro. <a href="<?php echo esc_url(home_url('/quien-es-gns-advisory/')); ?>">Descubre quiénes somos</a>.</p>
+                    <p>No somos una gestoría que "también hace Suiza". Somos tu consultoría fiscal especializada en fiscalidad en Suiza, tributación suiza y ahorro fiscal para empresarios. Por eso conocemos matices que otros no ven en cantones como Zug, Ginebra o Zúrich.</p>
+                    <p>¿Tu caso tiene sentido para aprovechar las ventajas fiscales de Suiza? Te lo decimos. ¿No lo tiene? También. No vamos a venderte una estructura que no te beneficia. Nuestro negocio se basa en los más de 500 clientes satisfechos que nos recomiendan.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 </main>
 
-<script>
-    // Marcar que JS está habilitado para las animaciones
-    document.documentElement.classList.add('js-enabled');
-
-    // === SMOOTH SCROLL DESACTIVADO - Conflictivo con animaciones ===
-    // El smooth scroll nativo de CSS es suficiente
-
-    // === BARRA DE PROGRESO DE SCROLL ===
-    const progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    document.body.appendChild(progressBar);
-
-    function updateScrollProgress() {
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.pageYOffset / windowHeight) * 100;
-        progressBar.style.width = scrolled + '%';
-    }
-
-    window.addEventListener('scroll', updateScrollProgress);
-
-    // === INTERSECTION OBSERVER CON ANIMACIONES BIDIRECCIONALES ===
-
-    let lastScrollY = window.pageYOffset;
-    let scrollDirection = 'down';
-
-    window.addEventListener('scroll', () => {
-        const currentScrollY = window.pageYOffset;
-        scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
-        lastScrollY = currentScrollY;
-    });
-
-    // Configuración del observer con animaciones bidireccionales
-    const observerOptions = {
-        threshold: [0, 0.15, 0.5, 1], // Múltiples thresholds para mejor control
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    // Crear el observer
-    const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const element = entry.target;
-
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
-                // Entrando en viewport - ANIMACIÓN HACIA ADELANTE
-                element.classList.add('animate-visible');
-                element.classList.remove('animate-hidden');
-
-                // Si es un counter, animar el número
-                if (element.classList.contains('counter-animate') && !element.dataset.counted) {
-                    animateCounter(element);
-                    element.dataset.counted = 'true';
+<!-- Schema.org JSON-LD para SEO -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#webpage",
+            "url": "<?php echo esc_url(home_url('/')); ?>",
+            "name": "Fiscalidad en Suiza para Empresarios | GNS Advisory - Asesoría Fiscal Especializada",
+            "description": "Asesoría fiscal especializada exclusivamente en fiscalidad en Suiza para empresarios españoles y latinoamericanos. Más de 500 estructuras implementadas. GmbH, Holding, AG.",
+            "isPartOf": {
+                "@id": "<?php echo esc_url(home_url('/')); ?>#website"
+            },
+            "about": {
+                "@id": "<?php echo esc_url(home_url('/')); ?>#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "<?php echo esc_url(home_url('/wp-content/uploads/2026/01/gns-advisory-asesoria-fiscal-y-legal-en-suiza-paga-menos-impuestos.webp')); ?>"
+            },
+            "inLanguage": "es"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#website",
+            "url": "<?php echo esc_url(home_url('/')); ?>",
+            "name": "GNS Advisory",
+            "description": "Asesoría fiscal especializada en fiscalidad en Suiza para empresarios hispanohablantes",
+            "publisher": {
+                "@id": "<?php echo esc_url(home_url('/')); ?>#organization"
+            },
+            "inLanguage": "es"
+        },
+        {
+            "@type": "Organization",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#organization",
+            "name": "GNS Advisory",
+            "alternateName": "GNS Group Advisory",
+            "url": "<?php echo esc_url(home_url('/')); ?>",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "<?php echo esc_url(home_url('/wp-content/uploads/2026/01/gns-advisory-asesoria-fiscal-y-legal-en-suiza-paga-menos-impuestos.webp')); ?>",
+                "width": 180,
+                "height": 37
+            },
+            "description": "Asesoría fiscal especializada exclusivamente en fiscalidad en Suiza para empresarios españoles y latinoamericanos. Más de 4 años de experiencia y 500+ estructuras implementadas.",
+            "foundingDate": "2022",
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": "4"
+            },
+            "slogan": "Fiscalidad en Suiza para empresarios que quieren pagar menos impuestos",
+            "knowsAbout": [
+                "Fiscalidad en Suiza",
+                "Asesoría fiscal Suiza",
+                "GmbH Suiza",
+                "Holding Suiza",
+                "AG Suiza",
+                "Residencia fiscal Suiza",
+                "Convenio doble imposición España-Suiza",
+                "Impuestos en Suiza",
+                "Tributación suiza"
+            ],
+            "areaServed": [
+                {
+                    "@type": "Country",
+                    "name": "España"
+                },
+                {
+                    "@type": "Country",
+                    "name": "Suiza"
+                },
+                {
+                    "@type": "Country",
+                    "name": "México"
+                },
+                {
+                    "@type": "Country",
+                    "name": "Argentina"
+                },
+                {
+                    "@type": "Country",
+                    "name": "Colombia"
                 }
-            } else if (!entry.isIntersecting && scrollDirection === 'up') {
-                // Saliendo del viewport HACIA ARRIBA - Reversa suave
-                if (element.dataset.bidirectional !== 'false') {
-                    element.classList.remove('animate-visible');
-                    element.classList.add('animate-hidden');
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "a.ortiz@gnsadvisory.com",
+                "availableLanguage": ["Spanish", "English", "French", "German"]
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/aortizher/"
+            ]
+        },
+        {
+            "@type": "LocalBusiness",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#localbusiness",
+            "name": "GNS Advisory",
+            "description": "Asesoría fiscal especializada en fiscalidad en Suiza para empresarios hispanohablantes",
+            "url": "<?php echo esc_url(home_url('/')); ?>",
+            "logo": "<?php echo esc_url(home_url('/wp-content/uploads/2026/01/gns-advisory-asesoria-fiscal-y-legal-en-suiza-paga-menos-impuestos.webp')); ?>",
+            "image": "<?php echo esc_url(home_url('/wp-content/uploads/2026/01/gns-advisory-asesoria-fiscal-y-legal-en-suiza-paga-menos-impuestos.webp')); ?>",
+            "priceRange": "€€€",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CH",
+                "addressLocality": "Suiza"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "47.3769",
+                "longitude": "8.5417"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            "founder": {
+                "@type": "Person",
+                "name": "Alejandra Ortiz",
+                "jobTitle": "Fundadora y Especialista en Fiscalidad en Suiza",
+                "url": "https://www.linkedin.com/in/aortizher/"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": "<?php echo esc_url(home_url('/')); ?>"
                 }
-            }
-        });
-    }, observerOptions);
-
-    // Observar todos los elementos con animación
-    document.addEventListener('DOMContentLoaded', () => {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => scrollObserver.observe(el));
-
-        // Inicializar parallax sections
-        initParallaxSections();
-    });
-
-    // === FUNCIÓN PARA ANIMAR NÚMEROS (COUNTER EFFECT) MEJORADA ===
-    function animateCounter(element) {
-        const text = element.textContent;
-        const number = parseFloat(text.replace(/[^0-9.]/g, ''));
-
-        if (isNaN(number)) return;
-
-        const duration = 2000;
-        const steps = 60;
-        const stepValue = number / steps;
-        const stepDuration = duration / steps;
-        let current = 0;
-        let step = 0;
-
-        const suffix = text.replace(/[0-9.,]/g, '').trim();
-        const hasDecimal = text.includes('.');
-
-        const timer = setInterval(() => {
-            step++;
-            current = Math.min(stepValue * step, number);
-
-            let displayValue;
-            if (hasDecimal) {
-                displayValue = current.toFixed(1);
-            } else {
-                displayValue = Math.floor(current).toString();
-            }
-
-            element.textContent = displayValue + (suffix ? ' ' + suffix : '');
-
-            if (step >= steps) {
-                clearInterval(timer);
-                element.textContent = text;
-            }
-        }, stepDuration);
-    }
-
-    // === ANIMACIÓN INICIAL DEL HERO ===
-    window.addEventListener('load', () => {
-        const heroTitle = document.querySelector('.hero-title');
-        const heroSubtitle = document.querySelector('.hero-subtitle');
-        const heroVideo = document.querySelector('.hero-video');
-        const heroBanner = document.querySelector('.hero-banner');
-
-        if (heroTitle) heroTitle.classList.add('hero-animate-in');
-        if (heroSubtitle) {
-            setTimeout(() => heroSubtitle.classList.add('hero-animate-in'), 200);
-        }
-        if (heroVideo) heroVideo.classList.add('video-entrance');
-        if (heroBanner) {
-            setTimeout(() => heroBanner.classList.add('hero-animate-in'), 600);
-        }
-    });
-
-    // === PARALLAX DESACTIVADO - Causaba espacio extra ===
-    // Las animaciones de scroll son suficientes
-    function initParallaxSections() {
-        // Función vacía - parallax desactivado
-    }
-
-    function updateParallaxElements() {
-        // Función vacía - parallax desactivado
-    }
-
-    // === SMOOTH SCROLL PARA LINKS INTERNOS CON EASING ===
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                const startPosition = window.pageYOffset;
-                const distance = targetPosition - startPosition;
-                const duration = 1500; // 1.5 segundos
-                let start = null;
-
-                function easeInOutCubic(t) {
-                    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-                }
-
-                function animation(currentTime) {
-                    if (start === null) start = currentTime;
-                    const timeElapsed = currentTime - start;
-                    const progress = Math.min(timeElapsed / duration, 1);
-                    const ease = easeInOutCubic(progress);
-
-                    window.scrollTo(0, startPosition + distance * ease);
-
-                    if (timeElapsed < duration) {
-                        requestAnimationFrame(animation);
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "¿Esto es legal?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "100%. No hago trucos. No hago ingeniería fiscal agresiva. Hago optimización dentro del marco legal suizo. Si quieres algo ilegal, no soy tu persona. Hay otros que hacen eso. Yo no."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto cuesta la primera reunión?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "230€ la hora. Si decides seguir adelante, ese coste se descuenta del proyecto. Si no, habrás invertido 230€ en entender tu situación fiscal real. Probablemente la mejor inversión que hagas este año."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Necesito mudarme a Suiza?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depende. Hay estructuras que no requieren residencia. Otras sí. Lo vemos en la primera reunión. No te voy a decir que te mudes si no tiene sentido para ti."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Por qué debería confiar en ti?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No tienes que hacerlo. Confía en los números. 4 años. Más de 500 clientes protegidos en Suiza. Cero problemas legales. Si eso no te basta, no pasa nada. Hay muchos asesores fiscales en el mundo."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Y si al final no me conviene?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Pues no lo hacemos. No voy a convencerte de algo que no te beneficia. Mi negocio se basa en clientes satisfechos que me recomiendan, no en vender humo. Si después de analizar tu caso veo que no tiene sentido, te lo digo. Y tan amigos."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto tarda todo el proceso?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depende de la complejidad. Una estructura simple: 6-8 semanas. Una relocalización completa con residencia: 3-6 meses. Te doy un timeline realista en la primera reunión. No prometo milagros."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Eres arrogante?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Probablemente. Pero también soy buena en lo que hago. Y prefiero ser honesta a ser simpática. Si buscas alguien que te diga que sí a todo, no soy yo. Si buscas alguien que te diga la verdad aunque no te guste, hablamos."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto es el impuesto de sociedades en Suiza para una GmbH?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depende de dónde te pongas. El impuesto de sociedades en Suiza oscila entre el 11% y el 21%. La parte federal es fija: 8,5% sobre beneficio neto. La cantonal varía. En Zug pagas alrededor del 12% total. En Ginebra o Vaud te vas al 18-21%. Un cliente que facturaba 800.000€ en España pagaba 200.000€ en impuestos. En Zug paga 96.000€."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Qué es una Holding Suiza y cómo optimiza la doble imposición?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Una sociedad que posee otras empresas y optimiza el convenio de doble imposición Suiza-España. El 95% de los dividendos que recibe de sus filiales NO tributan. Se llama 'participation exemption' y es completamente legal. Ideal para empresarios con varias sociedades en diferentes países."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Puedo crear una GmbH Suiza sin tener residencia fiscal allí?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Poder, puedes crear una GmbH Suiza sin residencia fiscal. Pero necesitas un administrador residente y sustancia real: oficina física, empleados si el negocio lo requiere, decisiones que se tomen desde Suiza. Las estructuras vacías no aplican el convenio de doble imposición Suiza-España correctamente."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto es el IVA en Suiza para mi GmbH o Holding?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "8,1%. El más bajo de Europa occidental. En España pagas 21%. Hay tipos reducidos: 2,6% para alimentación básica, 3,8% para hoteles. Si tienes un e-commerce o vendes servicios digitales, esa diferencia del 13% en IVA puede ser tu margen de beneficio."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuáles son los requisitos para obtener residencia fiscal en Suiza desde España?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Para obtener residencia fiscal en Suiza, Hacienda española mira tres cosas: que no pases más de 183 días al año en España, que tu centro de intereses económicos esté en Suiza, y que tu familia directa no viva en España. Si tienes más de 4 millones en activos, también hay que planificar el exit tax."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cómo hace mi asesor fiscal la declaración de la renta en Suiza?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "La declaración de la renta en Suiza se hace a tres niveles: federal, cantonal y municipal. Cada cantón tiene sus deducciones, y si tienes residencia fiscal Suiza en el cantón equivocado, pagas de más. En Suiza el patrimonio tributa (entre 0,1% y 1%), pero algunos cantones ofrecen forfait fiscal que lo compensa."
                     }
                 }
-
-                requestAnimationFrame(animation);
-            }
-        });
-    });
-
-    // === ANIMACIONES AL HACER HOVER EN SECCIONES ===
-    document.querySelectorAll('.testimonial-card, .service-column, .structure-card, .canton-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transition = 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)'; // Bounce effect
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transition = 'all 0.3s ease';
-        });
-    });
-
-    // === ANIMACIONES DE STRUCTURES Y CANTONS: Usar solo IntersectionObserver ===
-    // NO usar scroll manual para evitar conflictos con sticky
-    // Las animaciones se manejan completamente con el IntersectionObserver ya configurado
-
-    // === MOUSE PARALLAX DESACTIVADO - Causaba conflictos ===
-
-    // === OPTIMIZACIÓN: Reducir animaciones si el usuario prefiere menos movimiento ===
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            el.style.transition = 'opacity 0.3s ease';
-        });
-        ease = 0.3; // Scroll más directo
-    }
-
-    // === THROTTLE PARA EVENTOS DE SCROLL (PERFORMANCE) ===
-    function throttle(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // === LAZY LOADING DE ANIMACIONES PESADAS ===
-    const heavyAnimations = document.querySelectorAll('.blur-fade, .reveal-center');
-    const heavyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-visible');
-                heavyObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    heavyAnimations.forEach(el => heavyObserver.observe(el));
-
-    // === OPTIMIZACIÓN MÓVIL: Pausar animaciones cuando no está visible ===
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            document.body.style.animationPlayState = 'paused';
-        } else {
-            document.body.style.animationPlayState = 'running';
-        }
-    });
-
-    // === DEBUG: Log de scroll direction (puedes eliminarlo en producción) ===
-    // window.addEventListener('scroll', throttle(() => {
-    //     console.log('Scroll direction:', scrollDirection, 'Position:', window.pageYOffset);
-    // }, 100));
-
-    // === STICKY NATURAL: NO manipular con JavaScript ===
-    // El position: sticky funciona automáticamente con CSS puro
-    // Dejar que el navegador maneje el sticky de forma nativa
-
-    // === LIMPIAR ELEMENTOS EXTRA AL CARGAR - AGRESIVO ===
-    function cleanupExtraElements() {
-        // 1. Eliminar cualquier elemento después del main
-        const main = document.querySelector('#main-content, .landing-page');
-        if (main) {
-            let nextElement = main.nextElementSibling;
-            while (nextElement) {
-                const toRemove = nextElement;
-                nextElement = nextElement.nextElementSibling;
-
-                // Ocultar completamente cualquier elemento que no sea script esencial
-                if (!toRemove.classList.contains('keep') && toRemove.tagName !== 'SCRIPT') {
-                    toRemove.style.cssText = 'display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; visibility: hidden !important; position: absolute !important; left: -9999px !important;';
-                    toRemove.remove(); // Eliminar del DOM completamente
-                }
+            ]
+        },
+        {
+            "@type": "Service",
+            "@id": "<?php echo esc_url(home_url('/')); ?>#service",
+            "serviceType": "Asesoría Fiscal",
+            "name": "Consultoría de Fiscalidad en Suiza",
+            "description": "Asesoría fiscal especializada en fiscalidad en Suiza para empresarios españoles y latinoamericanos. Creación de GmbH, Holding y AG. Optimización fiscal y residencia en Suiza.",
+            "provider": {
+                "@id": "<?php echo esc_url(home_url('/')); ?>#organization"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Suiza"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Servicios de Fiscalidad en Suiza",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Consulta inicial de fiscalidad en Suiza",
+                            "description": "Primera consulta para analizar tu situación fiscal y determinar si la fiscalidad en Suiza tiene sentido para tu caso"
+                        },
+                        "price": "230",
+                        "priceCurrency": "CHF"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Creación de GmbH en Suiza",
+                            "description": "Constitución de sociedad limitada suiza con fiscalidad del 12-14%"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Creación de Holding en Suiza",
+                            "description": "Estructura holding con 95% de dividendos exentos según la fiscalidad suiza"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Residencia fiscal en Suiza",
+                            "description": "Gestión completa del cambio de residencia fiscal a Suiza incluyendo convenio de doble imposición"
+                        }
+                    }
+                ]
             }
         }
-
-        // 2. Eliminar footers específicamente
-        const footers = document.querySelectorAll('footer, .site-footer, #colophon, .footer, [role="contentinfo"], .footer-widget-area, #footer, .site-info');
-        footers.forEach(footer => {
-            footer.style.cssText = 'display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; visibility: hidden !important; position: absolute !important; left: -9999px !important;';
-            footer.remove();
-        });
-
-        // 3. Eliminar elementos de plugins comunes que aparecen al final
-        const pluginSelectors = [
-            '[id*="cookie"]',
-            '[class*="cookie"]',
-            '[id*="gdpr"]',
-            '[class*="gdpr"]',
-            '[id*="popup"]',
-            '[class*="popup"]',
-            '.wp-block-group__inner-container',
-            '.wp-site-blocks > *:not(#main-content):not(.landing-page)'
-        ];
-
-        pluginSelectors.forEach(selector => {
-            document.querySelectorAll(selector).forEach(el => {
-                if (!el.closest('#main-content, .landing-page')) {
-                    el.remove();
-                }
-            });
-        });
-
-        // 4. Forzar que body termine en el CTA
-        const ctaSection = document.querySelector('.cta');
-        if (ctaSection) {
-            const ctaRect = ctaSection.getBoundingClientRect();
-            const ctaBottom = ctaRect.bottom + window.pageYOffset;
-
-            // Forzar estilos en body
-            document.body.style.cssText += 'margin-bottom: 0 !important; padding-bottom: 0 !important;';
-            document.documentElement.style.cssText += 'margin-bottom: 0 !important; padding-bottom: 0 !important;';
-
-            // Calcular y ajustar altura
-            const bodyHeight = ctaBottom;
-            document.body.style.minHeight = bodyHeight + 'px';
-        }
-
-        // 5. Eliminar espacios en blanco fantasma
-        document.querySelectorAll('body > *').forEach(el => {
-            if (el.textContent.trim() === '' && !el.querySelector('*') && el.tagName !== 'SCRIPT') {
-                el.remove();
-            }
-        });
-    }
-
-    // Ejecutar la limpieza cuando el DOM esté listo
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', cleanupExtraElements);
-    } else {
-        cleanupExtraElements();
-    }
-
-    // Ejecutar nuevamente cuando todo esté cargado (incluyendo plugins)
-    window.addEventListener('load', () => {
-        cleanupExtraElements();
-
-        // Y una vez más después de un pequeño delay por si algún plugin se carga tarde
-        setTimeout(cleanupExtraElements, 500);
-        setTimeout(cleanupExtraElements, 1000);
-    });
-
-    // === ACORDEÓN FAQ CON ACCESIBILIDAD ===
-    document.addEventListener('DOMContentLoaded', () => {
-        const faqItems = document.querySelectorAll('.faq-item');
-
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-
-            question.addEventListener('click', () => {
-                const wasActive = item.classList.contains('active');
-
-                // Cerrar todos los items y actualizar ARIA
-                faqItems.forEach(otherItem => {
-                    const otherQuestion = otherItem.querySelector('.faq-question');
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    otherItem.classList.remove('active');
-                    otherQuestion.setAttribute('aria-expanded', 'false');
-                    otherAnswer.setAttribute('hidden', '');
-                });
-
-                // Toggle el item clickeado
-                if (!wasActive) {
-                    item.classList.add('active');
-                    question.setAttribute('aria-expanded', 'true');
-                    answer.removeAttribute('hidden');
-                }
-            });
-
-            // Soporte para navegación con teclado
-            question.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    question.click();
-                }
-            });
-        });
-    });
-
+    ]
+}
 </script>
 
-<?php
-// IMPORTANTE: Debemos llamar a get_footer() para que WordPress cierre correctamente el HTML
-// El footer está oculto visualmente con CSS pero es necesario para wp_footer()
-get_footer();
-?>
+<?php get_footer(); ?>

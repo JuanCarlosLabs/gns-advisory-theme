@@ -1,0 +1,838 @@
+/**
+ * About Page Styles (Quién es GNS Advisory)
+ * CSS extraído de page-quien-es-gns-advisory.php para mejor rendimiento (Core Web Vitals)
+ *
+ * @package GNS_Advisory
+ */
+
+/* === PAGE SOBRE NOSOTROS === */
+.page-sobre-nosotros {
+    font-family: 'Inter Tight', sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+.page-sobre-nosotros * {
+    box-sizing: border-box;
+}
+
+/* Hero */
+.sobre-hero {
+    padding: 120px 0 60px;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.sobre-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Breadcrumb SEO */
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '→';
+    margin-left: 0.5rem;
+    color: #4a4a4a;
+}
+
+.breadcrumb a {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #1a1a1a;
+}
+
+.sobre-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.sobre-hero-subtitle {
+    font-size: 1.25rem;
+    color: #2a2a2a;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Fundadora */
+.sobre-fundadora {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.sobre-fundadora .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.fundadora-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.fundadora-photo {
+    text-align: center;
+}
+
+.fundadora-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.fundadora-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.fundadora-role {
+    color: #4a4a4a;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.fundadora-story p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    font-size: 1.05rem;
+}
+
+.fundadora-story p:first-child {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.fundadora-story strong {
+    color: #000000;
+}
+
+.fundadora-contact {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.fundadora-contact a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fundadora-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Números */
+.sobre-numeros {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+}
+
+.sobre-numeros .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sobre-numeros h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.numeros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.numero-item {
+    padding: 2rem;
+}
+
+.numero-value {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.numero-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+}
+
+/* Equipo */
+.sobre-equipo {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+}
+
+.sobre-equipo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sobre-equipo h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #000000;
+}
+
+.sobre-equipo > .container > p {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.equipo-member {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.equipo-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.equipo-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #e0e0e0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipo-member h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #1a1a1a;
+}
+
+.equipo-role {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.equipo-desc {
+    color: #2a2a2a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.equipo-email {
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.equipo-email:hover {
+    text-decoration: underline;
+}
+
+/* Valores */
+.sobre-valores {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.sobre-valores .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sobre-valores h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #000000;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.valor-card {
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.valor-card:hover {
+    border-color: #1a1a1a;
+    transform: translateY(-4px);
+}
+
+.valor-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.valor-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+}
+
+.valor-card p {
+    color: #2a2a2a;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* CTA */
+.sobre-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    margin-bottom: 0;
+}
+
+/* Footer separator para distinguirlo de la sección CTA */
+.site-footer {
+    border-top: 3px solid #c0c0c0;
+    margin-top: 0;
+}
+
+.sobre-cta .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sobre-cta-content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sobre-cta-content h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.sobre-cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #c0c0c0;
+    color: #000000;
+    border: 2px solid #c0c0c0;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Animations - Los elementos son visibles por defecto en la página sobre nosotros */
+.page-quien-es .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .fundadora-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .fundadora-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .numeros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-hero .container,
+    .sobre-fundadora .container,
+    .sobre-numeros .container,
+    .sobre-equipo .container,
+    .sobre-valores .container,
+    .sobre-cta .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .sobre-hero {
+        padding: 80px 0 30px;
+    }
+
+    .sobre-hero .container {
+        padding: 0 1rem;
+    }
+
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb li {
+        font-size: 0.8rem;
+    }
+
+    .sobre-hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sobre-hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .sobre-fundadora {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-fundadora .container {
+        padding: 0 1rem;
+    }
+
+    .fundadora-grid {
+        gap: 1.5rem;
+    }
+
+    .fundadora-photo {
+        max-width: 220px;
+    }
+
+    .fundadora-photo img {
+        border-radius: 16px;
+    }
+
+    .fundadora-content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .fundadora-role {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .fundadora-story p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 0.875rem;
+    }
+
+    .fundadora-story p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .fundadora-contact {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+
+    .sobre-numeros {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-numeros .container {
+        padding: 0 1rem;
+    }
+
+    .sobre-numeros h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .numeros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .numero-item {
+        padding: 1rem;
+    }
+
+    .numero-value {
+        font-size: 2.25rem;
+    }
+
+    .numero-label {
+        font-size: 0.85rem;
+    }
+
+    .sobre-equipo {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-equipo .container {
+        padding: 0 1rem;
+    }
+
+    .sobre-equipo h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sobre-equipo > .container > p {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .equipo-grid {
+        gap: 1.25rem;
+        max-width: 100%;
+    }
+
+    .equipo-member {
+        padding: 1.5rem;
+        border-radius: 14px;
+    }
+
+    .equipo-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .equipo-member h3 {
+        font-size: 1.1rem;
+    }
+
+    .equipo-role {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .equipo-desc {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .equipo-email {
+        font-size: 0.85rem;
+    }
+
+    .sobre-valores {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-valores .container {
+        padding: 0 1rem;
+    }
+
+    .sobre-valores h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .valor-card {
+        padding: 1.5rem;
+        border-radius: 14px;
+    }
+
+    .valor-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .valor-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .valor-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .valor-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .sobre-cta {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-cta .container {
+        padding: 0 1rem;
+    }
+
+    .sobre-cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .sobre-cta-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .sobre-hero {
+        padding: 70px 0 25px;
+    }
+
+    .sobre-hero .container {
+        padding: 0 0.75rem;
+    }
+
+    .breadcrumb li {
+        font-size: 0.75rem;
+    }
+
+    .sobre-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .sobre-hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .sobre-fundadora {
+        padding: 2rem 0;
+    }
+
+    .sobre-fundadora .container {
+        padding: 0 0.75rem;
+    }
+
+    .fundadora-photo {
+        max-width: 180px;
+    }
+
+    .fundadora-content h2 {
+        font-size: 1.35rem;
+    }
+
+    .fundadora-story p {
+        font-size: 0.9rem;
+    }
+
+    .fundadora-story p:first-child {
+        font-size: 1rem;
+    }
+
+    .sobre-numeros {
+        padding: 2rem 0;
+    }
+
+    .sobre-numeros .container {
+        padding: 0 0.75rem;
+    }
+
+    .sobre-numeros h2 {
+        font-size: 1.35rem;
+    }
+
+    .numeros-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .numero-item {
+        padding: 0.75rem;
+    }
+
+    .numero-value {
+        font-size: 2rem;
+    }
+
+    .numero-label {
+        font-size: 0.8rem;
+    }
+
+    .sobre-equipo {
+        padding: 2rem 0;
+    }
+
+    .sobre-equipo .container {
+        padding: 0 0.75rem;
+    }
+
+    .sobre-equipo h2 {
+        font-size: 1.35rem;
+    }
+
+    .equipo-member {
+        padding: 1.25rem;
+    }
+
+    .equipo-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sobre-valores {
+        padding: 2rem 0;
+    }
+
+    .sobre-valores .container {
+        padding: 0 0.75rem;
+    }
+
+    .sobre-valores h2 {
+        font-size: 1.35rem;
+    }
+
+    .valor-card {
+        padding: 1.25rem;
+    }
+
+    .sobre-cta {
+        padding: 2rem 0;
+    }
+
+    .sobre-cta .container {
+        padding: 0 0.75rem;
+    }
+
+    .sobre-cta-content h2 {
+        font-size: 1.35rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary,
+    .fundadora-contact a,
+    .equipo-email {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .equipo-member:hover,
+    .valor-card:hover {
+        transform: none;
+    }
+}

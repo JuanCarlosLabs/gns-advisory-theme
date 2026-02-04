@@ -3,4 +3,17 @@ node_modules/
 *.zip
 .vscode/
 *.log
-.claude/settings.local.json
+.claude/
+
+# Archivos de respaldo
+*.backup
+*.backup2
+*.bak
+*.old
+
+# Scripts de utilidad (no subir a producción)
+create-sample-posts.php
+
+# Archivos sensibles
+sftp.json
+*.sql
